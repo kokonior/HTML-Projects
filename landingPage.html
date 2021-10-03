@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale= "1.0">
+    <title> Welcome to My web-page </title>
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+      
+      *{
+  margin: 0px;
+  padding: 0px;
+}
+
+.body{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)), url("bgimage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar{
+  width: 88%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  position: relative;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #75E892;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%
+}
+
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.title{
+  font-size: 70px;
+  line-height: 100px;
+  font-weight: bold;
+  height: 100px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content p{
+  margin: 20px auto;
+  font-weight: normal;
+  line-height:30px;
+  font-size: 20px;
+}
+
+button{
+  padding: 15px 25px;
+  margin: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: 2px solid #75E892;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(to right, transparent 50%, #75E892 50%);
+  background-size: 200%;
+  background-position: left;
+}
+
+button:hover{
+  background-position: right;
+  color: #000;
+}
+
+.slider{
+  color: #75E892;
+  margin-left: 12px;
+  box-sizing: border-box;
+  animation: slider 6s linear infinite;
+}
+
+@keyframes slider{
+  0% { margin-top: -400px; }
+  5% { margin-top: -200px; }
+  30% { margin-top: -200px; }
+  35% { margin-top: 0px; }
+  65% { margin-top: 0px; }
+  70% { margin-top: 200px; }
+  100% { margin-top: 200px; }
+}
+
+    </style>
+    
+  </head>
+
+  <body class="body">
+       <div class="navbar">
+         <ul>
+           <li> Blog </li>
+           <li> Daily Quotes </li>
+           <li> Wallpapers </li>
+           <li> 21 Days </li>
+        </ul>
+    </div>
+
+    <div class="content">
+      <div class="title">
+         Today, Stay
+         <div class="slider">
+           <div> Motivated </div>
+           <div> Focused </div>
+           <div> Happy </div>
+        </div>
+      </div>
+      <p> A great Attitude becomes a Great Day <br> which becomes a Great Year! </p>
+      <button type="button"> Explore the Website </button>
+    </div>
+ </body>
+</html>
