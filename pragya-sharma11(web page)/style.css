@@ -1,0 +1,124 @@
+header{
+    font-size: 60px;
+    background-color:darkblue;
+    text-align: center;
+    line-height: 95px;
+    height: 100px;
+    color: rgb(236, 236, 169);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    margin: 0px;
+    background-color: rgb(240, 237, 237);
+    border-radius: 6px;
+}
+div.machine{
+    background-color:rgb(205, 100, 64);
+    border:double rgb(80, 3, 3) 8px;
+    height: 400px;
+    width:1080px ;
+    margin-left: 90px;
+    margin-top: 40px;
+    border-radius: 10px;
+    display:flex;
+}
+#inpSpeed{
+    font-size: 30pt;
+    margin-left: 30px;
+    width: 64px;
+}
+div.slot{
+    height:250px;
+    width:400px;
+    margin-left : 20px;
+    margin-right: 30px;
+    margin-top: 65px;
+    background-color: beige;
+    border:solid rgb(160, 4, 4) 3px;
+    box-shadow: maroon 2px 2px 2px 2px;
+    text-align: center;
+    line-height: 250px;
+    font-size:90px;
+    overflow: hidden;
+}
+div.btns{
+    margin-top: 100px;
+}
+button.working:hover{
+    transform: translate(-5px,-5px); 
+    background-color: darkblue;
+    color:rgb(236, 236, 169) ; 
+    box-shadow:rgb(236, 236, 169) 2px 3px 2px 3px; 
+}
+button.working:active{
+    transform: translate(10px,10px);
+    background-color: darkblue;
+    color:rgb(236, 236, 169) ; 
+    box-shadow:rgb(236, 236, 169) 2px 3px 2px 3px;
+}
+button.working{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    box-shadow: rgb(150, 50, 43) 2px 3px 2px 3px;
+    color: midnightblue;
+    font-weight: bolder;
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-color: maroon;
+    border-width: 2px;
+}
+
+:root{
+    --speed : 5;
+    --limit : 0s;
+}
+.slot > .value{
+    display: inline-block;
+    animation: slotspin infinite ;
+    animation-duration: calc(var(--limit)/var(--speed));
+}
+
+
+@keyframes slotspin {
+    0%{
+        transform:translateY(-300px);
+    }
+    100%{
+        
+        transform:translateY(300px);
+    }
+}
+
+div.status{
+    margin-top:50px ;
+    margin-left: 300px;
+    margin-right: 400px;
+    padding: 0px;
+    padding-left: 60px;
+    font-size:50px;
+    color:rgb(228, 234, 247);
+    font-family: fantasy;
+    border-radius: 5px;
+    background-color: brown;
+    border:solid brown 2px;
+    box-shadow: rgb(100, 58, 58)2px 2px 2px 2px;
+    display: flex;
+}
+
+div.speed{
+    font-size: 30px;
+    display:flex;
+    color:darkblue;
+}
+#inpSpeed{
+    height: 50px;
+    margin-top:20px ;
+    border:rgb(94, 94, 129) solid  1px;
+    box-shadow: rgb(94, 94, 129) 2px 2px 2px 2px;
+}
+
+
