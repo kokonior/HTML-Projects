@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Program Kalkulator</title>
+    </head>
+        <body>
+            <script LANGUAGE="JavaScript">
+            function hitung(){
+            if(form.bilangan1.value == "" || form.bilangan2.value == ""){
+            alert("Masukan Data Terlebih Dahulu"); 
+            exit;
+            }
+        }
+
+ function tambah() {
+ hitung(); 
+ a=eval(form.bilangan1.value); 
+ b=eval(form.bilangan2.value); 
+ c=a+b 
+ alert(form.total.value = 'Hasil Penjumlahan = ' + c); 
+ }
+
+ function kali() {
+ hitung();
+ a=eval(form.bilangan1.value);
+ b=eval(form.bilangan2.value);
+ c=a*b
+ alert(form.total.value = 'Hasil Perkalian = ' + c);
+ }
+
+ function kurang() {
+ hitung();
+ a=eval(form.bilangan1.value);
+ b=eval(form.bilangan2.value);
+ c=a-b
+alert(form.total.value = 'Hasil Pengurangan = ' + c);
+ }
+ 
+ function bagi() {
+ hitung();
+ a=eval(form.bilangan1.value);
+ b=eval(form.bilangan2.value);
+ c=a/b
+ alert(form.total.value = 'Hasil Pembagian = ' + c);
+ }
+
+ function reset() {
+ form.bilangan1.value="";
+ form.bilangan2.value="";
+ form.total.value = "";
+ }
+
+ </script> 
+        <center>
+    <form name="form">
+        Membuat Calculator
+<hr><br>
+    Bilangan 1 : <input type="text" name="bilangan1" size=9> <br><br>
+    Bilangan 2 : <input type="text" name="bilangan2" size=9> <br><br>
+    Hasil Perhitungan  : <input type="text" name="total" size="18">
+<br><br><hr>
+
+ <input type=button name=submit onclick="tambah()" value="+">
+ <input type=button name=submit onclick="kali()" value="X">
+ <input type=button name=submit onclick="bagi()" value="/">
+ <input type=button name=submit onclick="kurang()" value="-">
+ <input type=button name=submit onclick="reset()" value="Reset">
+    </form>
+        </center>
+    </body>
+</html>
