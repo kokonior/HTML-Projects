@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple To do List By AhmadK powered by JS</title>
+  <style>
+    table,
+    th,
+    td {
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <fieldset>
+    <legend>Add To Do</legend>
+    <input type="text" name="todo" />
+    <input type="button" onclick="addtodo()" value="Add" />
+  </fieldset>
+  <br />
+  <table id="list-todo">
+  </table>
+
+  <script>
+    let datatodo = [
+      "Coding",
+      "Drink Coffe",
+      "Sleep"
+    ];
+
+
+    function showtodo() {
+      let listtodo = document.getElementById("list-todo");
+      listtodo.innerHTML = "<thead><tr><th>No</th><th>To Do List</th><th>Action</th></tr></thead>";
+      let no = 1;
+      for (let i = 0; i < datatodo.length; i++) {
+        let btnHapus = "<a href='#' onclick='deletetodo(" + i + ")'>Delete</a>";
+        listtodo.innerHTML += "<tr><td>" + no + "</td><td>" + datatodo[i] + "</td><td>[" + btnHapus + "]</td></tr>";
+        no++;
+      }
+
+    }
+
+    function addtodo() {
+      let input = document.querySelector("input[name=todo]");
+      if (input.value == "") {
+        window.alert("cannot add empty todo");
+      } else {
+        datatodo.push(input.value);
+        showtodo();
+      }
+    }
+
+    function deletetodo(id) {
+      let yakin = confirm("are you sure?");
+      if (yakin) {
+        datatodo.splice(id, 1);
+        showtodo();
+      } else {
+        showtodo();
+      }
+    }
+
+    showtodo();
+  </script>
+</body>
+
+</html>
