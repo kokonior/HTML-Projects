@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.navbar {
+    position: fixed !important;
+    width: 100%;
+    background: black;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+#header {
+    /* background-image: url('img/header.png'); */
+    height: 100vh;
+    min-height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.header-item {
+    align-self: center;
+    text-align: center;
+}
+
+.header-item-text-title {
+    color: white;
+    font-size: 4.25rem;
+}
+
+.header-item-text span {
+    color: white;
+    font-size: 1.5rem;
+    max-width: 800px;
+}
+
+.header-item-count {
+    margin-top: 5rem;
+}
+
+.header-count {
+    color: white;
+    font-weight: 500;
+    font-size: 3.125rem;
+}
+
+.header-count-desc{
+    color: white;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+#covid {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.section-title-text {
+    position: relative;
+    font-weight: 600;
+    font-size: 3.125rem;
+}
+
+.section-title-text:after {
+    content: '';
+    height: 3px;
+    width: 230px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto; left: 0; right: 0;
+}
+
+.item-corona {
+    margin-bottom: 75px;
+}
+ 
+.section-title-desc {
+    font-size: 0.928rem;
+    font-weight: 500;
+}
+
+.text-title-item {
+    font-weight: 500;
+    font-size: 1.875rem;
+}
+
+.text-desc-item {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.corona-img {
+    max-width: 420px;
+}
+
+.bor-light:after {
+    background: white;
+}
+
+#vaksin {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+@media (max-width: 767.98px) {
+    .corona-img {
+        display: none;
+    }
+}
