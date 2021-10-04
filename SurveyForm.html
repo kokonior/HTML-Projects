@@ -4,15 +4,54 @@
 <!-- the title will appear on the page-->
 <head>
 <title>Employee Interests Survey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<style type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<style type="text/css">
+*{
+  font-family: 'Love Ya Like A Sister', cursive;
+  
+}
 		.background-image{
 			background-image: url("https://images.unsplash.com/photo-1506259091721-347e791bab0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 			 background-size: cover;
 		    background-repeat: no-repeat; 
 		}
+    .text-center{
+      font-family: 'Indie Flower', cursive;
+      color:rgb(6, 30, 61);
+    }
+    .btn:hover{
+      transition: 0.5s;
+      box-shadow:0 0 2px lightblue,
+      0 0 5px lightcoral,
+      0 0 10px cyan,
+      0 0 20px blue,
+      0 0 30px green;
+    }
+    .col-91{
+      border: transparent;
+      border-bottom:2px solid purple;
+      width:100%;
+      position:relative;
+      left: 30px;
+      font-family: 'Source Code Pro', monospace;
+      color:rgba(0, 0, 0, 0.808);
+      background-color: transparent;
+    }
+    .card{
+      background:rgba(183, 241, 255, 0.63)
+
+    }
 	</style>
 </head>
 
@@ -33,19 +72,19 @@
 					<div class="my-4 col-12 d-flex p-3 ">
 							<span class="ms-3 w-25">Enter your name:</span>
 							<!-- Input type text for small texts, specify size -->
-							<input type="text" name="UserName" class="col-9">
+							<input type="text" name="UserName" class="col-91">
 							<!--Adds spaces - remove and see what happens -->
 							<!-- </br></br> -->
 					</div>
 					<div class=" my-4 col-12 d-flex p-3">
 						<span class="ms-3 w-25">Enter your department:</span>
-						<input type="text" name="Deptt" class="col-9">
+						<input type="text" name="Deptt" class="col-91">
 					</div>
 					<div class="my-4 col-12 d-flex p-3">
 						<span class="ms-3 w-25">Tell us a little about yourself:</span>
 						<!-- For writing lot of text like descriptions with text wrapping,
 						if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
-						<textarea name="Comments" cols=30 rows=2 class="col-9"></textarea>
+						<textarea name="Comments" cols=30 rows=2 class="col-91"></textarea>
 					</div>
 					<div class="my-4 col-12 d-flex p-3 ">
 						<span class="ms-3 w-25">Do you exercise at home?</span>
