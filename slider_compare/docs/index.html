@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <title>Basic Template</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Kube CSS -->
+    <link rel="stylesheet" href="../css/pixelcompare.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="title">PixelCompare</div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="#">Usage</a></li>
+        <li><a href="#">Demos</a></li>
+        <li><a href="#">API</a></li>
+        <li><a href="#">Get it now</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="showcase-card">
+      <div class="ex-title">Example 1</div>
+      <div class="ex-preview">
+        <div class="pixelcompare" data-pixelcompare>
+          <img src="./landscape_bw.jpg" width="100%"/>
+          <img src="./landscape.jpg" width="100%"/>
+        </div>
+      </div>
+      <div class="ex-code">
+          <pre>
+  <code>  &lt;div class="pixelcompare" data-pixelcompare&gt; 
+      &lt;img src="./landscape_bw.jpg" width="100%"/&gt;
+      &lt;img src="./landscape.jpg" width="100%"/&gt;
+    &lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <hr>
+    <div class="showcase-card">
+      <div class="ex-title">Example 2 (hover)</div>
+      <div class="ex-preview">
+        <div class="pixelcompare" data-pixelcompare data-hover data-show-slider>
+          <img src="./landscape_bw.jpg" width="100%"/>
+          <img src="./landscape.jpg" width="100%"/>
+        </div>
+      </div>
+      <div class="ex-code">
+        <pre>
+<code>  &lt;div class="pixelcompare" data-pixelcompare data-hover data-show-slider&gt; 
+    &lt;img src="./landscape_bw.jpg" width="100%"/&gt;
+    &lt;img src="./landscape.jpg" width="100%"/&gt;
+  &lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <hr>
+    <div class="showcase-card">
+      <div class="ex-title">Example 3 (vertical)</div>
+      <div class="ex-preview">
+          <div class="pixelcompare" data-pixelcompare data-vertical>
+            <img src="./landscape_bw.jpg" width="100%" />
+            <img src="./landscape.jpg" width="100%" />
+          </div>
+      </div>
+      <div class="ex-code">
+          <pre>
+  <code>  &lt;div class="pixelcompare" data-pixelcompare data-vertical&gt; 
+      &lt;img src="./landscape_bw.jpg" width="100%"/&gt;
+      &lt;img src="./landscape.jpg" width="100%"/&gt;
+    &lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <hr>
+    <div class="showcase-card">
+      <div class="ex-title">Example 3 (vertical & hover)</div>
+      <div class="ex-preview">
+          <div class="pixelcompare" data-pixelcompare data-vertical data-hover>
+            <img src="./landscape_bw.jpg" width="100%" />
+            <img src="./landscape.jpg" width="100%" />
+          </div>
+      </div>
+      <div class="ex-code">
+          <pre>
+  <code>  &lt;div class="pixelcompare" data-pixelcompare data-vertical data-hover&gt; 
+      &lt;img src="./landscape_bw.jpg" width="100%"/&gt;
+      &lt;img src="./landscape.jpg" width="100%"/&gt;
+    &lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+  <script src="../js/pixelcompare.js"></script>
+</body>
+</html>
