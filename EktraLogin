@@ -1,0 +1,32 @@
+<html>
+<head>
+ <title>Cara Membuat Form Login Sederhana Tapi Berkelas</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="login">
+    <h2 class="login-header"> Login</h2>
+        <form class="login-container">
+            <p>
+                <input type="username" placeholder="Username">
+            </p>
+            <p>
+                <input type="email" placeholder="Email">
+            </p>
+            <p>
+                <input type="submit" value="Login">
+            </p>
+			
+			
+			<div class="separator">
+					<span class="separator-text">OR</span>
+			</div>
+			 
+			 <div>
+				<input type="tombol" value="Login With Facebook" class="tombol" >
+			</div>
+
+        </form>
+</div>
+</body>
+</html>
