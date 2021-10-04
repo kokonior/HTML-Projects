@@ -1,5 +1,6 @@
 <html>
 <head>
+<center>
 	<script>
 		//function that display value
 		function dis(val)
@@ -24,16 +25,16 @@
 	<!-- for styling -->
 	<style>
 		.title{
-		margin-bottom: 10px;
+		margin-bottom: -3px;
 		text-align:center;
 		width: 210px;
-		color:green;
+		color: brown;
 		border: solid black 2px;
 		}
 
 		input[type="button"]
 		{
-		background-color:green;
+		background-color:brown;
 		color: black;
 		border: solid black 2px;
 		width:100%
@@ -42,14 +43,14 @@
 		input[type="text"]
 		{
 		background-color:white;
-		border: solid black 2px;
+		border: solid black 1px;
 		width:100%
 		}
 	</style>
 </head>
 <!-- create table -->
 <body>
-	<div class = title >GeeksforGeeks Calculator</div>
+	<div class = title ><b>CALCULATOR</b></div>
 	<table border="1">
 		<tr>
 			<td colspan="3"><input type="text" id="result"/></td>
@@ -84,5 +85,6 @@
 			<td><input type="button" value="*" onclick="dis('*')"/> </td>
 		</tr>
 	</table>
+    </center>
 </body>
 </html>
