@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://wikiki.github.io/css/documentation.css?v=201911011043"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="centerall">
+    <div class="container is-centered">
+      <div id="title" class="title">
+        Welcome To the Card Game
+        <div style="float: right">
+          <code id="timer" class="badge">0:0</code> <code id="counter">0</code>
+        </div>
+      </div>
+      <div class="subtitle">
+        Select 2 Same Card from all the hidden Cards bellow !
+        <br />
+        <code id="subtitle">12</code>
+        Cards Game !
+      </div>
+      <div id="gameselect">
+        <input
+          class="slider is-medium is-warning is-circle"
+          type="range"
+          min="12"
+          max="32"
+          step="4"
+          value="12"
+          id="gamerange"
+        />
+        <button id="startgame" class="button is-warning">Start Game</button>
+      </div>
+      <div id="gcards" class="columns is-multiline is-mobile is-centered"></div>
+    </div>
+
+    <div class="modal" id="congo">
+      <div class="modal-background"></div>
+      <div class="modal-content centerall">
+        <div class="box">
+          <h1 class="title">🎉 Congratulations !</h1>
+          <h2 class="subtitle">
+            You Have Won the Game . <code id="info"></code>
+          </h2>
+          <button class="button is-warning" onclick="window.location.reload()">
+            Play Again !
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="app.js"></script> -->
+  <script src="script.js"></script>
+</html>
