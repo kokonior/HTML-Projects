@@ -2,6 +2,12 @@
 <head>
  <title>Cara Membuat Form Login Sederhana Tapi Berkelas</title>
  <style>
+ 
+ body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
+ 
  .login {
   width: 350px;
   margin: 16px auto;
