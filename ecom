@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="ecom.css">
+    </head>
+    <body id="bd" style="relative">
+        <img src="" alt="setting">
+        Mekar Mukti 2021 - eComm
+        <img src="" alt="search">
+        <div id="vat">
+            video/animation <br> detail naration
+        </div>
+        <input id="b1" type="submit" value="A" onclick=swp(1)>
+        <input id="b2" type="submit" value="B" onclick=swp(2)>
+        <input id="b3" type="submit" value="C" onclick=swp(3)>
+        <div id="ftr">2021</div>
+        <script>
+            function swp(a) { //alert(
+            	x1 = new XMLHttpRequest();
+            	x1.open("GET","getI.php?a="+a,true);
+            	x1.send(); 
+            	x1.onreadystatechange=function() {
+            		if(x1.readyState==4 && x1.status==200) { //alert(x
+            			document.getElementById("vat").innerHTML = HTML = x1.responseText;
+            		}
+            	}
+            }
+            
+        </script>
+    </body>
+</html>
