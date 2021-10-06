@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sholat Tahajud</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <header>
+        <div class="jumbotron">
+          <h1 id="beranda">Tahajud</h1>
+          <p>Dan pada sebagian malam hari, shalat tahajjudlah kamu sebagaimana ibadah tambahan bagimu, mudah-mudahan Tuhan-mu mengangkat kamu ketempat yang terpuji — Al-Isra' 17:79</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#manfaat">Manfaat</a></li>
+            <li><a href="#tataCara">Tata Cara</a></li>
+            <li><a href="#bacaan">Bacaan</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="content">
+          <article id="manfaat">
+            <h2>Manfaat</h2>
+            <figure>
+              <img src="Image/tahajud.jpg" alt="tahajud">
+              <figcaption>Tahajud</figcaption>
+            </figure>
+            <p>Manfaat sholat tahajud bisa kamu dapatkan dengan mengikuti tata caranya dengan benar. Secara umum, cara sholat tahajud tidak jauh berbeda dengan sholat sunah pada umumnya. Mengenai jumlah rakaatnya, salat tahajud dikerjakan dua rakaat salam, dua rakaat salam, dengan jumlah rakaat yang tak terbatas. Walaupun begitu menurut hadits HR Bukhari dan Muslim, Rasulullah SAW tidak pernah mengerjakan sholat tahajud lebih dari 11 atau 13 rakaat (jumlah rakaat dengan witir). Bahkan saat sebelum tidur kamu berniat untuk melaksanakan salat tahajud, tetapi kamu tidak terbangun, kamu masih tetap mendapatkan manfaat sholat tahajud yang luar biasa. Berikut beberapa manfaat sholat tahajud.</p>
+            <section>
+              <h3>Doa Dikabulkan dan Penghapus Dosa</h3>
+              <p>Manfaat sholat tahajud yang pertama adalah akan dikabulkan doa-doanya oleh Allah SWT. Apalagi bila seseorang melaksanakannya di waktu utamanya yaitu di sepertiga malam terakhir. Nabi Muhammad SAW bersabda: “Rabb kita Tabaraka wa Ta’ala turun setiap malam ke langit dunia ketika masih tersisa sepertiga malam terakhir, lalu Dia berfirman: “Barangsiapa yang memohon ampun kepada-Ku, niscaya Aku mengampuninya. Barangsiapa yang memohon (sesuatu) kepada-Ku, niscaya Aku akan memberinya. Dan barangsiapa yang berdoa kepada-Ku, niscaya Aku akan mengabulkannya.” (HR. Bukhari).</p>
+              <p>Selain itu, manfaat sholat tahajud lainnya adalah sebagai ajang mendekatkan diri kepada Allah SWT, menghapus dosa, menolak penyakit serta pencegah dari dosa. Dengan menjalankan sholat tahajud, maka kamu bisa mendapatkan manfaat sholat tahajud yang mengagumkan ini. Dosa dosa kecil yang pernah kamu perbuat menjadi berguguran.</p>
+            </section>
+            <section>
+              <h3>Jembatan untuk Masuk Surga</h3>
+              <p>Terdapat sebuah hadis yang mengatakan tentang manfaat sholat tahajud yang luar biasa untuk umat manusia apabila menjalankannya. Manfaat itu adalah menjadikan sebuah jembatan untuk masuk ke surga.</p>
+              <p>Berikut bunyi hadis yang dikatakan oleh Rasulullah SAW saat itu kepada Abdullah Ibnu Muslim berkaitan dengan keistimewaan sholat tahajud. “Hai sekalian manusia! Sebarkanlah salam, dan bagikanlah makanan serta sambunglah silaturahmi dan tegakkan lah sholat malam saat manusia yang lain sedang tidur, niscaya kalian akan masuk surga dengan selamat.” (HR. Ibnu Majah).</p>
+            </section>
+            <section>
+              <h3>Amalan yang Akan Membantu di Akhirat</h3>
+              <p>Ada juga ayat yang terkandung di dalam Alquran terkait sholat malam ini. Dalam surat Az-Zariyat ayat 15-18 telah disebutkan bahwa orang yang senantiasa melakukan sholat tahajud, insya Allah akan mendapatkan sebuah balasan yang setimpal yang diberikan oleh Allah SWT ketika kelak sudah berada di akhirat.</p>
+              <p>Dalam ayat tersebut dengan jelas menyebutkan bahwa. “Sesungguhnya orang-orang yang bertaqwa berada dalam taman-taman surga dan di mata air-mata air, seraya mengambil apa yang Allah SWT berikan kepada mereka. Sebelumnya mereka telah berbuat baik (di dunia), mereka adalah orang-orang yang sedikit tidurnya di waktu malam dan di akhir malam mereka memohon ampun kepada Allah.” (QS. Az Zariyat: 15-18).</p>
+            </section>
+            <section>
+              <h3>Kebiasaan yang Dilakukan Orang Saleh</h3>
+              <p>Salat tahajud merupakan kebiasaan orang-orang yang saleh. Tentunya orang-orang saleh tersebut mengetahui bagaimana tata cara salat tahajud dan manfaat sholat tahajud yang luar biasa bagi diri mereka. Maka, bila kamu juga melaksanakan ibadah ini secara rutin, maka kamu juga termasuk orang yang saleh.</p>
+              <p>“Biasakanlah dirimu untuk shalat malam karena hal itu tradisi orang-orang saleh sebelummu, mendekatkan diri kepada Allah, menghapus dosa, menolak penyakit, dan pencegah dari dosa.” (HR. Ahmad).</p>
+            </section>
+            <section>
+              <h3>Menjaga Kesehatan Rohani</h3>
+              <p>Kalau kamu selalu rutin dalam mengerjakan amalan ibadah yang paling utama di malam hari ini, tentu saja akan ada keistimewaan yang bisa kamu raih. Selain keistimewaan sholat tahajud di atas, kamu juga bisa mendapatkan manfaat sholat tahajud yang mengagumkan seperti kesehatan rohani yang cukup terjaga.</p>
+              <p>Hal ini sudah jelas ditegaskan oleh Allah SWT dengan mengatakan bahwa orang yang selalu sholat tahajud akan selalu mempunyai sifat yang rendah hati dan ramah dan refleksi ketenangan jiwa di dalam kehidupan sehari-hari.</p>
+              <p>Allah SWT telah berfirman, “Dan hamba-hamba Tuhan Yang Maha Penyayang itu (ialah) orang-orang yang berjalan di atas bumi dengan rendah hati dan apabila orang-orang jahil menyapa mereka, mereka mengucapkan kata-kata yang baik. Dan orang yang melewati malam hari dengan bersujud dan berdiri untuk Tuhan mereka.” (QS. Al-Furqan: 63-64).</p>
+            </section>
+          </article>
+          <article id="tataCara">
+            <h2>Tata Cara</h2>
+            <p>Mengenai tata cara sholat tahajud, tidak berbeda jauh dengan sholat sunnah pada umumnya:</p>
+            <ol>
+              <li>Cara sholat tahajud yang pertama adalah membaca niat</li>
+              <li>Setelah membaca niat, dilanjutkan dengan membaca takbir.</li>
+              <li>Kemudian membaca doa iftitah (sunah).</li>
+              <li>Lalu membaca surat alfatihah, setelah alfatihah membaca surat pendek yang ada dalam Al Qur’an yang telah dihafal.</li>
+              <li>Kemudian lanjutkan seperti pada langkah langkah sholat pada umumnya. Seperti rukuk, sujud, hingga salam.</li>
+              <li>Setelah salam, disunahkan membaca bacaan wirid, tasbih, tahmid, takbir, sholawat, istigfar, kemudian membaca doa sholat tahajud.</li>
+            </ol>
+          </article>
+          <article id="bacaan">
+            <h2>Bacaan</h2>
+            <section>
+              <h3>Niat Sholat Tahajud</h3>
+              <p>Ushallii sunnatat-tahajjudi rak'ataini (mustaqbilal qiblati) adaan lillaahi ta'aalaa.</p>
+              <p>Artinya:"Aku niat salat sunah tahajud dua rakaat (dengan menghadap kiblat) karena Allah Taala."</p>
+            </section>
+            <section>
+              <h3>Doa Setelah Sholat Tahajud</h3>
+              <img src="Image/doa.jpg" alt="doa sholat tahajud">
+              <p>“Allaahumma lakal hamdu anta qayyimus samaa waati wal ardhi wa man fiihinna. wa lakal hamdu anta malikus samaa waati wal ardhi wa man fiihinna, wa lakal hamdu anta nuurus samaawaati wal ardhi wa man fiihinna, wa lakal antal haqqu, wa wa’dukal haqqu, wa liqaa’uka haqqu, wa qaulukal haqqun, wal jannatu haqquw wannaaru haqquw wan-nabiyyuuna haqquw wa Muhammadun shallallahu ‘alaihi wa sallama haqquw wassaa’atu haqq. Allaahumma laka aslamtu wa bika aamantu wa ‘alaika tawakkaltu wa ilaika anabtu, wa bika khaashamtu wa ilaika haakamtu faghfirlii maa qoddamtu wa maa akhkhartu wa maa asrartu wa maa a’lantu wa maa anta a’lamu bihiminnii. antal muqoddimu wa antal mu’akhkhiru laa ilaaha anta. wa laa haula wa laa quwwata illaa billaah.”</p>
+              <p>Artinya: "Ya, Allah! Bagi-Mu segala puji, Engkau cahaya langit dan bumi serta seisinya. Bagi-Mu segala puji, Engkau yang mengurusi langit dan bumi serta seisinya. Bagi-Mu segala puji, Engkau Tuhan yang menguasai langit dan bumi serta seisinya. Bagi-Mu segala puji dan bagi-Mu kerajaan langit dan bumi serta seisi-nya. Bagi-Mu segala puji, Engkau benar, janji-Mu benar, firman-Mu benar, bertemu dengan-Mu benar, Surga adalah benar (ada), Neraka adalah benar (ada), (terutusnya) para nabi adalah benar, (terutusnya) Muhammad adalah benar (dari- Mu), peristiwa hari kiamat adalah benar. Ya Allah, kepada-Mu aku pasrah, kepada-Mu aku bertawakal, kepada-Mu aku beriman, kepada-Mu aku kembali (bertaubat), dengan pertolongan-Mu aku berdebat (kepada orang-orang kafir), kepada-Mu (dan dengan ajaran-Mu) aku menjatuhkan hukum. Oleh karena itu, ampunilah dosaku yang telah lalu dan yang akan datang. Engkaulah yang mendahulukan dan mengakhirkan, tiada Tuhan yang hak disembah kecuali Engkau, Engkau adalah Tuhanku, tidak ada Tuhan yang hak disembah kecuali Engkau."</p>
+            </section>
+          </article>
+        </div>
+        <aside>
+          <header>
+            <h2>My Profile</h2>
+            <figure>
+              <img src="Image/profile.jpg" alt="profile">
+              <figcaption>My Profile</figcaption>
+            </figure>
+          </header>
+          <table>
+            <tr>
+              <th>Nama Lengkap</th>
+              <td>Muhammad Dzikri Zulkifly Riskha</td>
+            </tr>
+            <tr>
+              <th>Nama Panggilan</th>
+              <td>Dzikri</td>
+            </tr>
+            <tr>
+              <th>TTL</th>
+              <td>Pasuruan, 11 Mei 2001</td>
+            </tr>
+            <tr>
+              <th>Hobi</th>
+              <td>Olahraga</td>
+            </tr>
+            <tr>
+              <th>Pendidikan</th>
+              <td>SMA</td>
+            </tr>
+            <tr>
+              <th>Tahun Lulus</th>
+              <td>2019</td>
+            </tr>
+            <tr>
+              <th>Social Media</th>
+              <td><a href="https://www.facebook.com/dzikri.404" target="_blank">Facebook</a></td>
+            </tr>
+          </table>
+        </aside>
+      </main>
+    <footer>Muhammad Dzikri &#169; 2020</footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
