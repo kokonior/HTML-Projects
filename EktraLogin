@@ -86,6 +86,17 @@
   cursor: pointer;
 }
 
+.tombol {
+  background: #3b5999;
+  border-color: transparent;
+  color: #fff;
+  width: 30px;
+  margin: 1px ;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+
+}
  </style>
 </head>
 <body>
