@@ -1,0 +1,149 @@
+:root {
+	--timer-color: #887bd3;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #e7e7e7;
+
+	background: #3023ae;
+	background: -moz-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+	background: -webkit-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+	background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorsrt='#3023ae', endColor='#c86dd7');
+}
+
+button {
+	padding: 16px 32px;
+	font-size: 1em;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, .1);
+	color: #e7e7e7;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	opacity: 100%;
+	transition: opacity 0.6s;
+}
+
+button:hover {
+	opacity: 50%;
+	transition: opacity 0.6s;
+}
+
+.main {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.turns {
+	background-color: rgba(255, 255, 255, .2);
+	font-size: 1.5em;
+	padding: 12px 24px;
+	border-radius: 5px;
+}
+
+.time-container {
+	position: relative;
+}
+
+.time, .config, .config-tooltip-text  {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3.2em;
+}
+
+.config {
+	top: 80%;
+	display: inline-block;
+	font-size: 1.3em;
+	cursor: pointer;
+	opacity: 30%;
+	transition: opacity 0.6s;
+}
+
+.config-tooltip-text {
+	font-size: 0.6em;
+	font-weight: 600;
+	top: -7px;
+	opacity: 0%;
+	transition: opacity 0.6s;
+}
+
+.config:hover, .config:hover .config-tooltip-text {
+	opacity: 80%;
+	transition: opacity 0.6s;
+}
+
+.time-mode {
+	padding: 24px;
+	font-size: 1.5em;
+}
+
+.circle-container {
+	transform: rotate(-90deg);
+}
+
+.background-circle, .circle {
+	fill: none;
+}
+
+.background-circle {
+	stroke: rgba(255, 255, 255, .2);
+	stroke-width: 5;
+}
+
+.circle {
+	stroke: var(--timer-color);
+	stroke-width: 10;
+	stroke-dasharray: 597;
+	stroke-dashoffset: var(--dash-offset, 0);
+	transition: stroke-dashoffset 1s linear;
+}
+
+.dropdown-content {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.select-options > select {
+	background-color: var(--timer-color);
+	border: 1px solid rgba(255, 255, 255, .1);
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	opacity: 60%;
+	transition: opacity 0.6s;
+}
+
+.select-options > select:hover {
+	opacity: 100%;
+	transition: opacity 0.6s;
+}
+
+.config-message {
+	font-size: 0.6em;
+	font-weight: 600;
+	display: none;
+}
+
+.config-message > span {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.config-message > span > a {
+	color: tomato;
+}
