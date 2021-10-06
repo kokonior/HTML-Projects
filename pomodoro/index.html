@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pomodoro</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.compat.css"
+		integrity="sha512-5m1+8f8jC4ePfYvS39HmjqsYkkragJZaXV7kfreb5pytmTlDnZgXZ73JlYC0Ui25beVJMWLJq8AzDv4ZeXC9mg=="
+		crossorigin="anonymous" />
+	<script src="https://kit.fontawesome.com/c42ac314bc.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="main">
+		<div class="turns animated slideInDown">1/4</div>
+
+		<div class="time-container animated rotateIn">
+			<svg width="200" height="200" class="circle-container">
+				<circle class="background-circle" r="90" cx="100" cy="100" />
+				<circle class="circle" r="90" cx="100" cy="100" />
+			</svg>
+			<div class="time">00:00</div>
+			<div class="config">
+				<i class="fas fa-cog" data-toggle="collapse" data-target="#drop-content"></i>
+				<span class="config-tooltip-text">Configurar</span>
+			</div>
+		</div>
+
+		<div id="drop-content" class="collapse dropdown-content">
+			<div class="select-options">
+				<label for="work-time-options">Tempo:</label>
+				<select id="work-time-options" name="work-options" onchange="showResetMessage()">
+					<option value="25" selected>25 minutos</option>
+					<option value="35">35 minutos</option>
+					<option value="45">45 minutos</option>
+					<option value="55">55 minutos</option>
+				</select>
+				<label for="total-turns-options">Turnos:</label>
+				<select id="total-turns-options" name="qtde-turns" onchange="showResetMessage()">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4" selected>4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="config-message">
+				<span>
+					<a href="javascript:reset()">Reinicie</a> para aplicar as modificações
+				</span>
+			</div>
+		</div>
+
+		<div class="time-mode animated zoomIn">Trabalho</div>
+
+		<div>
+			<button class="timer-control animated slideInLeft">Iniciar</button>
+			<button class="reset-button animated slideInRight">Reiniciar</button>
+		</div>
+	</div>
+
+	<audio id="notification">
+		<source src="notification.mp3">
+	</audio>
+
+	<script src="scripts.js"></script>
+</body>
+
+</html>
