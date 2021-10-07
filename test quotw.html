@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <div class='container text-center'>
+        <h1>Random Quotes Rewritten</h1>
+        <p>These are some random quotes from <a href="https://forismatic.com/" target='_blank'>forismatic.com</a>. I hope you enjoy them!</p>
+        <button class='btn btn-success'>New Quote</button>
+        <a class='btn btn-primary' id='tweet' href='#' target='_blank' role='button'><i class="fa fa-twitter"></i> Tweet the Quote</a>
+        <p id='random_quote'></p>
+      </div>
+
+
+      <script type="text/javascript">
+        function randomQuote() {
+            $.ajax({
+                url: "https://api.forismatic.com/api/1.0/?",
+                dataType: "jsonp",
+                data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+                success: function( response ) {
+                    $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
+                    response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+                    $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
+                    ' (' + response.quoteAuthor + ')');
+                }
+            });
+            }
+
+
+            $("button").click(function(){
+            randomQuote();
+            });    
+     </script>
+</body>
+</html>
