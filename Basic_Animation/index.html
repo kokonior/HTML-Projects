@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<style>
+.demo {
+  background-color: hsl(207, 9%, 19%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.perspective-container {
+  perspective: 800px;
+}
+
+.card {
+  
+  background-size: cover;
+  box-shadow: 0 0 140px 10px rgba(0,0,0,.5);
+  position: relative;
+  height: 300px;
+  width: 500px;
+  
+  --sheenX: 0; /* Set these with JavaScript */
+  --sheenY: 0;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -400px;
+  right: -400px;
+  bottom: -400px;
+  left: -400px;
+  background: linear-gradient(217deg, rgba(255,255,255,0), rgba(255,255,255,0) 35%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,.25) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+  transform: translateX(var(--sheenX)) translateY(var(--sheenY));
+}
+
+</style>
+
+<body>
+    <div class="demo" id="demo1">
+        <h1 style="color: aliceblue;">Feel free to move cursor </h1>
+        <div class="perspective-container">
+          <div class="card" id="card1">
+            <iframe src="https://giphy.com/embed/7kn27lnYSAE9O" width="480" height="373" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/running-muppets-7kn27lnYSAE9O">via GIPHY</a></p>
+          </div>
+        </div>
+      </div>
+
+    
+<script>
+    document.onmousemove = function(event){
+        handleMouseMove(event);
+    } 
+    
+    function handleMouseMove(event) {
+  const height = window.innerHeight;
+  const width = window.innerWidth;
+  // Creates angles of (-20, -20) (left, bottom) and (20, 20) (right, top)
+  const yAxisDegree = event.pageX / width * 40 - 20;
+  const xAxisDegree = event.pageY / height * -1 * 40 + 20;
+  var cardDiv = document.getElementById('card1');
+  var scaleX ,scaleY;
+
+  if(xAxisDegree<1)scaleX=1;
+  else if(xAxisDegree>2)scaleX=2;
+  else scaleX = xAxisDegree;
+
+  if(yAxisDegree<1)scaleY=1;
+  else if(yAxisDegree>2)scaleY=2;
+  else scaleY = yAxisDegree;
+
+
+  cardDiv.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg) scale(${scaleX},${scaleY}) `;
+  //event.target.style.transform = `rotateY(${yAxisDegree}deg) rotateX(${xAxisDegree}deg) `;
+  // Set the sheen position
+  setSheenPosition(event.pageX / width, event.pageY / width);
+}
+
+function setSheenPosition(xRatio, yRatio) {
+  // This creates a "distance" up to 400px each direction to offset the sheen
+  const xOffset = 1 - (xRatio - 0.5) * 800;
+  const yOffset = 1 - (yRatio - 0.5) * 800;
+  var cardDiv = document.getElementById('card1');
+  cardDiv.style.setProperty('--sheenX', `${xOffset}px`)
+  cardDiv.style.setProperty('--sheenY', `${yOffset}px`)
+}
+
+</script>
+
+</body>
+</html>
