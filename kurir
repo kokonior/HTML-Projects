@@ -5,6 +5,7 @@
     </title>
     <link rel="stylesheet" href="style.css">
     <style>
+    form{line-height:2em} label, select,input{ margin-left: 5px; width: 120px; display: block; float: left; line-height: 15px } </style>
   </head>
   <body>
     <script type='text/javascript'>
