@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trying Peer Js</title>
+</head>
+
+<body>
+    <h4 id="text-peer-id">Your peer id is : </h4>
+
+    <div id="connection-display">
+        <h5 id="connected-user">Connect to : </h5> <input id="connect-to-user" type="text"> <button onclick="connectToUser()">connect</button>
+    </div>
+
+    <h5>Message : </h5>
+    <input id="input-text" type="input">
+    <button onclick="sendMessages()">send</button>
+
+    <div id="chat-room">
+
+    </div>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script>
+        var enemyPeer = null;
+        
+        function receiveMessage(params) {
+            var chatRoom = document.getElementById('chat-room').innerHTML += `<p>${params}</p>`
+        }
+        function onConnected(params) {
+            document.getElementById('connection-display').innerHTML = `connected to ${params}`
+        }
+        function setEnemy(params) {
+            enemyPeer = params;
+        }
+        function sendMessages() {
+            var inputUser = document.getElementById('input-text').value
+            document.getElementById('chat-room').innerHTML += `<p> You: ${inputUser}</p>`
+            enemyPeer.send(inputUser)
+        }
+        // peer section
+        var peer = new Peer();
+        peer.on('open', function (id) {
+            console.log('My peer ID is: ' + id);
+            document.getElementById('text-peer-id').innerHTML += id
+        });
+        function connectToUser(params) {
+            var id = document.getElementById('connect-to-user').value
+            console.log('connecting to',id)
+            var tryConn = peer.connect(id)
+            tryConn.on('open',function (conn) {
+                onConnected(id);
+                setEnemy(tryConn)
+                tryConn.on('data', function (data) {
+                receiveMessage(data);
+            })
+            })
+            
+        }
+        peer.on('connection', function (conn) {
+            onConnected(conn.peer)
+            setEnemy(conn)
+            conn.on('data', function (data) {
+                receiveMessage(data);
+            })
+        })
+    </script>
+</body>
+
+</html>
