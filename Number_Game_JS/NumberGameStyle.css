@@ -1,0 +1,126 @@
+html {
+   font-size: 10px;
+   font-weight: 300;
+ }
+ 
+ body {
+   width: 90vw;
+   margin: 20px;
+   background: radial-gradient(#706060, #fd0505);
+ }
+ 
+ main {
+   text-align: center;
+   background: radial-gradient(#73c9eb,#001aff);
+   border: blur(50px) solid #88ff00;
+   filter:  drop-shadow(50px 50px 100px #ff00ff);
+   border-width: 0 8px 8px 8px;
+   min-height: 80vh;
+   border-radius: 8px 8px 3rem 3rem;
+   padding: 1rem;
+   color: #1f2933;
+   position: relative;
+   left: 25%;
+ }
+
+ 
+ 
+ h2 {
+   font-size: 2.2rem;
+   margin: 8rem 0;
+ }
+ 
+ p {
+   font-size: 1.8rem;
+ }
+ 
+ .button-wrapper {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ button {
+   border: none;
+   cursor: pointer;
+   background: #83e1d0;
+   padding: 2rem;
+   border-radius: 1rem 1rem 0 0;
+ }
+ 
+ button:last-child {
+   background: #ef5454;
+   border-radius: 0 0 1rem 1rem;
+ }
+ 
+ 
+ h3 {
+   font-size: 2rem;
+ }
+ 
+ input {
+   border: 5px solid rgb(250, 168, 168);
+   border-radius: 7px;
+   background: transparent;
+   margin: 2rem 0;
+   padding: 1rem 0;
+   width: 19rem;
+   text-align: center;
+   box-shadow: 0px 0px 65px 30px rgba(45,255,196,0.9);
+   animation: turnaround 10s ease infinite;
+ }
+
+ input:hover{
+   animation: none;
+ }
+
+ @keyframes turnaround{
+  0%{transform: perspective(500px) rotateY(70deg) rotateZ(-10deg) rotateX(30deg)}
+  33%{transform: perspective(500px) rotateY(20deg) rotateZ(-10deg) rotateX(-30deg)}
+  67%{transform: perspective(0) rotateY(0deg) rotateZ(0deg) rotateX(0deg)}
+  100%{transform: perspective(500px) rotateY(70deg) rotateZ(-10deg) rotateX(30deg)}
+ } 
+
+ #range {
+   display: flex;
+   background: #83e18b;
+   height: 50px;
+   padding: 0;
+   font-weight: 800;
+   margin: 0 0 4rem 0;
+ }
+ 
+ #rangeOutput {
+   font-size: 1.6rem;
+ }
+ 
+ .stats {
+   text-align: left;
+ }
+ 
+ .info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .info span {
+   font-size: 1.6rem;
+ }
+ 
+ #newGameButton {
+   border-radius: 0;
+ }
+ 
+ @media (min-width: 800px) {
+   body {
+     width: 60vw;
+   }
+  
+ }
+ @media (max-width:800px){
+   main{
+     position: relative;
+     left: 0px;
+   }
+ }
+

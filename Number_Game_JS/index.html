@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="NumberGameStyle.css" />
+    <title>Number Game | @its_shyam640</title>
+  </head>
+  <body onload="init()">
+    <main>
+      <div id="welcomeScreen">
+        <h2>Guess the random number <br />between 1-100</h2>
+        <section>
+          <p>Select difficulty setting:</p>
+
+          <div class="button-wrapper">
+            <button onclick="easyMode()">
+              Easy: 10 attempts
+            </button>
+            <button onclick="hardMode()">
+              Hard: 5 attempts
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <div id="gameArea">
+        <button id="newGameButton" onclick="newGame()">NEW GAME</button>
+        <section>
+          <h3 id="textOutput">Write Your Guess in Below box:</h3>
+          <input
+            type="number"
+            id="inputBox"
+            min="1"
+            max="100"
+            onchange="compareGuess()"
+          />
+        </section>
+
+        <section>
+          <p>Current range:</p>
+          <span id="rangeOutput"> 1 - 100 </span>
+          <div id="range">
+            <span id="low"></span>
+            <span id="space"></span>
+            <span id="high"></span>
+          </div>
+        </section>
+
+        <section class="stats">
+          <div class="info">
+            <p>Number of previous attempts:</p>
+            <span id="attempts">0</span>
+          </div>
+          <div class="info">
+            <p>Your previous guesses:</p>
+            <span id="guesses">-</span>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="NumberGame.js"></script>
+  </body>
+</html>
