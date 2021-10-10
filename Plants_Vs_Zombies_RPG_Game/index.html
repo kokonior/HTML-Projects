@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RPG Game</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--Header-->
+    <div class="row">
+        <div class="row text-center col-md-12">
+            <h1 class="text-center"><img id="reset" src="assets/images/title.png"></h1>
+        </div>
+    </div>
+    <!--Main Content-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="characterGroup">
+                    <h2><strong>Click on a character</strong></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 player">
+                <h2><strong>Your Character</strong></h2>
+            </div>
+
+            <div class="col-md-6 defender">
+                <h2><strong>Defender</strong></h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" id="fight">
+                <h2><strong>Fight!</strong></h2>
+                <button type="button" class="btn btn-primary btn-md atk">Attack</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="statements"></h2>
+                <!--<button type="button" class="btn btn-primary btn-md reset">Reset</button> -->
+            </div>
+        </div>
+        <script type="text/javascript " src="assets/javascript/game.js "></script>
+</body>
+
+</html>
