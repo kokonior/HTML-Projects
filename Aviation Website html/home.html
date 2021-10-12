@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- SEARCH-->
+        <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Ncc Aviation Community</title>
+
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myDIV *").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+            </script>
+    </head>
+    <body>
+        <!--NAV BAR-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Aviation</a>
+                 <!--SEARCH BAR-->
+                 <div class="wrap">
+                    <div class="search">
+                       <input id = "myInput" type="text" class="searchTerm" placeholder="What are you looking for?">
+                       <button type="submit" class="searchButton">
+                         <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                 </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="home.html" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="faq.html" class="nav__link">FAQ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="members.html" class="nav__link">Members</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="community.html" class="nav__link">Community</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="latestplacestofly.html" class="nav__link">Latest Places to Fly</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="trainingonline.html" class="nav__link">Training Online</a>
+
+                        </li>
+                        <li class="nav__item">
+                            <a href="review.html" class="nav__link">Review</a>
+                        </li>
+                    </ul>
+
+                    
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+               
+        </nav>
+        
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+                <img src="https://images.unsplash.com/photo-1490043312819-28207692b051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">NCC Aviation Community</span>
+                        <h1 class="home__data-title">Bringing <br> Communities <b>Closer <br> Together</b></h1>
+                        <a href="#" class="button">More Info</a>
+
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+
+                    
+                    </div>
+                
+            
+
+            <!--==================== ABOUT ====================-->
+        <div id="myDIV">
+            <section class="FAQ" id="faq">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">About our <br> Little Community</h2>
+                        <p class="about__description">We have been brininging NCC Aviation Communities Closer for 15 years, We provide business-critical information, predictive intelligence and connections with opportunities and people. That’s how the Aviation Week Network helps you make decisions and build your business.
+
+ 
+
+                            Delivering award-winning journalism, deep data and analytics, world-class events, and content-driven marketing services, our core principle is helping our customers succeed by enabling them to Know, Predict and Connect.
+                        </p>
+                        <a href="#"    onclick="location.href = 'community.html'"        class="button">More Info</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="https://images.unsplash.com/photo-1552773346-ca6976a5d4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80" alt="" class="about__img-one" >
+                            <p>Control Deck</p>
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="https://images.unsplash.com/photo-1612187861438-d6df19967ec3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="about__img-two">
+                      <p>Plane flying</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+           
+
+           
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Video Tour</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Find out more with our video of the most beautiful and 
+                        pleasant places for you and your family.
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file" >
+                            <source src="assets/video/video.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place">
+                <h2 class="section__title">Latest News</h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place.jpeg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">1</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hydrogen Planes</h3>
+                                <span class="place__subtitle">Electric propulsion and new regulations: Aviation is changing</span>
+                                <span class="place__author">Anmar Frangoul </span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place2.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">2</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Emirates</h3>
+                                <span class="place__subtitle">The way for global aviation?</span>
+                                <span class="place__author">Simon Calder</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place3.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">3</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Alaska</h3>
+                                <span class="place__subtitle">Boeing Partners With Alaska Airlines For Latest ecoDemonstrator</span>
+                                <span class="place__author">Tom Boon</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place4.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Whitehaven</h3>
+                                <span class="place__subtitle">Australia</span>
+                                <span class="place__author">$2499</span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span class="place__author">$1999</span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                        <p class="subscribe__description">Subscribe to our newsletter and get a 
+                            special 30% discount.
+                        </p>
+    
+                        <form action="sub" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+    
+                            <button class="button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== SPONSORS ====================-->
+            <section class="sponsor section">
+                <div class="h2sponsor">
+                    <h2>Socials</h2>
+                </div>     
+                <div class="sponsor__container container grid">
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors5.png" alt="" class="sponsor__img">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Aviation Community</h3>
+                        <p class="footer__description">Bringing <br> Communities, 
+                            Closer <br> Together.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>  
+                    </div>
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">FAQ</h3>
+                    </div>
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Members</h3>
+                    </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Community</h3>  
+                </div>
+            <div class="footer__data">
+                <h3 class="footer__subtitle">Latest Places To Fly</h3>   
+        </div>
+        <div class="footer__data">
+            <h3 class="footer__subtitle">Training Online</h3>         
+    </div>
+    <div class="footer__data">
+        <h3 class="footer__subtitle">Review</h3> 
+</div>
+ <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2021 Tamara Harris. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+
+
+    
+       
+        
+    </body>
+</html>
