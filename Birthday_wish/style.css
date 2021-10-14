@@ -1,0 +1,19 @@
+*{
+    margin:0%;
+}
+body{
+    background-image: url('https://images.pexels.com/photos/433527/pexels-photo-433527.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.birthday{
+    margin: 20%;
+    padding: 10px;
+    color:black;
+    text-align: center;
+    vertical-align:middle;
+    backdrop-filter: blur(10px) ;
+    border-radius: 35px;
+    border-color: rgb(80, 33, 43);
+    border-style: double;
+}
