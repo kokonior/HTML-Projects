@@ -1,0 +1,16 @@
+.dino {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px; /* putting the dino on the ground*/
+  }
+  
+  .obstacle {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+  }
+  
