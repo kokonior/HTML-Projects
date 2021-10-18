@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #10afcbb9;
+}
+main{
+    background-color: #10afcb;
+    position: relative;
+    width: 60vw;
+    height: 75vh;
+    overflow: hidden;
+    position: absolute;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3vh;
+    box-shadow:10px 10px 100px #1d233d44, -10px -10px 100px #1d233d;
+}
+.bg{
+    overflow:visible;
+}
+.bg h1{
+    font-family: 'Rampart One', cursive;
+    font-size: 50px;
+    text-shadow: 2px 1px white;
+    color: #1D233D;
+    padding: 0;
+    margin: 0;
+    transform: rotate(-10deg);
+    position: absolute;
+    top: -200px;
+    left: -100px;
+    right: -100px;
+    height: 200vh;
+    padding: 0;
+    cursor: none;
+}
+h2, p{
+    background-color: #10afcb;
+    color: rgb(13, 44, 71);
+    text-shadow: 2px 2px #ffffff;
+    font-size: 4vw;
+    font-family: 'Share Tech Mono', monospace;
+    width: 100%;
+}
+p{
+    position: absolute;
+    top:0px ;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-bottom: 5px solid #1d233d;
+    font-weight: 500;
+}
+h2{
+    border-top: 5px solid #1d233d;
+    position: absolute;
+    font-size: 2.8vw;
+    bottom: 0px ;
+    padding: 5px 0;
+    
+}
