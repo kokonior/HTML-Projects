@@ -1,19 +1,29 @@
-*{
-    margin:0%;
-}
-body{
-    background-image: url('https://images.pexels.com/photos/433527/pexels-photo-433527.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-    background-repeat:no-repeat;
-    background-size:cover;
-}
-.birthday{
-    margin: 20%;
-    padding: 10px;
-    color:black;
-    text-align: center;
-    vertical-align:middle;
-    backdrop-filter: blur(10px) ;
-    border-radius: 35px;
-    border-color: rgb(80, 33, 43);
-    border-style: double;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday wish</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<style>
+  body {
+   background-color: lightblue;
+  }
+</style>
+    <div class="birthday">
+        <font color="red"><center><h1>Happy Birthday!</h1></center></font>
+        <hr>
+        <br>
+        <h2>May all your dreams come true and you achieve success in your life.</h2>
+        <h2>You have grown one more year. Do something that mark your worth in this world</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+     <br>
+    <marquee> <B></h3>HAPPY BIRTHDAY TO YOU </h3></B></marquee>
+</body>
+</html>
