@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The address element</h1>
+
+<address>
+Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+Visit us at:<br>
+Example.com<br>
+Ciparay jaya, Bogor<br>
+INDONESIA
+</address>
+
+</body>
+</html>
