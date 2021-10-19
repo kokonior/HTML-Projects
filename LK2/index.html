@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="style.css">
+     <script src="java.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="section">
+      <div id="formx">
+        <h1>Form Sederhana</h1>
+        <p>Form Latihan</p>
+      <form id="latihan"  method="post"  onsubmit="return validateForm(this);">
+        <p>NIM <sup>*</sup><br>
+        <input type="text"  name="nim" required><br>
+        <p id="alertnim"></p>
+        <p>Nama <sup>*</sup><br>
+        <input type="text"  name="nama" maxlength="50" required>
+        <p>Alamat <sup>*</sup><br>
+        <textarea name="alamat"></textarea >
+          <p>Email <sup>*</sup><br>
+          <input type="email"  name="email" required><br><br>
+          <input type="submit" value="Submit" class="tombol">
+      </form>
+      </div>
+      <div id="hasil">
+        <table title="Data Mahasiswa">
+          <tr><th>Data Mahasiswa</th></tr>
+          <tr>
+            <td>NIM</td><td>:</td><td id="nim"></td>
+          </tr>
+          <tr>
+            <td>Nama</td><td>:</td><td id="nama"></td>
+          </tr>
+          <tr>
+            <td>Alamat</td><td>:</td><td id="alamat"></td>
+          </tr>
+          <tr>
+            <td>Email</td><td>:</td><td id="email"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="footer">
+      <img src="http://hmj.informatics.uii.ac.id/wp-content/uploads/2018/05/hmtf_logo.png" width="50px" height="50px">
+       <img src="https://www.uii.ac.id/wp-content/uploads/2017/04/Logo-UII-Asli.png" width="70px" height="50px">
+       <p>Design By Informatics</p>
+       <p>000000</p>
+    </div>
+  </body>
+</html>
