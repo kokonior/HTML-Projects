@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The time element</h1>
+
+<p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+
+<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+<p><b>Note:</b> The time element does not render as anything special in any of the major browsers.</p>
+
+</body>
+</html>
