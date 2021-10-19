@@ -1,15 +1,15 @@
 <html>
 <head>
- <title>Cara Membuat Form Login Sederhana Tapi Berkelas</title>
+ <title>Login Page</title>
  <style>
  
  body {
-  background: #456;
-  font-family: 'Open Sans', sans-serif;
+  background: #cc66ff;
+  font-family: 'Times New Roman', Arial ;
 }
  
  .login {
-  width: 350px;
+  width: 355px;
   margin: 16px auto;
   font-size: 16px;
 
@@ -124,5 +124,6 @@
 
         </form>
 </div>
+<marquee>PLEASE LOGIN WITH YOUR ACCOUNT</marquee>
 </body>
 </html>
