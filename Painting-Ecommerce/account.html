@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Account | PaintArena</title>
+</head>
+<body>
+    <!-- Navigation Menu  -->
+    <div class="account-page">
+        <div class="container">
+            <div class="navbar">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" width="125px" class="logo-img"></a>
+				</div>
+				<nav>
+					<ul id="menuItems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="account.html">Account</a></li>
+					</ul>
+				</nav>
+				<a href="cart.html"><img src="images/cart.png" height="30px" width="30px"></a>
+				<img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+			</div>
+        </div>
+
+        <!-- account page  -->
+    
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/main-2.png" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="signup()">Register</span>
+                                <hr id="indicator">
+                            </div>
+                            <form id="loginForm">
+                                <input type="text" name="" id="" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Login</button>
+                                <a href="">Forget Password</a>
+                            </form>
+
+                            <form id="signUpForm">
+                                <input type="text" name="" id="" placeholder="Username">
+                                <input type="email" name="" id="" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Register</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- Footer Starts -->
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p class="foo-p">Download app for Android and IOS smartphones</p>
+					<div class="app-logo">
+						<img src="images/play-store.png" >
+						<img src="images/app-store.png" >
+					</div>
+				</div>
+
+				<div class="footer-col-2">
+					<img src="images/logo-white.png" alt="" class="logo-img">
+					<p class="foo-p">Our purpose is to make unquie arts accesible to many.</p>
+				</div>
+
+				<div class="footer-col-3">
+					<h3>Useful Links</h3>
+					<ul>
+						<li><a href="">Coupons</a></li>
+						<li><a href="">Blog Posts</a></li>
+						<li><a href="">Join Us</a></li>
+						<li><a href="">Return Policy</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col-4">
+					<h3>Follow Us</h3>
+					<ul>
+						<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copy">Copyright &copy; 2021 Gaurav Shukla</p>
+		</div>
+	</div>
+
+	<!-- JavaScript for menu toggle  -->
+	<script>
+		let menuItems = document.getElementById('menuItems');
+		menuItems.style.maxHeight="0px";
+
+		function menuToggle(){
+			if(menuItems.style.maxHeight=="0px"){
+				menuItems.style.maxHeight="200px";
+			}
+			else{
+				menuItems.style.maxHeight="0px"
+			}
+        };
+        // Js for form 
+        let loginForm = document.getElementById('loginForm');
+        let signupForm = document.getElementById('signUpForm');
+        let indicator = document.getElementById('indicator');
+
+        function signup(){
+            signupForm.style.transform = "translateX(0px)";
+            loginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        };
+        function login(){
+            signupForm.style.transform = "translateX(300px)";
+            loginForm.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        };
+
+	</script>
+</body>
+</html>

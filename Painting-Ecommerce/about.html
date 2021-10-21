@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>About | PaintArena</title>
+</head>
+<body>
+    <!-- Navigation Menu  -->
+    <div class="account-page">
+        <div class="container">
+            <div class="navbar">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" width="125px" class="logo-img"></a>
+				</div>
+				<nav>
+					<ul id="menuItems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="account.html">Account</a></li>
+					</ul>
+				</nav>
+				<a href="cart.html"><img src="images/cart.png" height="30px" width="30px"></a>
+				<img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+			</div>
+        </div>
+
+        <!-- account page  -->
+    
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 about-us">
+                        <h2>Who are we</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores possimus quisquam 
+                        distinctio incidunt perspiciatis officia similique. Facere sequi eius totam recusandae, 
+                        sed accusamus molestiae quasi sapiente harum? Nostrum voluptatibus beatae cupiditate! Nihil
+                        sapiente laboriosam perspiciatis possimus exercitationem quasi dolorum eaque, reiciendis ea. 
+                        Autem nihil nisi ut minima corrupti, repellat id consectetur itaque inventore iste reiciendis
+                        neque deleniti fugiat fugit eaque delectus laudantium maxime placeat voluptatem odit molestiae
+                        harum. Nemo, maxime delectus! Aliquam earum rerum sapiente, recusandae ducimus laborum 
+                        quae perferendis aperiam molestiae? Dolores earum veniam mollitia eius deleniti corporis
+                        minus possimus, provident doloribus fugit, fuga tenetur dolor recusandae odit esse! Minus
+                        deleniti alias dolores accusamus cumque sint ipsa tenetur saepe? Minus adipisci hic aliquam
+                        voluptatum voluptatem? Mollitia minus quasi, labore nulla cumque voluptatem nostrum reprehenderit
+                        deleniti architecto harum. Aut, eligendi ullam fuga nihil sequi sed, eveniet dolore quisquam maxime 
+                        culpa eaque voluptatibus minima expedita dolor? Adipisci earum assumenda doloribus in eaque nesciunt.</p>
+                        <a href="products.html" class="btn">Explore Products &#10141;</a>
+					</div>
+
+					<div class="col-2">
+                        <img src="images/about.png" width="100%">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- Footer Starts -->
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p class="foo-p">Download app for Android and IOS smartphones</p>
+					<div class="app-logo">
+						<img src="images/play-store.png" >
+						<img src="images/app-store.png" >
+					</div>
+				</div>
+
+				<div class="footer-col-2">
+					<img src="images/logo-white.png" alt="" class="logo-img">
+					<p class="foo-p">Our purpose is to make unquie arts accesible to many.</p>
+				</div>
+
+				<div class="footer-col-3">
+					<h3>Useful Links</h3>
+					<ul>
+						<li><a href="">Coupons</a></li>
+						<li><a href="">Blog Posts</a></li>
+						<li><a href="">Join Us</a></li>
+						<li><a href="">Return Policy</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col-4">
+					<h3>Follow Us</h3>
+					<ul>
+						<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copy">Copyright &copy; 2021 Gaurav Shukla</p>
+		</div>
+	</div>
+
+	<!-- JavaScript for menu toggle  -->
+	<script>
+		let menuItems = document.getElementById('menuItems');
+		menuItems.style.maxHeight="0px";
+
+		function menuToggle(){
+			if(menuItems.style.maxHeight=="0px"){
+				menuItems.style.maxHeight="200px";
+			}
+			else{
+				menuItems.style.maxHeight="0px"
+			}
+        };
+        
+	</script>
+</body>
+</html>

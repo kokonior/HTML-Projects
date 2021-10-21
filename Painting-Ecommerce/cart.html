@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Cart | PaintArena</title>
+</head>
+<body>
+    <!-- Navigation Menu  -->
+    <div class="container">
+        <div class="navbar">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" width="125px" class="logo-img"></a>
+			</div>
+			<nav>
+				<ul id="menuItems">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="account.html">Account</a></li>
+				</ul>
+			</nav>
+			<a href="cart.html"><img src="images/cart.png" height="30px" width="30px"></a>
+			<img src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+		</div>
+    </div>
+<!-- Cart Items  -->
+<div class="small-container cart-area">
+	<table>
+		<tr>
+			<th>Product</th>
+			<th>Quantity</th>
+			<th>Subtotal</th>
+		</tr>
+		<tr>
+			<td>
+				<div class="cart-info">
+					<img src="images/buy-1.jpg" alt="">
+					<div>
+						<p>Women Illustration</p>
+						<small>₹ 2499.00</small>
+						<br>
+						<a href="">Remove</a>
+					</div>
+				</div>
+			</td>
+			<td><input type="number" value="1"></td>
+			<td>₹ 699.00</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="cart-info">
+					<img src="images/buy-2.jpg" alt="">
+					<div>
+						<p>Women Potrait Painting</p>
+						<small>₹ 2699.00</small>
+						<br>
+						<a href="">Remove</a>
+					</div>
+				</div>
+			</td>
+			<td><input type="number" value="1"></td>
+			<td>₹ 699.00</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="cart-info">
+					<img src="images/buy-3.jpg" alt="">
+					<div>
+						<p>Butterfly Water Color</p>
+						<small>₹ 1999.00</small>
+						<br>
+						<a href="">Remove</a>
+					</div>
+				</div>
+			</td>
+			<td><input type="number" value="1"></td>
+			<td>₹ 699.00</td>
+		</tr>
+	</table>
+	<div class="total-price">
+		<table>
+			<tr>
+				<td>Subtotal</td>
+				<td>₹ 7197.00</td>
+			</tr>
+			<tr>
+				<td>Tax+Shipping</td>
+				<td>₹ 1099.00</td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td>₹ 8296.00</td>
+			</tr>
+		</table>
+
+	</div>
+</div>
+	
+
+    <!-- Footer Starts -->
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p class="foo-p">Download app for Android and IOS smartphones</p>
+					<div class="app-logo">
+						<img src="images/play-store.png" >
+						<img src="images/app-store.png" >
+					</div>
+				</div>
+
+				<div class="footer-col-2">
+					<img src="images/logo-white.png" alt="" class="logo-img">
+					<p class="foo-p">Our purpose is to make unquie arts accesible to many.</p>
+				</div>
+
+				<div class="footer-col-3">
+					<h3>Useful Links</h3>
+					<ul>
+						<li><a href="">Coupons</a></li>
+						<li><a href="">Blog Posts</a></li>
+						<li><a href="">Join Us</a></li>
+						<li><a href="">Return Policy</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col-4">
+					<h3>Follow Us</h3>
+					<ul>
+						<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copy">Copyright &copy; 2021 Gaurav Shukla</p>
+		</div>
+	</div>
+
+	<!-- JavaScript for menu toggle  -->
+	<script>
+		let menuItems = document.getElementById('menuItems');
+		menuItems.style.maxHeight="0px";
+
+		function menuToggle(){
+			if(menuItems.style.maxHeight=="0px"){
+				menuItems.style.maxHeight="200px";
+			}
+			else{
+				menuItems.style.maxHeight="0px"
+			}
+        };
+        
+	</script>
+</body>
+</html>
