@@ -1,0 +1,67 @@
+body
+    {
+        margin-top: 20px;
+        padding: 0px;
+        background: url("bg1.jpg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        font-family: sans-serif;
+        background-color: rgba(255,255,255,0.9);
+    }
+
+h1
+    { 
+        color:white;
+        background-color:rgba(106,90,205,0.6);
+        padding:20px;
+        margin-top:0px;
+        margin-bottom:1%;
+        margin-left:20px;
+        margin-right:20px;
+        border-style:solid;
+        border-color:slateblue;
+    }
+        
+h2,h3,p
+    {
+        opacity:1;
+        color:rgb(0,0,0);
+            
+    }
+
+button[name='submit']
+    {
+        background-color: rgb(0,100,0);
+        border-style: solid;
+        border-radius:15px;
+        border-width: 3px;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+                
+    }
+    
+
+form
+    {
+        background-color:rgba(255,255,255,0.7); 
+        padding: 10px;
+        margin-left:20%;
+        margin-right:20%;
+        margin-top:30px;
+        margin-bottom:0px;
+        text-align:center;
+    }
+
+
+
+img
+    {
+        width: 200px;
+        height: 128px;
+        border-style:solid;
+        border-color:black;
+    }
