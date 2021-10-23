@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+    function display(val)
+    {
+        document.getElementById("textval").value+=val
+        document.getElementById("textval").innerHTML=document.getElementById("textval").value
+    }
+    
+    function calculate()
+    {
+        
+        x = document.getElementById("textval").value
+        y = eval(x)
+        document.getElementById("textval").value = String(y)
+        document.getElementById("textval").innerHTML=document.getElementById("textval").value
+    }
+    
+    </script>
+    <style>
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background-image: url("pic1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 99%;
+            height: 85%;
+        }
+        .container{
+            background-color: rgb(184, 51, 51,0.6);
+            height: 65%;
+            width: 200px;
+            margin: auto;
+            margin-top: 120px;
+            border: 2px solid black;
+            border-radius: 10px;
+            
+        }
+        #input{
+            height: 125px;
+            
+        }
+        #key{
+            height: 295px;
+            
+        }
+        .row1{
+            height: 54px;
+        }
+
+        .but{
+            font-size: 50;
+            font-weight: bolder;
+
+        }
+        input[type="text"]
+        {  
+            border-radius: 10px;
+            text-align: right;
+            font-size: 25px;
+            background-color:black;
+            color: white;
+            border-color: white;
+            width:100%
+           
+        }
+        
+        
+    </style>
+    <title>My Calculator</title>
+</head>
+<body>
+    <div class="container w-25 pt-2">
+        <div class="row m-1" id="input">
+            <input class="col-lg-12 col-md-12 rounded-lg" disabled="disabled" type="text" name="" id="textval">
+        </div>
+          
+          <div class="row m-1 mt-2" id="key">
+            <div class="col-md-12 col-lg-12 border border-dark bg-primary rounded-lg">
+                <div class="row m-1 mt-3">
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center  "><input class=" but btn-warning border border-danger pt-2 h-100 w-100" type="button" value="7" onclick="display('7')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class=" but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="8" onclick="display('8')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class=" but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="9" onclick="display('9')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class=" but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="+" onclick="display('+')"></div>
+                </div>
+                <div class="row m-1 mt-3">
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center  "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="4" onclick="display('4')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="5" onclick="display('5')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="6" onclick="display('6')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="-" onclick="display('-')"></div>
+                </div>
+                <div class="row m-1 mt-3">
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center  "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="1" onclick="display('1')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="2" onclick="display('2')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="3" onclick="display('3')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="*" onclick="display('*')"></div>
+                </div>
+                <div class="row m-1 mt-3">
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center  "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="0" onclick="display('0')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="." onclick="display('.')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-warning border border-danger pt-2 h-100 w-100 " type="button" value="/" onclick="display('/')"></div>
+                    <div class="row1 col-lg-3 col-md-3  bg-primary text-center "><input class="but btn-success border border-danger pt-2 h-100 w-100 " type="button" value="=" onclick="calculate()"></div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
