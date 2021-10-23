@@ -1,0 +1,28 @@
+<html><head>
+    <title>Image</title>
+</head>
+
+<body>
+    <img src="harrypotter.png" style="height: 250px; width: 250px; position: relative; left: 525px;" id="image"><br><br>
+    <button onclick="startMoving()">Start</button>
+    <button onclick="stopMoving()">Stop</button>
+    <script>
+        var i = 0;
+        var t;
+        function startMoving() {
+            t = setInterval(move, 200);
+        }
+        function move() {
+            document.getElementById("image").style.position = "relative";
+            document.getElementById("image").style.left = i + "px";
+            i = i + 5;
+        }
+        function stopMoving() {
+            clearInterval(t);
+        }
+    </script>
+
+
+
+<div id="weava-permanent-marker" date="1634973646811"></div><div id="weava-ui-wrapper"><div class="weava-drop-area-wrapper"><div class="weava-drop-area"></div>
+</div></div></body></html>
