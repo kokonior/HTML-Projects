@@ -16,4 +16,14 @@ body{
     border-radius: 35px;
     border-color: rgb(80, 33, 43);
     border-style: double;
+	
+}
+
+.birthday2{
+    text-shadow: 1px 2px;
+    font-size: 30px;
+}
+
+.birthday2:hover {
+    color:#ffddca;
 }
