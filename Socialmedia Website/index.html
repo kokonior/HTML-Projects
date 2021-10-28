@@ -1,0 +1,359 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendsLogy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ca2fa8aa7a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="./images/Untitled-0.png" class="logo">
+            <ul>
+                <li><img src="./images/notification.png"></li>
+                <li><img src="./images/inbox.png"></li>
+                <li><img src="./images/video.png"></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+
+            <div class="search-box">
+                <img src="./images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="./images/Aman.jpg">
+            </div>
+
+        </div>
+    
+
+    <!------------------------ Setting Menu ------------------------>
+
+    <div class="settings-menu">
+      
+        <div id="dark-btn">
+            <span></span>
+        </div>
+
+        <div class="settings-menu-inner">
+            <div class="user-profile">
+                <img src="./images/Aman.jpg" alt="">
+                <div>
+                    <p>Aman Kumawat</p>
+                    <a href="myprofile.html">See Your profile</a>
+                </div>
+            </div>
+            <hr>
+            <div class="user-profile">
+                <img src="./images/feedback.png" alt="">
+                <div>
+                    <p>Give Feedback</p>
+                    <a href="#">Help us to improve the new Design</a>
+                </div>
+            </div>
+            <hr>
+            <div class="setting-links">
+                <img src="./images/setting.png"  class="settings-icon">
+                <a href="#">Settings & Privacy <img src="./images/arrow.png" width="10px"></a>
+            </div>
+            <div class="setting-links">
+                <img src="./images/help.png"  class="settings-icon">
+                <a href="#">Help & Support<img src="./images/arrow.png" width="10px"></a>
+            </div>
+            <div class="setting-links">
+                <img src="./images/display.png"  class="settings-icon">
+                <a href="#">display & Accessibility<img src="./images/arrow.png" width="10px"></a>
+            </div>
+            <div class="setting-links">
+                <img src="./images/logout.png"  class="settings-icon">
+                <a href="#">Logout<img src="./images/arrow.png" width="10px"></a>
+            </div>
+
+        </div>
+    </div>
+
+</nav>
+
+    <div class="container">
+
+        <!-------------------- L E F T S I D E B A R -------------------->
+
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="latest-news.html"><img src="./images/news.png"> Latest News</a>
+                <a href="friends.html"><img src="./images/friends.png"> Friends</a>
+                <a href="group.html"><img src="./images/group.png"> Group</a>
+                <a href="marketplace.html"><img src="./images/marketplace.png"> Marketplace</a>
+                <a href="marketplace.html"><img src="./images/watch.png"> Watch</a>
+                <a href="marketplace.html">See More</a>
+            </div>
+            <div class="short-links">
+                <p>Your Shortcuts</p>
+                <a href="marketplace.html"><img src="./images/shortcut-1.png"> Web Developers</a>
+                <a href="marketplace.html"><img src="./images/shortcut-2.png"> Java Developers</a>
+                <a href="marketplace.html"><img src="./images/shortcut-3.png"> Full Stack Development</a>
+                <a href="marketplace.html"><img src="./images/shortcut-4.png"> Cyber Security</a>
+            </div>
+        </div>
+
+        <!--------------------- M A I N C O N T E N T ------------------->
+
+        <div class="main-content">
+            <div class="story-gallery">
+                <div class="story story1">
+                    <img src="./images/upload.png">
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <a href="Vinesh-status.html"><img src="./images/vinesh.jpg"></a>
+                    <p>Vinesh</p>
+                </div>
+                <div class="story story3">
+                    <a href="yash-status.html"><img src="./images/Yash Barfa 20210930_214314.jpg"></a>
+                    <p>Yash</p>
+                </div>
+                <div class="story story4">
+                    <a href="harshit-status.html"><img src="./images/Harshit pros1.jpg"></a>
+                    <p>Harshit</p>
+                </div>
+                <div class="story story5">
+                    <a href="wonder.html"><img src="./images/Wonder Woman🦸‍♀️ 20210930_224358.jpg"></a>
+                    <p>W. Woman</p>
+                </div>
+            </div>
+
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="./images/Aman.jpg" alt="">
+                    <div>
+                        <a href="myprofile.html"> <p>Aman Kumawat</p></a>
+                        <small>Public <i class="fas fa-caret-down"></i></small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="what's on your mind Aman?"></textarea>
+                    <div class="add-post-links">
+                        <a href="marketplace.html"><img src="./images/live-video.png">Live Video</a>
+                        <a href="marketplace.html"><img src="./images/photo.png">Photo/Vdeo</a>
+                        <a href="marketplace.html"><img src="./images/feeling.png">Feeling/Activity</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <a href="harsh-profile.html"><img src="./images/harsh.jpg" ></a>
+                        <div>
+                            <a href="harsh-profile.html" class="profile-visit"><p>Harsh Jat</p></a>
+                            <span>October 01 2021, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Missing those Goldendays of School life.....<a href="#">#FriendsLogy</a> <a
+                        href="#">#Schoolday</a></p>
+                <img src="./images/school.jpeg" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png"> 120</div>
+                        <div><img src="./images/comments.png"> 45</div>
+                        <div><img src="./images/share.png"> 13</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/harsh.jpg"> <i class="fas fa-caret-down"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/vinesh.jpg" alt="">
+                        <div>
+                            <a href="vinesh-profile.html"><p>Vinesh Yadav</p></a>
+                            <span>October 01 2021, 17:05 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Anything is possible when you have right people to support you.<a
+                        href="#">#FriendsLogy</a> <a href="#">#Friends</a></p>
+                <img src="./images/1633075869036.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png"> 206</div>
+                        <div><img src="./images/comments.png"> 58</div>
+                        <div><img src="./images/share.png"> 22</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/vinesh.jpg"> <i class="fas fa-caret-down"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/member-4.png" alt="">
+                        <div>
+                            <a href="marketplace.html"><p>Dushyant Sharma</p></a>
+                            <span>October 02 2021, 17:30 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Enjoying the day with friends.....<a href="#">#SocialBook</a> <a
+                        href="#">#Friends</a></p>
+                <img src="./images/schooldaus.jpg" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png"> 234</div>
+                        <div><img src="./images/comments.png"> 68</div>
+                        <div><img src="./images/share.png"> 42</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/member-4.png"> <i class="fas fa-caret-down"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="./images/Wonder Woman🦸‍♀️ 20210930_224358.jpg" alt="">
+                        <div>
+                            <a href="marketplace.html"><p>Wonder Woman</p></a>
+                            <span>October 01 2021, 17:05 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+
+                <p class="post-text">Anything is possible when you have right people to support you.<a
+                        href="#">#FriendsLogy</a> <a href="#">#Friends</a></p>
+                <img src="./images/feed-image-2.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="./images/like-blue.png"> 206</div>
+                        <div><img src="./images/comments.png"> 58</div>
+                        <div><img src="./images/share.png"> 22</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="./images/Wonder Woman🦸‍♀️ 20210930_224358.jpg"> <i class="fas fa-caret-down"></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="load-more-btn">Load More</button>
+
+
+
+        </div>
+
+        <!--------------------- R I G H T S I D E B A R ------------------>
+
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Events</h4>
+                <a href="#">See All</a>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>18</h3>
+                    <span>October</span>
+                </div>
+                <div class="right-event">
+                    <h4>Social Media</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> New Palacia, Indore</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>23</h3>
+                    <span>October</span>
+                </div>
+                <div class="right-event">
+                    <h4>Affiliate Marketing</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>New Palacia, Indore</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="./images/advertisement.png" class="sidebar-ads">
+            <div class="sidebar-title">
+                <h4>Conversation</h4>
+                <a href="#">Hide Chat</a>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/vinesh.jpg">
+                </div>
+                <p>Vinesh Yadav</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/Yash Barfa 20210930_214314.jpg">
+                </div>
+                <p>Yash Barfa</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/Harshit pros1.jpg">
+                </div>
+                <p>Harshit Panwar</p>
+            </div>
+
+        </div>
+    </div>
+
+ <!---------------------------JS for toggle menu------------------------>
+
+ <script>
+    var menuitems = document.getElementById("nav-left");
+    menuitems.style.maxHeight = "0px";
+    function menutoggle() {
+        if (menuitems.style.maxHeight == "0px")
+        {
+            menuitems.style.maxHeight = "200px";
+        }
+          else
+        {
+            menuitems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<!------------------- F O O T E R ------------------->
+    <div class="footer">
+        <p>Copyright 2021 - Am@n Kumawat</p>
+    </div>
+
+<!------------------- J S ---------------------->
+<script src="script.js"></script>
+
+</body>
+</html>

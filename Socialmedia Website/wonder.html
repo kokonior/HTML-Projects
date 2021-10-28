@@ -1,0 +1,208 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendsLogy-Status</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ca2fa8aa7a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .wstory img {
+  position: absolute;
+  width: 45px;
+  border-radius: 50%;
+ margin-left: 55px;
+ margin-top: 3px;
+  border: 5px solid #1876f2;
+}
+.wstory p {
+  position: absolute;
+  width: 100%;
+  margin-left: 115px;
+  margin-top: 20px;
+  color: #626262
+}
+.wstatus {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 400px;
+}
+</style>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="./images/Untitled-0.png" class="logo">
+            <ul>
+                <li><img src="./images/notification.png"></li>
+                <li><img src="./images/inbox.png"></li>
+                <li><img src="./images/video.png"></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+
+            <div class="search-box">
+                <img src="./images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="./images/Aman.jpg">
+            </div>
+
+        </div>
+    
+
+    <!------------------------ Setting Menu ------------------------>
+
+    <div class="settings-menu">
+      
+        <div id="dark-btn">
+            <span></span>
+        </div>
+
+        <div class="settings-menu-inner">
+            <div class="user-profile">
+                <img src="./images/Aman.jpg" alt="">
+                <div>
+                    <p>Aman Kumawat</p>
+                    <a href="myprofile.html">See Your profile</a>
+                </div>
+            </div>
+            <hr>
+            <div class="user-profile">
+                <img src="./images/feedback.png" alt="">
+                <div>
+                    <p>Give Feedback</p>
+                    <a href="#">Help us to improve the new Design</a>
+                </div>
+            </div>
+            <hr>
+            <div class="setting-links">
+                <img src="./images/setting.png"  class="settings-icon">
+                <a href="#">Settings & Privacy <img src="./images/arrow.png" width="10px"></a>
+            </div>
+            <div class="setting-links">
+                <img src="./images/help.png"  class="settings-icon">
+                <a href="#">Help & Support<img src="./images/arrow.png" width="10px"></a>
+            </div>
+            <div class="setting-links">
+                <img src="./images/display.png"  class="settings-icon">
+                <a href="#">display & Accessibility<img src="./images/arrow.png" width="10px"></a>
+            </div>
+            <div class="setting-links">
+                <img src="./images/logout.png"  class="settings-icon">
+                <a href="#">Logout<img src="./images/arrow.png" width="10px"></a>
+            </div>
+
+        </div>
+    </div>
+
+</nav>
+
+    <div class="container">
+
+        <!-------------------- L E F T S I D E B A R -------------------->
+
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="latest-news.html"><img src="./images/news.png"> Latest News</a>
+                <a href="#"><img src="./images/friends.png"> Friends</a>
+                <a href="#"><img src="./images/group.png"> Group</a>
+                <a href="#"><img src="./images/marketplace.png"> Marketplace</a>
+                <a href="#"><img src="./images/watch.png"> Watch</a>
+                <a href="#">See More</a>
+            </div>
+            <div class="short-links">
+                <p>Your Shortcuts</p>
+                <a href="#"><img src="./images/shortcut-1.png"> Web Developers</a>
+                <a href="#"><img src="./images/shortcut-2.png"> Java Developers</a>
+                <a href="#"><img src="./images/shortcut-3.png"> Full Stack Development</a>
+                <a href="#"><img src="./images/shortcut-4.png"> Cyber Security</a>
+            </div>
+        </div>
+
+        <!--------------------- M A I N C O N T E N T ------------------->
+
+        <div class="main-content">
+            <div class="wstory">
+                <img src="./images/Wonder Woman🦸‍♀️ 20210930_224358.jpg">
+                <p><b>Wonder Woman</b></p>
+            </div>
+            <img src="./images/W status.jpg" class="wstatus">
+        </div>
+
+        <!--------------------- R I G H T S I D E B A R ------------------>
+
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Events</h4>
+                <a href="#">See All</a>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>18</h3>
+                    <span>October</span>
+                </div>
+                <div class="right-event">
+                    <h4>Social Media</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> New Palacia, Indore</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>23</h3>
+                    <span>October</span>
+                </div>
+                <div class="right-event">
+                    <h4>Affiliate Marketing</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>New Palacia, Indore</p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="./images/advertisement.png" class="sidebar-ads">
+            <div class="sidebar-title">
+                <h4>Conversation</h4>
+                <a href="#">Hide Chat</a>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/vinesh.jpg">
+                </div>
+                <p>Vinesh Yadav</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/Yash Barfa 20210930_214314.jpg">
+                </div>
+                <p>Yash Barfa</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="./images/Harshit pros1.jpg">
+                </div>
+                <p>Harshit Panwar</p>
+            </div>
+
+        </div>
+    </div>
+
+<!------------------- F O O T E R ------------------->
+    <div class="footer">
+        <p>Copyright 2021 - Am@n Kumawat</p>
+    </div>
+
+<!------------------- J S ---------------------->
+<script src="script.js"></script>
+
+</body>
+</html>
