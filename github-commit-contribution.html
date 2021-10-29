@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<style>
+			nav{
+				padding-top: 100px;
+				padding-bottom: 5px;
+				width: 1040px;
+				margin: auto;
+				display: flex;
+				justify-content: space-around;
+			}
+			nav span{
+				font-family: sans-serif;
+				font-size: 0.7em;
+				color: #777;
+			}
+			#stats{
+				margin: auto;
+				width: 1040px;
+
+			}
+			#stats p{
+				display: inline-block;
+				padding: 5px;
+				margin: 0.5px;
+			}
+			.co-0{ background: #EBEDF0; }
+			.co-1{ background: #C3E089; }
+			.co-2{ background: #79C56D; }
+			.co-3{ background: #239A3B; }
+			.co-4{ background: #196127; }
+		</style>
+	</head>
+	<body>
+		<nav>
+			<span>Jun</span>
+			<span>Jul</span>
+			<span>Aou</span>
+			<span>Sep</span>
+			<span>Oct</span>
+			<span>Nov</span>
+			<span>Dec</span>
+			<span>Jan</span>
+			<span>Fev</span>
+			<span>Mar</span>
+			<span>Avr</span>
+			<span>Mai</span>
+		</nav>
+		<section id="stats"></section>
+		<script>
+
+			function getRand(total, maxRand){
+			    let max = 0, tab = [];
+                for(let i = 0; i < total; i++){
+                    let rand = Math.floor(Math.random() * (maxRand + 1));
+                    rand = Math.floor(Math.random() * (rand + 1));
+                    tab.push(rand);
+					max = (rand > max)? rand : max;
+                }
+                return {max: max, tab: tab};
+			}
+
+			function getColor(max, number, total){
+			    let palier = Math.floor(max/total);
+			    if(number <= 0){ return 'co-0'; }
+			    if(number <= palier){ return 'co-1'; }
+				for(let i = 1; i <= total; i++){
+					let newPalier = palier*i;
+					if(number <= newPalier){ return `co-${i}`; }
+				}
+				return `co-${total}`;
+			}
+
+			let section = document.querySelector('#stats');
+			let stats = getRand(601, 10);
+			let html = '';
+
+			stats = stats.tab.map(jour => {
+			   let classe = getColor(stats.max, jour, 4);
+			   html += `<p class="${classe}"></p>`;
+			});
+
+			section.innerHTML = html;
+
+		</script>
+	</body>
+</html>
