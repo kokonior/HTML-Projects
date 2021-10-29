@@ -1,0 +1,70 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99%;
+    height: 85%;
+}
+
+.container{
+    margin-top: 55px;
+    background-image: url("Img_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0,0,0,0.4);
+    height: 739px;
+    overflow-x: hidden;
+    
+}
+
+.car{
+    height: 100px;
+    width: 250px;
+    
+    position: absolute;
+    bottom: 3%;
+    left: 30%;
+}
+
+.surface{
+    height: 140px;
+    width: 180%;
+    
+    background-image: url("Img_02.png");
+    background-repeat: repeat-x;
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    
+}
+
+@keyframes moveRight {
+    100%{
+        transform: translateX(-293px);
+    }
+    
+}
+@keyframes suspension {
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+
+.moveRight{
+    animation: moveRight 2s linear infinite;
+}
+.suspension{
+    animation: suspension 1s linear infinite;
+}
