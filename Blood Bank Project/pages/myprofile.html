@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCqCE5tUMkmCdbu-VdKYG0JjcHwXQgYZys",
+            authDomain: "blood-bank-app-7b607.firebaseapp.com",
+            databaseURL: "https://blood-bank-app-7b607-default-rtdb.firebaseio.com",
+            projectId: "blood-bank-app-7b607",
+            storageBucket: "blood-bank-app-7b607.appspot.com",
+            messagingSenderId: "241258421966",
+            appId: "1:241258421966:web:fd758539dc87080dd2ba9f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        #footer {
+            /* background-color: #9c1d1d; */
+            background-image: url("../images/home1.jpg");
+            padding: 10px;
+            font-family: cursive;
+            color: white;
+            text-align: center;
+            margin-top: 15%
+        }
+
+        ul,
+        nav li {
+            margin-right: 18px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .notification {
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            padding: 15px 26px;
+            width: 40%;
+            position: relative;
+            display: inline;
+            border-radius: 2px;
+        }
+
+        .notification:hover {
+            background: red;
+        }
+
+        .notification .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background-color: #555;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: rgba(255, 255, 255, 0.9);color:black">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="../images/logo.png" alt="">
+            </div>
+            <ul class="navbar-nav mr-auto" style="color: black;margin-left: 25%">
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em;" href="index.html">Home</a></li>
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" href="donor.html">Donors</a>
+                </li>
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" href="myprofile.html">My Profile</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" href="#"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<span id="user"></span> </a></li>
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" onclick="logout()" href="#"><span
+                            class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br><br>
+    <div>
+        <div class="card" id="profileCard" style="padding: 10px;">
+            <h1 id="name"></h1>
+            <p class="title" id="email"></p>
+            <p id="address"></p>
+            <p id="number"></p>
+             <a href="#" class="notification" id="inbox" style="background: red;margin: auto;margin-bottom: 5%;">
+                <span>Message</span>
+                <!-- <span class="badge" id="totalMessages">0</span> -->
+            </a>
+            <a href="#" class="notification" id="notification" style="background: #007bff;margin: auto">
+                <span>Notifications</span>
+                <!-- <span class="badge" id="totalNotification">0</span> -->
+            </a>
+            <br> 
+            <!-- <p><button id="edit">Edit Profile</button></p> -->
+
+        </div>
+    </div>
+
+    <div id="main"></div>
+
+    <br />
+    <div id="footer">
+        IAD Project (UBIT) - Blood Bank Application [Umar, Hunain, Naveera]
+    </div>
+</body>
+<script>
+
+    let database = firebase.database().ref("/");
+
+    let user = JSON.parse(localStorage.getItem("Current_User"));
+    console.log(user.id);
+
+
+    document.getElementById("user").innerHTML = user.email.slice(0, -10);
+    database.child(`Users/${user.id}`).on("value", result => {
+        let value = result.val();
+        value.id = result.key;
+        console.log(value);
+        document.getElementById("name").innerHTML = value.name;
+        document.getElementById("email").innerHTML = value.email;
+        document.getElementById("number").innerHTML = value.number;
+        document.getElementById("address").innerHTML = value.address;
+
+    })
+    // document.getElementById("edit").addEventListener("click", () => {
+    //     window.open("edit.html", "Edit", "width:500px")
+    // })
+
+
+    document.getElementById(`inbox`).addEventListener("click", () => {
+        database.child(`Donors/${user.id}/Message`).on("child_added", mes => {
+            let txt = mes.val();
+            console.log(txt);
+
+            if (txt) {
+                //let num = 0;
+                //document.getElementById("totalMessages").innerHTML = ++num;
+
+                document.getElementById(`profileCard`).style.display = "none"
+                let messageNotifac = document.getElementById(`main`)
+
+                let Div = document.createElement(`div`)
+                Div.setAttribute(`class`, `card`)
+
+                messageNotifac.appendChild(Div)
+
+                let message = document.createElement(`h1`)
+                let text = document.createTextNode(txt.message)
+                message.appendChild(text);
+
+                let br = document.createElement("br");
+                message.appendChild(br);
+
+                let btn = document.createElement(`input`)
+                btn.setAttribute(`type`, `button`)
+                btn.setAttribute(`class`, `btn-danger`)
+                btn.setAttribute(`value`, `Ok Done`);
+                message.appendChild(btn);
+
+                btn.addEventListener("click", () => {
+                    document.getElementById(`profileCard`).style.display = "block";
+                    document.getElementById(`main`).style.display = `none`;
+                })
+
+                Div.appendChild(message);
+            }
+        })
+    })
+
+
+    document.getElementById(`notification`).addEventListener(`click`, function () {
+        //my addition
+        //let num2 = 0;
+        //document.getElementById("totalNotification").innerHTML = ++num2
+
+        document.getElementById(`profileCard`).style.display = "none";
+        database.child(`Donors/${user.id}/requests`).on(`child_added`, notif => {
+            let notification = notif.val();
+            console.log(notification)
+
+
+            let messageNotifac = document.getElementById(`main`)
+
+            let Div = document.createElement(`div`)
+            Div.setAttribute(`class`, `card`)
+
+            messageNotifac.appendChild(Div)
+
+            let name = document.createElement(`h1`)
+            let text = document.createTextNode(notification.name)
+            name.appendChild(text)
+
+            Div.appendChild(name)
+
+            let city = document.createElement(`span`)
+            city.setAttribute(`class`, `price`)
+            let text2 = document.createTextNode(notification.city)
+            city.appendChild(text2)
+
+            Div.appendChild(city)
+
+            let number = document.createElement(`p`)
+            number.setAttribute(`class`, `price`)
+            let text3 = document.createTextNode(notification.number)
+            number.appendChild(text3)
+
+            Div.appendChild(number)
+
+            let span = document.createElement(`span`)
+            let text4 = document.createTextNode(notification.message)
+            span.appendChild(text4)
+            Div.appendChild(span)
+
+            let br = document.createElement(`br`)
+            Div.appendChild(br)
+
+
+            let acceptBtn = document.createElement(`input`)
+            acceptBtn.setAttribute(`type`, `button`)
+            acceptBtn.setAttribute(`class`, `btn-success`)
+            acceptBtn.setAttribute(`value`, `Accept`)
+            acceptBtn.setAttribute(`id`, notif.key)
+            Div.appendChild(acceptBtn)
+
+
+            let declineBtn = document.createElement(`input`)
+            declineBtn.setAttribute(`type`, `button`)
+            declineBtn.setAttribute(`class`, `btn-danger`)
+            declineBtn.setAttribute(`value`, `Decline`)
+            declineBtn.setAttribute(`id`, notif.key)
+
+            Div.appendChild(declineBtn)
+
+
+            acceptBtn.addEventListener(`click`, function () {
+                let messageObj = {
+                    message: `Your Request is Accepted From ${user.name}`,
+                    acepterId: user.id,
+                }
+                database.child(`Donors/${notification.recieverId}/Message`).push(messageObj)
+                database.child(`Donors/${user.id}/requests/`).remove();
+
+                document.getElementById(`main`).style.display = `none`;
+                document.getElementById(`profileCard`).style.display = "block";
+
+
+                alert(`Request Accepted`)
+            })
+
+            declineBtn.addEventListener(`click`, function () {
+                alert(`Request Rejected`)
+                let messageObj1 = {
+                    message: `Your Request is Rejected From ${user.name}`,
+                    acepterId: user.id
+                }
+                database.child(`Donors/${notification.recieverId}/Message`).push(messageObj1)
+                console.log(`1==>`, this.id)
+
+                database.child(`Donors/${user.id}/requests/${this.id}/`).remove();
+                this.parentNode.style.display = `none`;
+                document.getElementById(`profileCard`).style.display = "block"
+
+
+
+            })
+
+
+        })
+
+
+
+
+    })
+
+
+
+
+
+    var logout = () => {
+        firebase.auth().signOut().then(res => {
+            console.log(res);
+            window.location.href = "login.html";
+            localStorage.removeItem("Current_User");
+        }).catch(error => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage)
+        })
+    }
+</script>
+
+</html>

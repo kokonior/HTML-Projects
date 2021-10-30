@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCqCE5tUMkmCdbu-VdKYG0JjcHwXQgYZys",
+            authDomain: "blood-bank-app-7b607.firebaseapp.com",
+            databaseURL: "https://blood-bank-app-7b607-default-rtdb.firebaseio.com",
+            projectId: "blood-bank-app-7b607",
+            storageBucket: "blood-bank-app-7b607.appspot.com",
+            messagingSenderId: "241258421966",
+            appId: "1:241258421966:web:fd758539dc87080dd2ba9f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        #footer {
+            /* background-color: #9c1d1d; */
+            background-image: url("../images/home1.jpg");
+            padding: 10px;
+            font-family: cursive;
+            color: white;
+            text-align: center;
+            margin-top: 40%
+        }
+        #main{
+            display: flex;
+        }
+
+        ul,
+        nav li {
+            margin-right: 18px;
+        }
+
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 4px;
+            text-align: center;
+            background: #f7f9f8;
+            margin-left: 30px;
+            line-height: 1px;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .card img {
+            width: 150px;
+            border-radius: 5px
+        }
+
+        .button {
+            position: relative;
+            background-color: #f0575f;
+            border: none;
+            font-size: 18px;
+            color: #FFFFFF;
+            padding: 7%;
+            border-radius: 5px;
+            width: 45%;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            margin-left: 10px
+        }
+
+        .button:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: rgba(255, 255, 255, 0.9);color:black">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="../images/logo.png" alt="">
+            </div>
+            <ul class="navbar-nav mr-auto" style="color: black;margin-left: 25%">
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em;" href="index.html">Home</a></li>
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" href="donor.html">Donors</a>
+                </li>
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" href="myprofile.html">My Profile</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" href="#"><span
+                            class="glyphicon glyphicon-user"></span>&nbsp;<span id="user"></span> </a></li>
+                <li><a style="color: #333333;font-weight: bold;font-size: 1.2em" onclick="logout()" href="#"><span
+                            class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="background-image: url('../images/images.jpg');   background-repeat: no-repeat;background-size: cover">
+        <center>
+            <div style="padding: 10%">
+                <h3><b>Select Blood Group to Filter:</b></h3>
+                <select name="Blood Group" style="padding: 1%" id="donateGroup">
+                    <option value="Select Blood Group">Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O+">O+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-+">B-</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                 
+                 
+            </div>
+        </center>
+    </div>
+    <br />
+    <div id="main"></div>
+
+
+    <div id="footer">
+        IAD Project (UBIT) - Blood Bank Application [Umar, Hunain, Naveera]
+    </div>
+</body>
+<!-- Compiled and minified CSS -->
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+
+    let database = firebase.database().ref("/");
+
+    let user = JSON.parse(localStorage.getItem("Current_User"));
+    console.log(user);
+
+    document.getElementById("user").innerHTML = user.email.slice(0, -10);
+
+    database.child(`Donors`).on(`child_added`, value => {
+        let result = value.val();
+        result.id = value.key
+        console.log(result.id)
+
+        let Div = document.getElementById(`main`)
+        
+
+        let Div1 = document.createElement(`div`)
+        Div1.setAttribute(`class`, `row`)
+
+
+        let Div2 = document.createElement(`div`)
+        Div2.setAttribute(`class`, `column`)
+
+        let Div3 = document.createElement(`div`)
+        Div3.setAttribute(`class`, `card`)
+        Div3.setAttribute(`id`, `card`)
+
+        Div2.appendChild(Div3)
+        Div1.appendChild(Div2)
+      
+
+        let h2 = document.createElement(`h3`)
+        let text = document.createTextNode(`Name: ${result.name}`)
+        h2.appendChild(text)
+        Div3.appendChild(h2)
+
+        let h3 = document.createElement(`h4`)
+        h3.setAttribute(`class`, `bGroups`)
+        let text2 = document.createTextNode(`Blood: ${result.blood}`)
+        h3.appendChild(text2)
+        Div3.appendChild(h3)
+
+        let detailBtn = document.createElement(`input`)
+        detailBtn.setAttribute(`type`, `button`)
+        detailBtn.setAttribute(`value`, `About More`)
+        detailBtn.setAttribute(`id`, result.id)
+        detailBtn.setAttribute(`class`, `button`)
+        Div3.appendChild(detailBtn)
+        Div.appendChild(Div3)
+
+        detailBtn.addEventListener(`click`, function () {
+            localStorage.setItem(`donorProfile`, JSON.stringify(this.id));
+            location.href = `donorprofile.html`
+
+        })
+
+
+
+
+
+        document.getElementById(`donateGroup`).addEventListener(`click`, function () {
+
+            let value = document.getElementById(`donateGroup`);
+            let blood = value.options[value.selectedIndex].value;
+            // console.log(blood)
+
+
+            if (blood === `Select Blood Group`) {
+                document.getElementById(detailBtn.id).parentNode.style.display = `block`;
+                console.log("BLOOD GROUP")
+
+            }
+
+            else if (result.blood === blood) {
+                document.getElementById(detailBtn.id).parentNode.style.display = `block`;
+            }
+
+            else if (result.blood !== blood) {
+                document.getElementById(detailBtn.id).parentNode.style.display = `none`
+            }
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+    }) 
+
+
+
+
+
+
+
+
+    var logout = () => {
+        firebase.auth().signOut().then(res => {
+            console.log(res);
+            window.location.href = "login.html";
+            localStorage.removeItem("Current_User");
+        }).catch(error => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage)
+        })
+    }
+
+
+
+
+
+
+
+
+
+// database.child("Users/").on("child_added",user=>{})
+
+// document.getElementById("title").innerHTML = user.name;
+// document.getElementById("x").innerHTML = user.name;
+// document.getElementById("img").src = user.image.slice(12);
+
+// document.getElementById("Blood").innerHTML = "Blood : "+user.blood;
+// document.getElementById("p1").innerHTML = "Blood : "+user.blood;
+// document.getElementById("p2").innerHTML = "Email : "+user.email;
+// document.getElementById("p3").innerHTML = "Age : "+user.age;
+// document.getElementById("p4").innerHTML = "Number : "+user.number;
+// document.getElementById("p5").innerHTML = "Address : "+user.address;
+
+
+
+//     document.getElementById("user").innerHTML = user.email.slice(0,-10);
+</script>
+
+</html>
