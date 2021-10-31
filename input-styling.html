@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Input</title>
+      <style media="screen">
+         body{
+            margin-top: 100px;
+            margin-left: 200px;
+         }
+         .beauinput input{
+            border: none;
+            border-bottom: 1px solid #aaa;
+            background: none;
+            font-size: 1em;
+            transition: 0.1s;
+         }
+         .beauinput input::placeholder{ opacity: 0; }
+         .beauinput input:focus::placeholder{ opacity: 0.5; }
+         .beauinput input:invalid{
+            border: none;
+            border-bottom: 2px solid #EF476F;
+         }
+         .beauinput.focused input{
+            border-bottom: 2px solid #00bcd6;
+         }
+         .beauinput.error input{
+            border-bottom: 2px solid #EF476F;
+         }
+         .beauinput{
+            font-family: sans-serif;
+            position: relative;
+            display: inline-block;
+         }
+         .beauinput .error{
+            position: absolute;
+            top: 15px; left: 0;
+            color: #EF476F;
+            font-size: 0.8em;
+         }
+         .beauinput .label{
+            margin: 0;
+            position: absolute;
+            z-index: -1;
+            bottom: 1px; left: 0;
+            color: #888;
+            transition: 0.3s;
+         }
+         .beauinput.focused .label{
+            color: #00bcd6;
+            font-size: 0.85em;
+            bottom: 25px;
+         }
+         .beauinput.filled .label{
+            color: #888;
+            font-size: 0.85em;
+            bottom: 25px;
+         }
+      </style>
+   </head>
+   <body>
+      <p class="beauinput"><input type="text" label="Nom" error="Veuillez indiquer un nom correct" placeholder="Votre Nom"/></p>
+
+      <p class="beauinput"><input type="text" label="Prénom" error="Veuillez indiquer un prénom correct" placeholder="Votre Prénom" /></p>
+
+      <p class="beauinput"><input type="text" name="date" label="Date de naissance" error="Mauvais format de date" placeholder="dd/mm/yyyy" /></p>
+      <button id="send">Envoyer</button>
+      <script type="text/javascript">
+         function showInputError(input){
+            if(!input.parentNode.childNodes['2']){
+               let error = document.createElement('p')
+               error.classList.add('error')
+               input.parentNode.classList.add('error')
+               input.parentNode.appendChild(error)
+               error.innerText = input.attributes.error.value
+            }
+         }
+
+         function beautifyInput(id){
+            let inputs = document.querySelectorAll('.'+id)
+            for(p of inputs){
+               let input = p.childNodes[0],
+                  label = document.createElement('p')
+               label.classList.add('label')
+               label.innerText = input.attributes.label.value
+               p.appendChild(label)
+               if(input.value){ p.classList.add('filled') }
+               input.onfocus = function(){
+                  this.parentNode.classList.add('focused')
+               }
+               input.onkeyup = function(){
+                  if(this.value !== ''){ this.parentNode.classList.add('filled') }
+                  else{ this.parentNode.classList.remove('filled') }
+               }
+               input.onblur = function(){
+                  this.parentNode.classList.remove('focused')
+               }
+            }
+         }
+         beautifyInput('beauinput')
+
+         document.querySelector('#send').onclick = function(){
+            if(!document.querySelector('input[name="date"]').value.match(/([0-3][0-9]\/[0-1][0-9]\/[0-3][0-9][0-9][0-9])/g)){
+               showInputError(document.querySelector('input[name="date"]'));
+            }
+         }
+      </script>
+   </body>
+</html>
