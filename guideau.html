@@ -1,0 +1,414 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- My Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- <script src="https://kit.fontawesome.com/eb48c7dfa4.js" crossorigin="anonymous"></script> -->
+
+
+    <!-- My Js -->
+    <!-- <script src="assets/js/script.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Beranda</title>
+    <style>
+      * {
+  font-family: "Poppins", sans-serif;
+}
+.navhead {
+  box-shadow: 0 2px 5px #f7ecec;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+.banner {
+  margin-top: 80px;
+  height: 100vh;
+}
+
+.landing {
+  background-image: url("/assets/img/landing-img.png");
+  background-size: cover;
+  margin-top: -500px;
+  height: 400px;
+  width: 400px;
+  /* Animate */
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: animate__backInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2.5s; /* don't forget to set a duration! */
+}
+
+.parent {
+  background-color: rgba(250, 247, 247, 1);
+  margin-top: -65px;
+}
+.parent1 {
+  background-color: rgba(250, 247, 247, 1);
+  margin-top: 60px;
+}
+
+.c-1 {
+  margin-top: 60px;
+  padding-top: 20px;
+}
+
+.white-cat {
+  background-image: url("/assets/img/white-cat.png");
+  height: 500px;
+  background-size: cover;
+  background-position-x: center;
+  /* Animate */
+  display: block;
+  margin: 0 0.5rem;
+  animation: animate__slideInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+h3::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #eaeaea;
+  padding-bottom: 5px;
+  width: 30%;
+  margin: auto;
+}
+
+.card-perawatan {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 5px 0 rgba(65, 45, 45, 0.1) !important;
+  width: 280px;
+  overflow: hidden;
+}
+
+.card-perawatan > img {
+  height: 280px;
+  width: 280px;
+  transition: 1s;
+}
+.card-perawatan > img:hover {
+  opacity: 0.5;
+}
+
+.card-perawatan:hover {
+  cursor: pointer;
+}
+
+.food {
+  margin-top: -50px;
+}
+
+label {
+  font-weight: bold;
+}
+.form-kontak {
+  margin-bottom: 50px;
+}
+.footer {
+  box-shadow: 0 -5px 5px -5px #d8d8d8;
+}
+.footer p {
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .landing {
+    background-image: url("/assets/img/landing-img.png");
+    background-size: cover;
+    height: 180px;
+    width: 200px;
+    margin-top: -110px;
+  }
+  #btn {
+    margin-bottom: -220px;
+  }
+  .banner {
+    height: 500px;
+  }
+
+  .white-cat {
+    background-image: url("/assets/img/white-cat.png");
+    height: 300px;
+    width: 200px;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  .content-1 h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  #h3 {
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .card-perawatan {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 5px 0 rgba(65, 45, 45, 0.1) !important;
+    height: 350px;
+  }
+
+  .card-perawatan > img {
+    height: 280px;
+    transition: 1s;
+  }
+  .img-mid {
+    margin: 7px 0;
+  }
+
+  .food {
+    width: 80px;
+    height: 220px;
+    margin-bottom: -10px;
+  }
+
+  .form-kontak {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    height: 50px;
+    margin-top: 50px;
+    background-color: #f3f3f3;
+    box-shadow: 0 -5px 5px -5px #d8d8d8;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+  }
+  /* .footer {
+    height: 50px;
+    box-shadow: 0 -20px 20px -20px #d8d8d8;
+    bottom: 0;
+    position: fixed;
+  } */
+  .footer p {
+    font-size: 12px;
+    line-height: 50px;
+  }
+}
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navhead">
+    <div class="container">
+        <!-- Just an image -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo-nav.jpeg" alt="logo" height="40" width="45">
+            </a>
+        </nav>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto pr-5">
+                <a class="nav-link" href="#">Beranda</a>
+                <a class="nav-link" href="#">Jenis Perawatan</a>
+                <a class="nav-link" href="#">Makanan Hewan</a>
+                <a class="nav-link" href="#">Melatih Peliharaan</a>
+                <a class="nav-link" href="#">Kontak kita</a>
+            </div>
+            <a href="#" class="btn btn-outline-primary mr-2">Masuk</a>
+            <a href="#" class="btn btn-outline-warning">Daftar</a>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1> <b>Welcome</b> To Our <b>Website</b></h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, quos dolor quo cupiditate, voluptatibus recusandae a esse necessitatibus dignissimos laudantium, corporis quod repudiandae! Incidunt veritatis sapiente quae magnam alias aliquam nisi et tempora unde, harum possimus vitae, aut corrupti! A, eligendi neque veniam amet corrupti ea provident inventore ratione nihil!</p>
+                <hr class="col my-4">
+                <button class="btn btn-outline-secondary btn-md" id="btn">Learn More</button><br>
+            </div>
+            <div class="col-md-4">
+                <div class="landing animate__backInRight"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="parent">
+    <div class="container">
+        <div class="row c-1">
+            <div class="col-md-4">
+                <div class="white-cat wow animate__slideInLeft"></div>
+            </div>
+
+            <div class="col-lg-8">
+                <h3 class="text-center my-4" id="h3">Rawat peliharaan dengan baik</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, sunt provident. Deserunt laborum voluptate voluptatum temporibus in, voluptas quae recusandae itaque iusto excepturi consectetur unde numquam laboriosam aliquid facilis maiores?
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At quibusdam voluptates autem atque provident. Maxime vel quod hic sit ut quisquam, commodi dolorem, sapiente eaque consequuntur illum tempore ipsum officia.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md mt-4 mb-4">
+            <h3 class="text-center" id="h3">Jenis-jenis Perawatan</h3>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-perawatan">
+                    <img class="card-img-top" src="assets/img/dog-ilustrator.png" alt="gambar makanan">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md img-mid">
+                <div class="card card-perawatan">
+                    <img class="card-img-top" src="assets/img/cute-cat.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card card-perawatan">
+                    <img class="card-img-top" src="assets/img/dog-ilustrator.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parent1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md mt-4 mb-4">
+                <h3 class="text-center" id="h3">Makanan Sehat</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <img class="card-img-top food wow animate__slideInLeft" src="assets/img/food.png" alt="Card image cap">
+            </div>
+
+            <div class="col-lg-8 content-1">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, sunt provident. Deserunt laborum voluptate voluptatum temporibus in, voluptas quae recusandae itaque iusto excepturi consectetur unde numquam laboriosam aliquid facilis maiores?
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At quibusdam voluptates autem atque provident. Maxime vel quod hic sit ut quisquam, commodi dolorem, sapiente eaque consequuntur illum tempore ipsum officia.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium totam voluptatibus, ducimus illo praesentium optio, dolores inventore dicta earum distinctio dignissimos assumenda nisi. Animi quos doloremque ipsa corrupti, dolorem reiciendis.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="row pt-4 mb-5">
+            <div class="col text-center">
+                <h3>Kontak Kita</h3>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="card text-white bg-primary mb-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Kontak Kita</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h1>Location</h1>
+                    </li>
+                    <li class="list-group-item">My Office</li>
+                    <li class="list-group-item">Jl. Gang Langgar No. 45, Jakarta</li>
+                    <li class="list-group-item">West Java, Indonesia</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 form-kontak">
+                <form>
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="telp">No Telp</label>
+                        <input type="text" class="form-control" id="telp">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Pesan</label>
+                        <textarea name="pesan" id="pesan" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary">Kirim Pesan!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<nav class="footer" id="footer">
+    <div class="container">
+        <p>&copy; Design By : maap gw malink ya || 2020</p>
+    </div>
+</nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
