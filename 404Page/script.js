@@ -94,6 +94,15 @@ function goLight() {
 	TweenMax.set('.hlFur', {fill: furLightColor});
 	TweenMax.set('.hlSkin', {fill: skinLightColor});
 }
-
+function goGreen() {
+	TweenMax.set('#light', {visibility: "hidden"});
+	
+	TweenMax.set('.lettersSide', {fill: lettersSideDark, stroke: lettersStrokeDark});
+	TweenMax.set('.lettersFront', {fill: lettersFrontDark, stroke: lettersStrokeDark});
+	TweenMax.set('#lettersShadow', {opacity: .05});
+	
+	TweenMax.set('.hlFur', {fill: furDarkColor});
+	TweenMax.set('.hlSkin', {fill: skinDarkColor});
+}
 goDark();
 yetiTL.play();
