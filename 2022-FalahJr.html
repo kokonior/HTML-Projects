@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Minggu 2</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+        </head>
+        <body>
+
+        <div class="container box-form">
+            <center>
+            <h1>Form Ticketing</h1>
+            <h6>By Khoiru Miftakhul Falah</h6>
+            <hr>
+        </center>
+            <div class="form-content">
+                <form id="form1" name="form1" onsubmit="return false" class="form-content">
+                    <div class="form-input">
+                        <label for="nama_depan">Nama Depan : </label>
+                        <input type="text" id="nama_depan" placeholder="Nama Depan">
+                    </div>
+                    <div class="form-input">
+                        <label for="nama_belakang">Nama Belakang : </label>
+                        <input type="text" id="nama_belakang" placeholder="Nama Belakang">
+                    </div>
+                    <div class="form-input">
+                        <label for="tanggal_lahir">Tanggal Lahir : </label>
+                        <input type="date" id="tanggal_lahir" placeholder="Tanggal Lahir">
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Email : </label>
+                        <input type="text" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-input">
+                        <label for="no_hp">No Hp : </label>
+                        <input type="number" id="no_hp" placeholder="No Hp">
+                    </div>
+                    <div class="form-input">
+                        <label for="kategori">Kategori Tiket: </label>
+                        <select name="" id="kategori">
+                            <option value="">Pilih Kategori</option>
+                            <option value="Kategori 1">Kategori 1</option>
+                            <option value="Kategori 2">Kategori 2</option>
+                            <option value="Kategori 3">Kategori 3</option>
+                            <option value="VIP">VIP</option>
+                            <option value="VVIP">VVIP</option>
+                        </select>
+                    </div>
+                    <div class="form-submit">
+                        <button type="button" onclick="tampilkan()" data-toggle="modal" data-target="#exampleModal">
+                            Pesan Tiket
+                            </button>
+                           
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <p id="container"></p>
+
+      <!-- Button to Open the Modal -->
+
+  
+  <!-- The Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Tiketmu </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Nama Lengkap : <span id="nama_lengkap"></span></p>
+          <p>Tanggal Lahir : <span id="tgl"></span></p>
+          <p>Email : <span id="email2"></span></p>
+          <p>No HP : <span id="hp"></span></p>
+          <p>Kategori : <span id="category"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	<script src="assets/js/script.js"></script>
+
+</body>
+</html>
