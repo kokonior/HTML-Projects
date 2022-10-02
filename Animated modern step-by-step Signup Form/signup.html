@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>Animated Signup form</title>
+    
+        <style>
+            :root {
+                --active: magenta;
+                --inactive: blueviolet;
+            }
+
+            body {
+                background: #212534;
+            }
+
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-family: "Consolas", sans-serif;
+            }
+
+            .nav {
+                display: flex;
+                justify-content: center;
+                width: 70%;
+                margin: 1rem auto;
+            }
+
+            .nav ul {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                text-align: center;
+                position: relative;
+            }
+
+            .step {
+                width: 50px;
+                height: 50px;
+                color: black;
+                background: var(--inactive);
+                border-radius: 5px;
+                font-size: 2.3rem;
+                position: relative;
+                z-index: 1000;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .step::before{
+                content: '';
+                width: max-content;
+                font-size: 1rem;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 150%);
+                color: var(--inactive);
+                font-weight: bold;
+                user-select: none;
+                text-transform: uppercase;
+            }
+
+            .step:nth-child(2)::before {
+                content: 'Account Creation';
+            }
+
+            .step:nth-child(3)::before {
+                content: 'Personal Details';
+            }
+
+            .step:nth-child(4)::before {
+                content: 'Social Profiles'; 
+            }
+
+            .active {
+                background: var(--active);
+                transition: 0.2s linear;
+            }
+
+            .active::before{
+                color: var(--active);
+                transition: 0.2s linear;
+            }
+
+            .progress {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 4px;
+                background: var(--inactive);
+            }
+
+            .progress-bar {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                transition: 0.5s linear;
+                width: 0%;
+                height: 6px;
+                background: var(--active);
+            }
+
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 90%;
+                width: 82%;
+                margin: 4rem auto;
+                border: 1px solid magenta;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 1px magenta;
+                overflow: hidden;
+                background: #191c29;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                color: var(--inactive);
+            }
+
+            .show {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+            }
+
+            .show *{
+                margin: 1rem 0;
+                font-size: 1.2rem;
+            }
+
+            .form-section {
+                width: 100%;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                align-items: center;
+                color: var(--active);
+            }
+
+            .form-section label {
+                width: 30%; 
+            }
+
+            .form-section input {
+                width: 70%;
+                padding: 0.7rem;
+                border-radius: 100px;
+                outline: 1px solid gray;
+                color: white;
+                border: none;
+                background: transparent;
+            }
+
+            .hide, .hide *{
+                display: none;              
+            }
+
+            .btn {
+                padding: 1rem;
+                font-weight: bold;
+                color: black;
+                background: var(--inactive);
+                border: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 50px;
+            }
+
+            .btn:hover{
+                background: var(--active);
+                transition: 0.1s linear;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav">
+            <ul>
+               <span class="progress">
+                  <span class="progress-bar"></span>
+               </span>
+               <li class="step active" onclick="makeActive(this)">1</li>
+               <li class="step" onclick="makeActive(this)">2</li>
+               <li class="step" onclick="makeActive(this)">3</li>
+            </ul>
+         </nav>
+         <main class="main card">
+            <form action="/"  class="show">
+               <h2 class="title">Enter your account details</h2>
+               <section class="form-section">
+                  <label for="email">Email : </label>
+                  <input type="email" name="email" placeholder="Enter your email" required>
+               </section>
+               <section class="form-section">
+                  <label for="password">Password : </label>
+                  <input type="password" name="password" placeholder="Enter a password" required>
+               </section>
+               <button type="submit" class="btn" onclick="next(this)">Create Account</button>
+            </form>
+            <form action="/" class="hide">
+               <h2 class="title">Enter your personal details</h2>
+               <section class="form-section">
+                  <label for="fname">First Name : </label>
+                  <input type="text" name="fname" placeholder="Enter your first name" required>
+               </section>
+               <section class="form-section">
+                  <label for="lname">Last Name : </label>
+                  <input type="text" name="lname" placeholder="Enter your last name" required>
+               </section>
+               <section class="form-section">
+                  <label for="age">Age : </label>
+                  <input type="number" min="18" name="age" placeholder="Enter your age" required>
+               </section>
+               <button type="submit" class="btn" onclick="next(this)">Update Details</button>
+            </form>
+            <form action="/" class="hide">
+               <h2 class="title">Enter your social profiles</h2>
+               <section class="form-section">
+                  <label for="insta">Instagram : </label>
+                  <input type="text" name="insta" placeholder="Enter instagram handle">
+               </section>
+               <section class="form-section">
+                  <label for="twitter">Twitter : </label>
+                  <input type="text" name="twitter" placeholder="Enter twitter handle">
+               </section>
+          
+               <button class="btn">Link profiles</button>
+            </form>
+         </main>
+
+        <script defer>
+            console.clear();
+
+            const buttons = qsa('button')
+            const progressBar = qs('.progress-bar')
+            const steps = qsa('.step')
+            const forms = qsa('form')
+
+            for(let i=0; i<buttons.length; i++ ){
+            buttons[i].addEventListener('click', e => e.preventDefault())
+            }
+
+            function makeActive(e) {
+            let index = null;
+            for(let i = 0; i<steps.length; i++){
+                if(steps[i] == e){
+                    index = i;
+                    break;
+                }
+            }
+            
+            let prev
+            if(index==0){
+                prev = steps[index]
+            }else{
+                prev = steps[index-1]
+            }
+            
+            if(!prev.classList.contains('active')){
+                return;
+            }
+            
+            for(let i=0; steps[i]!=e; i++ ){
+                steps[i].classList.add('active')
+            }
+            e.classList.add('active')
+            for(let i=index+1; i<steps.length; i++){
+                steps[i].classList.remove('active')
+            }
+            let progress = 50*index
+            progressBar.style.width = `${progress}%`;
+            
+            for(let i=0; i<forms.length; i++){
+                if(i == index){
+                    forms[i].classList.add('show')
+                    forms[i].classList.remove('hide')
+                }else{
+                    forms[i].classList.add('hide')
+                    forms[i].classList.remove('show')  
+                }
+            }
+            }
+
+            function next(e) {
+            e.parentElement.classList.add('hide')
+            e.parentElement.classList.remove('show')
+            
+            for(let i=0; i<forms.length; i++) {
+                if(forms[i] == e.parentElement){
+                    steps[i+1].click()
+                    return;
+                }else{
+                    continue;
+                }
+            }
+            }
+
+            function qs(query) {
+            return document.querySelector(query)
+            }
+
+            function qsa(query) {
+            return document.querySelectorAll(query)
+            }
+        </script>
+    </body>
+</html>
