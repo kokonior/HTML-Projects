@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles.css">
+    <title>Resume CV</title>
+</head>
+<body>
+
+    <!-- Details form container -->
+    <div class="container shadow p-5 mb-5 bg-white rounded" id="resume-form">
+    <h1 class="text-center" style="font-size: 80px; font-weight: 800; color:    #044450 ;">Resume Builder</h1>
+    <p class="text-center" style="font-size: 20px; font-weight: bold; color:  #0b1e2d ;">Create your Free Resume from this tool.</p>
+    
+    <div class="row">
+        <!-- Personal details column-->
+        <div class="col-md-6">
+            <h1>Personal Information</h1>
+            <hr>
+            <div class="form-group mt-4">
+                <label for="">Choose a Profile Picture</label>
+                <br>
+                <input id="imgField" type="file" class="form-control">
+            </div>      
+            <div class="form-group mt-4 md-4">
+                <label for="nameField">Your name</label>
+                <input type="text" id="nameField" placeholder="Your name" class="form-control">
+            </div>
+            <div class="form-group mt-4 md-4">
+                <label for="nameField">Your Contact</label>
+                <input type="text" id="contactField" placeholder="Your Contact" class="form-control">
+            </div>
+            <div class="form-group mt-4 md-4">
+                <label for="emailField">Your Email</label>
+                <input type="text" id="emailField" placeholder="Your Email" class="form-control">
+            </div>
+            <div class="form-group mt-4 md-4">
+                <label for="nameField">Your Address</label>
+                <input type="text" id="addressField" placeholder="Your Address" class="form-control">
+            </div>
+            <h4 class="mt-4 md-4 mt-4 md-4">Important Links</h4>
+            <div class="form-group">
+                <label for="nameField">Linkedin</label>
+                <input type="text" id="linkedinField" placeholder="Your Linkedin profile" class="form-control">
+            </div>
+            <div class="form-group mt-4 md-4">
+                <label for="nameField">Github.com</label>
+                <input type="text" id="gitField" placeholder="Your GitHub profile" class="form-control">
+            </div>
+            <div class="form-group mt-4 md-4">
+                <label for="nameField">Facebook</label>
+                <input type="text" id="fbField" placeholder="Your facebook profile" class="form-control">
+            </div>
+            <div class="form-group mt-4 md-4">
+                <label for="nameField">Stackoverflow</label>
+                <input type="text" id="stField" placeholder="Your stackoverflow profile" class="form-control">
+            </div>
+        </div>
+        <!-- Professional details -->
+        <div class="col-md-6">
+            <!-- Second column -->
+            <h1>Professional Information</h1>
+            <hr>
+            <div class="form-group mt-4">
+                <label for="exampleFormControlTextarea1">Objective</label>
+                <textarea class="form-control" id="objField" rows="3"></textarea>
+            </div>
+
+            <div class="form-group mt-4" id="we" >
+                <label for="">Experience</label>
+                <textarea 
+                    class="form-control weField" 
+                    rows="3">
+                </textarea>
+                <!-- new textArea will add here -->
+                <div class="container" id="weAddButton">
+                    <button 
+                        style="background-color:  #1b4f72 ; color: white"
+                        class="btn mt-2" 
+                        onclick="addNewField1()">Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="form-group mt-4" id="ed" >
+                <label for="">Education Qualification</label>
+                <textarea 
+                    class="form-control edField" 
+                    rows="3">
+                </textarea>
+                <!-- new textArea will add here -->
+                <div class="container" id="edAddButton">
+                    <button 
+                        style="background-color:  #1b4f72 ; color: white"
+                        class="btn  mt-2" 
+                        onclick="addNewField2()">Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="form-group mt-4" id="ce" >
+                <label for="">Certifications</label>
+                <textarea 
+                    class="form-control ceField" 
+                    rows="3">
+                </textarea>
+                <!-- new textArea will add here -->
+                <div class="container" id="ceAddButton">
+                    <button 
+                        style="background-color:  #1b4f72 ; color: white"
+                        class="btn mt-2" 
+                        onclick="addNewField3()">Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 text-center">
+            <button class="" onclick="generateCv()" style=" background-color:  #1b4f72 ; color: white; border-radius: 5px; padding: 10px;">
+                Generate CV
+            </button>
+        </div>
+    </div>
+    </div>
+
+    <div>
+        <p class="text-center" id="footer" style="color: black;">Made with by Tech</p>
+    </div>
+
+    <!-- Template generate -->
+
+    <div class="container" id="resume-template">
+        <div class="row">
+            <div class="col-md-4 background text-center">
+                <img 
+                    src="./assets/default-logo.png" 
+                    alt="default-picture"
+                    class="img-logo"
+                    id="imgT"
+                >
+                <div class="container personal">
+                    <p class="name1" id="nameT1">Tarun Singh</p>
+                    <p class="address1" id="addT1">Krishna Nagar, delhi, India</p>
+                    <p class="phn1" id="contactT">+91 256232323</p>
+                    <p class="email1" id="emailT">tarunsinghwap7@gmail.com</p>
+                </div>
+                <div class="container social">
+                    <h4 class="social-head">Social Links</h4>
+                    <hr class="hr-row">
+                    <p class="">
+                        <a id="lkT" href="#1">https://www.linkedin.com/in/tarunsingh24/</a>
+                    </p>
+                    <p class="">
+                        <a id="gitT" href="#2">https://github.com/tarunsinghofficial</a>
+                    </p>
+                    <p class="">
+                        <a id="fbT" href="#3">https://www.instagram.com/targrapher76/</a>
+                    </p>
+                    <p class="">
+                        <a id="stT" href="#4">https://www.youtube.com/channel/UCOykz3Ssp3Q1SHPG8Mqj7PA</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 class="text-center mt-4" id="nameT2" style="font-size: 50px; font-weight: bold;">Tarun Singh</h1>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body" id="objectiveT">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati assumenda iure hic voluptatem reiciendis eum, quas facilis earum exercitationem, accusamus iusto, voluptas ducimus suscipit quae modi. Quod accusantium, illum impedit quaerat voluptatem odio facilis reiciendis obcaecati recusandae minima? Alias, perspiciatis.
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="edT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Certifications</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="cerT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, reprehenderit!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 text-center">
+            <button class="" id="downloadCV" style="border-radius: 5px; padding: 10px; background-color:  #1b4f72 ; color: white">
+                Print CV
+            </button>
+            <!-- <button class="btn-primary" onclick="goBack()" style="border-radius: 5px; padding: 10px;">
+                Back
+            </button> -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+</body>
+</html>
