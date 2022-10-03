@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    font-family: 'Open Sans';
+} 
+
+/* #resume-form {
+    display: none;
+} */
+
+#resume-template {
+    display: none;
+}
+
+.background {
+    background-color:  #3a9aff ;
+}
+
+.img-logo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+p {
+    color: white;
+}
+
+.name1, .address1 {
+    font-size: 20px;
+}
+.email1, .phn1 {
+    font-size: 18px;
+}
+.personal {
+    padding-bottom: 10px;
+}
+
+.hr-row {
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+    max-width: fit-content;
+    
+}
+.social-head {
+    color: white;
+    font-weight: bold;
+}
+.social{
+    text-align: left;
+    padding-top: 20px;
+}
