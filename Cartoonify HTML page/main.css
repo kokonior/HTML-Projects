@@ -1,0 +1,36 @@
+*{
+    text-align: center  ;
+}
+body{
+    margin: 0;
+    font-family:monospace;
+    background-color:#323232;
+}
+
+.heading{
+    color: aliceblue;
+}
+div{
+    padding:5px 5px 5px 5px ; 
+}
+h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 50px 90px 25px 95px;
+    font-weight: bold;
+    font-size: 650%;
+}
+h3{
+    padding-bottom: 7%;
+    font-weight: bold;
+}
+img {  
+    margin: 50px 150px 50px 150px;
+    max-width: 26%;  
+    height: auto; 
+    border-style: solid; 
+    border-radius: 5%;
+    border-color: aliceblue;
+} 
+/* #ori-img{ */
+    /* margin-right:20%;
+} */
