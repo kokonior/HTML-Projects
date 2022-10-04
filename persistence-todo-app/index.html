@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./src/main.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <div class="logo-container">
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="headiing">
+        <h1>Altaf's Todo List</h1>
+      </div>
+      <form action="" name="taskList">
+        <input
+          class="todo-input"
+          type="text"
+          name="text"
+          id="textInput"
+          placeholder="Enter Your Task"
+        />
+        <button class="todo-button" type="submit">
+          <i class="fa fa-plus-square"></i>
+        </button>
+        <div class="select">
+          <select name="todos" id="todo-filter" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+      <div class="todo-container">
+        <ul id="todo-list"></ul>
+      </div>
+    </main>
+
+    <footer>
+      <p class="copy">
+        &copy; 2020 All Rights Reserved by <span>Altaf Shaikh</span>
+      </p>
+      <div class="social-links">
+        <a href="#" class="fa fa-twitter twitter"></a>
+        <a href="#" class="fa fa-linkedin linkedin"></a>
+        <a href="#" class="fa fa-facebook facebook"></a>
+        <a href="#" class="fa fa-github github"></a>
+      </div>
+    </footer>
+  </body>
+</html>
