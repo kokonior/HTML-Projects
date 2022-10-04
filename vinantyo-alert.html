@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+        body {
+        background-color: #1B1734;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+
+    }
+
+    h1 {
+        letter-spacing: 4px;
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: #a89aff;
+    }
+
+    .transbox {
+        margin: 0 auto;
+        position: relative;
+        padding: 20px;
+        max-width: 680px;
+        background: rgba(255, 255, 255, .2);
+    }
+
+    .bungkus p {
+        font-size: 18px;
+    }
+
+    img {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+        border: 2px transparent;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        margin: 5px;
+    }
+
+    img:hover {
+        transform: scale(1.15);
+        box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+
+    p.miring {
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    p.bold {
+        font-weight: bold;
+    }
+
+    button {
+        padding: 7px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    button.blue {
+        background-color: #3498db;
+    }
+
+    button.green {
+        background-color: #2ecc71;
+    }
+
+    button.orange {
+        background-color: orangered;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+<body>
+    <h1>Contoh Alert</h1>
+    <div class="transbox">
+        <p class="miring">Javascript merupakan bahasa komputer yang terdiri dari serangkaian
+            instruksi yang memberitahukan komputer untuk melakukan sesuatu yang berada
+            pada dokumen HTML. Sesuatu itu dapat berupa menampilkan teks, memindahkan
+            gambar, atau meminta informasi kepada pengguna. Biasanya instruksi yang
+            disebut kode program diproses dari baris atas ke baris bawah, kemudian
+            memproses kode atau menjalankan kode tersebut. Java script berkerja disisi
+            Client, sehingga dapat langsung berjalan disisi browser bukan melalui web server. 
+            <br>
+        </p>
+    </div>
+    <br>
+    <h2>ALERT DAN PROMPT</h2>
+    <button onclick="alert('Berhasil di click!');">ALERT</button>
+    <button class="orange" onclick="nama = prompt('Masukkan Nama anda', ''); alert('Selamat datang ' + nama); document.getElementById('nama').innerHTML = '<h2> Hi, ' + nama, '</h2>';">PROMPT</button>
+    <button class="green" onclick="
+    if(confirm('Apakah ingin coba lagi?')==true){
+        alert('Oke kita coba lagi!');
+    }
+    else{
+        alert('Oke sip');
+    };
+    ">Confirm</button>
+    <div id="nama"></div>
+
+</body>
+</body>
+</html>
