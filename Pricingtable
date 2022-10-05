@@ -1,0 +1,20 @@
+<html>
+<div class="background">
+  <div class="container-landing">
+    <div class="panel pricing-table">
+      
+      <div class="pricing-plan">
+        <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Pembayaran SPP</h2>
+        <a href="#/" class="pricing-button is-featured">Sign up</a>
+      </div>
+      
+      <div class="pricing-plan">
+        <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Small team</h2>
+        <a href="#/" class="pricing-button is-featured">Free trial</a>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
