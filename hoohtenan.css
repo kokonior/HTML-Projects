@@ -1,0 +1,41 @@
+</style>
+body {
+    font-family: serif;
+
+}
+
+li {
+    list-style: none;
+    float: left;
+    padding: 33px 20px;
+}
+
+.header{
+    background-color: rgb(10, 25, 58);
+    height: 90px;
+    color: #fff;
+
+}
+
+.header-logo {
+    font-size: 36px;
+    float: left;
+    padding: 20px 40px;
+}
+
+main{
+    padding: 100px 80px;
+
+}
+
+.copy-container h1 {
+    font-size: 140px;
+}
+
+.copy-container h2 {
+    font-size: 60px;
+}
+
+.copy-container span {
+    color: red;
+}
