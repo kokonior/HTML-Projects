@@ -1,6 +1,14 @@
+.timerContainer{
+    width: 30%;
+    margin: auto;
+    box-shadow: 1px 2px 133px -23px #647696;
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 10%;
+}
 .container {
   text-align: center;
-  color: blue;
+  color: #647696;
 }
 #show {
   font-size: 60px;
@@ -11,6 +19,8 @@
 }
 button {
   margin: 8px;
-  border: 2px solid blue;
+  border: 2px solid #647696;
   padding: 10px;
+  border-radius: 5px;
 }
+
