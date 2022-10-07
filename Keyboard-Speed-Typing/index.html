@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta lang="en-US">
+    <meta name="description" content="Lightweight website to test typing speed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <title>Keyboard Pro</title>
+    <script type="text/javascript" src="script.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="masthead">
+        <h1>Keyboard Speed Typer</h1>
+    </header>
+    <main class="main">
+        <article class="intro">
+            <p>⁍ Try to test your speed by typing the below paragraph exactly how it appears.</p>
+            <p>⁍ Remember, your time start as soon as you start typing!</p>
+            <p>⁍ Your current status is indicated by the border color around the input area.</p>
+        </article>
+        <section class="test-area">
+            <div id="origin-text">
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. </p>
+            </div>
+            <div class="test-wrapper">
+                <textarea onclick=" start();" oninput="spellCheck()" id="test-area" name="textarea" rows="6" placeholder="The timer is triggered when you start typing in this area!." autofocus></textarea>
+            </div>
+            <div class="meta">
+                <section id="clock">
+                    <div class="timer">00:00:00</div>
+                </section>
+                <div><button onclick="reset()" id="reset">
+                    <span>Start Over</span>
+                    <div class="icon-content">
+                        <span class="material-icons">&#xe042;</span>
+                    </div>
+                </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+<footer></footer>
+
+</html>
