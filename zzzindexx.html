@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TES</title>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.container {
+			margin: auto;
+			text-align: center;
+			font-family: sans-serif;
+			border:	1px solid #000;
+			border-radius: 7px;
+			margin-bottom: 5em;
+		}
+		.list h2 {
+			text-align: left;
+			margin: 0 0 0 20px;
+		}
+		.grid-content {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			padding: 1em;
+			margin: 1em;
+			border:	1px solid #000;
+			background-color: salmon;
+		}
+		.grid-item {
+			padding: 1em 0;
+			margin: 10px;
+			text-align: center;
+			border:	1px solid #000;
+			background-color: skyblue;
+		}
+
+
+
+		.card-item {
+			border:	2px solid navy;
+		}
+		img {
+			width: 200px;
+			height: 250px;
+		}
+		p.p-details {
+			margin: 0;
+		}
+
+
+
+		.item-menu {
+			display: grid;
+			grid-template-columns: auto auto;
+		}
+		.left {
+			background-color: salmon;
+			padding: 1em 0;
+		}
+		.right {
+			background-color: pink;
+			padding: 1em 0;
+		}
+		input[type="checkbox"] {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 20px;
+			border:	1px solid #000;
+			border-radius: 7px;
+			cursor: pointer;
+		}
+		input[type="text"] {
+			width: 25%;
+			height: 20px;
+			border:	1px solid #000;
+			border-radius: 7px;
+			outline: none;
+		}
+
+
+		input[type="submit"] {
+			width: 100%;
+			height: 4em;
+			border-radius: 7px;
+			background-color: skyblue;
+			color: #fff;
+			cursor: pointer;
+			margin-top: 1em;
+		}
+		input[type="submit"]:hover {
+			background-color: #fff;
+			color: skyblue;
+		}
+	</style>
+</head>
+<body>
+
+
+	<div class="heading"><h3>Tessssssss PHP</h3></div>
+	<div class="container">
+		<div class="list">
+			<h2>Daftar 1</h2>
+		</div>
+		<form action="auth.php" method="POST">
+		<div class="grid-content">
+			<div class="grid-item">
+				<div class="card-item">
+					<div class="item-img">
+						<img class="item-d" src="wa.png">
+					</div>
+				</div>
+				<div class="card-item-details">
+					<div class="caption">
+						<h4><b>Item D</b></h4>
+						<p class="p-details">Item D xxxxxxxxxx xxxxxxxxxxxxxxx</p>
+					</div>
+					<div class="item-menu">
+						<!-- tambah item ke keranjang/pilih item -->
+						<div class="left">
+							<input type="checkbox" name="d"><br> Tambah ke keranjang
+						</div>
+						<!-- jumlah item -->
+						<div class="right">
+							<input type="text" name="valued" placeholder="1-9" maxlength="1"><br> Jumlah
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="card-item">
+					<div class="item-img">
+						<img class="item-d" src="wa.png">
+					</div>
+				</div>
+				<div class="card-item-details">
+					<div class="caption">
+						<h4><b>Item E</b></h4>
+						<p class="p-details">Item E xxxxxxxxxx xxxxxxxxxxxxxxx</p>
+					</div>
+					<div class="item-menu">
+						<!-- tambah item ke keranjang/pilih item -->
+						<div class="left">
+							<input type="checkbox" name="e"><br> Tambah ke keranjang
+						</div>
+						<!-- jumlah item -->
+						<div class="right">
+							<input type="text" name="valuee" placeholder="1-9" maxlength="1"><br> Jumlah
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div class="card-item">
+					<div class="item-img">
+						<img class="item-d" src="wa.png">
+					</div>
+				</div>
+				<div class="card-item-details">
+					<div class="caption">
+						<h4><b>Item F</b></h4>
+						<p class="p-details">Item F xxxxxxxxxx xxxxxxxxxxxxxxx</p>
+					</div>
+					<div class="item-menu">
+						<!-- tambah item ke keranjang/pilih item -->
+						<div class="left">
+							<input type="checkbox" name="f"><br> Tambah ke keranjang
+						</div>
+						<!-- jumlah item -->
+						<div class="right">
+							<input type="text" name="valuef" placeholder="1-9" maxlength="1"><br> Jumlah
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="button">
+			<input type="submit" name="submit" class="btn" value="Review Your Order">
+		</div>
+		</form>
+	</div>
+</body>
+
+</body>
+</html>
