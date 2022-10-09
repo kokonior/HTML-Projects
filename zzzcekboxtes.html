@@ -1,0 +1,30 @@
+<html>
+<head>
+	<style type="text/css">
+	input[type=checkbox]{
+    opacity: .5;
+}
+#email{
+    display: none;
+}
+input[type=checkbox]:checked ~ #email{
+    display: block;
+}
+
+	</style>
+</head>
+
+<body>
+<div class="remove-check">
+    <label for="reveal-email" class="btn" style="width: 300px"><input type="checkbox" id="reveal-email" role="button" />Sign Up</label>
+</div>
+<br>
+<div id="email">
+    <form id="email-form" class="nice" action="" method="post">
+        <input class="input-text required email" type="text" name="EMAIL" id="id_email" placeholder="Email" />
+        <input type="hidden" name="name" id="id_name_email">
+        <a class="btn" >Apply</a>
+    </form>
+</div>
+</body>
+</html>
