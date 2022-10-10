@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Nilai Mahasiswa</h1>
+
+    <table>
+        <tr>
+            <th rowspan="2">NO</th>
+            <th rowspan="2">Nama Mahasiswa</th>
+            <th colspan="2">Nilai Tugas</th>
+        </tr>
+        <tr>
+            <td height="25px">1</td>
+            <td height="25px">2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Jean</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Diluc</td>
+            <td>85</td>
+            <td>80</td> 
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Dvalin</td>
+            <td>50</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hilichurls</td>
+            <td>30</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Albedo</td>
+            <td>100</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td colspan="2">Rata - rata</td>
+            <td>71</td>
+            <td>71</td>
+        </tr>
+    </table>
+</body>
+</html>
