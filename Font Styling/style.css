@@ -1,0 +1,21 @@
+.txt {
+  /* Change font family!
+
+    Font Family: We provide 3 different fonts which
+    look similar so that if any font isn't supported by browser,
+    it may render the next one.
+    */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Change Font Size */
+  font-size: 60px;
+
+  /* To UPPERCASE */
+  text-transform: uppercase;
+
+  /* Underline */
+  text-decoration: underline;
+
+  /*Change color to RGB 19, 11, 230. */
+  color: rgb(19, 11, 230);
+}
