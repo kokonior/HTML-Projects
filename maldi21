@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Tugas Hacktoberfest
+        </title>
+        <body>
+            <!-- CONSOLE -->
+            <h1>Console & Kegunaan (Inspect Element)</h1>
+            <script>
+                //console.debug('console.debug()'); // ?
+
+                console.info("Memberikan Info"); // menampilkan pesan informasi
+                
+                console.error("Ini error"); // menampilan pesan error/berwarna merah
+
+                console.dir([2,3,4]); // menampilkan indeks/lokasi (jika diterapkan pada array)
+            </script>
+
+            <!-- DIALOG PROMPT -->
+            <h1>Dialog Prompt</h1> 
+            <script>
+                var min = prompt("Masukkan Nilai Minimum"); 
+                var maks = prompt("Masukkan Nilai Maksimum"); 
+                document.write("<p>Nilai Minimum = " + min + "</p>");
+                document.write("<p>Nilai Maksimum = " + maks + "</p>");
+
+                document.write("<p>Deret Ganjil yang dihasilkan dari Nilai Minimum & Nilai Maksimum : </p>");
+                for (i=min; i<=maks; i++) {
+                    if (i%2==1) {
+                        document.write(i + " ");
+                    }
+                }
+                document.write("<p>Deret Genap yang dihasilkan dari Nilai Minimum & Nilai Maksimum : </p>");
+                for (i=min; i<=maks; i++) {
+                    if (i%2==0) {
+                        document.write(i + " ");
+                    }
+                }
+            </script>
+
+            <!-- 5 METHOD UNTUK MANIPULASI ARRAY -->
+            <h1>Method Array</h1>
+            <script>
+                var fruit = ["banana", "mango", "apple", "orange", "watermelon"];
+                fruit.pop(); // menghapus value pada ekor array
+                fruit.push("guava"); // menambahkan value setelah ekor array
+                fruit.shift(); // menghapus value pada kepala array
+                fruit.unshift("snakefruit"); // menambahkan value pada kepala array
+                delete buah[0]; // menghapus indeks 0 pada array
+                fruit.forEach((data) => {
+                    document.write(`<li>${data}</li>`);
+                })
+            </script>
+
+            <!-- EKSPERIMEN ARRAY PADA OBJEK -->
+            <h1>Eksperimen Array Pada Objek (console.log(fruit))</h1>
+            <script>
+                var fruits = [{
+                    warna : "Putih",
+                    kulitbuah : "Kuning",
+                    bentuk : "Lonjong",
+                    rasa : "Manis"
+                },
+                {
+                    warna : "Kuning",
+                    kulitbuah : "Hijau",
+                    bentuk : "Oval",
+                    rasa : "Manis"
+                },
+                {
+                    warna : "Kuning",
+                    kulitbuah : "Merah",
+                    bentuk : "Bulat",
+                    rasa : "Manis"
+                },
+                {
+                    warna : "Oren",
+                    kulitbuah : "Oren",
+                    bentuk : "Bulat",
+                    rasa : "Manis"
+                },
+                {
+                    warna : "Merah",
+                    kulitbuah : "Hijau",
+                    bentuk : "Bulat",
+                    rasa : "Manis"
+                }]
+                fruits.pop(); // menghapus value pada ekor array
+                fruits.push({ // menambahkan value setelah ekor array
+                    warna : "Putih",
+                    kulitbuah : "Merah Muda",
+                    bentuk : "Oval",
+                    rasa : "Asam Manis"
+                }); 
+                fruits.shift(); // menghapus value pada kepala array
+                fruits.unshift({
+                    warna : "Putih",
+                    kulitbuah : "Coklat",
+                    bentuk : "Oval",
+                    rasa : "Asam Manis"
+                }); // menambahkan value pada kepala array
+                //delete fruits[0]; // menghapus indeks 0 pada array
+            </script>
+            </body>
+        </body>
+    </head>
+</html>
