@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas No 1</title>
+    <style>
+      .tooltip {
+        position: relative; display: inline-block;
+      }
+
+      .tooltip .tooltip-teks {
+        visibility: hidden; width: 110px;
+        background-color: #333; color: #fff;
+        text-align: center; border-radius: 3px;
+        padding: 10px; position: absolute;
+      }
+
+      .tooltip .tooltip-teks::before {
+        position: absolute; content: ""; height: 0;
+        width: 0; border: 10px solid transparent;
+        left: -17px; border-right: 10px solid #333;
+      }
+
+      .tooltip:hover .tooltip-teks {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="tooltip">Mahasiswa Sistem Informasi Semester 4 memang cerdas dan santun <span class="tooltip-teks">Cerdas Santun</span>
+      </p>
+    </div>
+  </body>
+</html>
