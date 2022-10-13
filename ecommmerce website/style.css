@@ -1,0 +1,175 @@
+
+a{
+	color: #75b61ac2;
+}
+a:hover{
+	color: #75B61A;
+	text-decoration: none;
+}
+section {
+    padding: 100px 0px;
+}
+img{
+	width: 100%;
+}
+header#header{
+	background: #fff;
+	border-bottom: 2px solid #75B61A;
+}
+.my-menu{
+	float: right !important;
+}
+.my-navbar li a{
+	font-weight: bold;
+}
+.mbl-btn i{
+	color: #75B61A;
+}
+.shopping-bag i {
+    font-size: 30px;
+    color: #75B61A;
+}
+
+
+.head-text {
+    text-align: left;
+}
+
+
+
+img.head-img {
+    width: 500px;
+}
+button .my-btn{
+	background: #75b61ac2;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 20px;
+}
+.my-btn:hover{
+	background: #75B61A;
+	color: white;
+	
+}
+section#shiping {
+    padding: 50px;
+    background: #001524;
+    color: white;
+}
+
+.box-icon {
+    display: inline-block;
+}
+
+.box-title {
+    display: inline-grid;
+    margin-left: 20px;
+}
+
+.box-title h3 {
+    font-size: 23px;
+}
+
+.box-icon i {
+    color: #75B61A;
+    font-size: 30px;
+}
+.shipping-box {
+    background: #1C2F3C;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.products {
+    background: #F6F7F2;
+    padding: 10px;
+	transition: all .5s;
+}
+
+.product-desc {
+    text-align: center;
+}
+.product-rating{
+	width: 100px;
+	margin: auto;
+	margin-bottom: 5px;
+}
+.products:hover {
+    box-shadow: 0px 0px 5px 1px #ddd;
+}
+
+.product-img {
+    margin-bottom: 20px;
+}
+.product-img img{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer#footer {
+    background: #001524;
+    color: #6B7780;
+    padding: 60px;
+}
+.app-store {
+    display: inline-block;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.app-img {
+    float: left;
+}
+.footer-title{
+    margin-bottom: 20px;
+}
+.footer-title h5 {
+    color: white;
+}
+.footer-logo{
+	width: 150px;
+	margin: auto;
+}
+.footer-desc ul{
+	list-style: none;
+	padding-left: 0px;
+}
+.footer-desc ul li{
+	padding: 6px 0px;
+}
