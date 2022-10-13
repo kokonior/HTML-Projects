@@ -1,0 +1,35 @@
+public class Buku {
+    String namaPengarang;
+    String judulBuku;
+    int tahunTerbit;
+    int cetakanKe;
+    double hargaJual;
+
+    public Buku(String namaPengarang,String judulBuku,int tahunTerbit,int cetakanKe,double hargaJual) {
+        this.namaPengarang = namaPengarang;
+        this.judulBuku = judulBuku;
+        this.tahunTerbit = tahunTerbit;
+        this.cetakanKe = cetakanKe;
+        this.hargaJual = hargaJual;
+    }
+    public Buku(String namaPengarang,String judulBuku,double hargaJual) {
+        this.namaPengarang = namaPengarang;
+        this.judulBuku = judulBuku;
+        this.hargaJual = hargaJual;
+    } 
+    public Buku(String namaPenString,String judulBuku,int tahunTerbit){
+        this.namaPengarang = namaPenString;
+        this.judulBuku = judulBuku;
+        this.tahunTerbit = tahunTerbit;
+    }
+    
+    public void infoBuku() {
+        System.out.println ("Nama Pengarang : " + namaPengarang + 
+        "\nJudul Buku : " + judulBuku + 
+        "\nTahun Terbit : " + tahunTerbit +
+        "\nCetakan Ke : " + cetakanKe +
+        "\nHarga Jual : "+ hargaJual);
+    }
+
+    
+}
