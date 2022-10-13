@@ -1,0 +1,14 @@
+======== BOOTSTRAP 4.5 ==========
+https://getbootstrap.com/docs/4.5/getting-started/introduction/
+
+======== FONTAWESOME ==========
+https://fontawesome.com/
+
+======== CDN (FOR FONTAWESOME 5.10.0) ==========
+https://cdnjs.com/libraries/font-awesome/5.10.0
+
+======== UNSPLASH SOURCE (FOR GETTING RANDOM IMAGES) ==========
+https://source.unsplash.com/
+
+======== GRADIENT COLOR (FOR GETTING CUSTOM GRADIENT COLORS IN BACKGROUND) ==========
+https://cssgradient.io/gradient-backgrounds/
