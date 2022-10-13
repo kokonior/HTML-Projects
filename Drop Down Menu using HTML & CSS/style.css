@@ -1,0 +1,45 @@
+.body {
+  margin: 0px;
+  padding: 0px;
+}
+.menu {
+  width: 1000px;
+  margin: auto;
+  background-color: black;
+}
+.menuitem {
+  float: left;
+  color: white;
+  padding: 15px 25px;
+  position: relative;
+}
+.clear {
+  clear: both;
+}
+.submenu {
+  width: 120px;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  display: none;
+}
+
+.submenuitem {
+  color: black;
+  border: 1px solid orangered;
+  padding: 10px;
+}
+
+.menuitem:hover .submenu {
+  display: block;
+}
+.menuitem:hover {
+  background-color: orangered;
+}
+.active {
+  background-color: orangered;
+}
+.submenu > div:hover {
+  color: white;
+  background-color: orangered;
+}
