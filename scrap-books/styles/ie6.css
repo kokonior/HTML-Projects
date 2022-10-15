@@ -1,0 +1,21 @@
+#header div.section div div#navigation ul.secondary li a{
+	display:inline-block;
+}
+#header div.section div div#logo{
+	margin-left:5px;
+}
+#header div#featured ul li.first{
+	margin-left:10px;
+}
+#header div#featured ul li div{
+	margin-top:-16px;
+}
+#header div#featured ul li a.view{
+	margin-right:3px;
+}
+#content div div.section div.guides ol, #content div div.section div ol{
+	margin-left:25px;
+}
+#content div div.section div ul.accessories li div{
+	margin-bottom:20px;
+}

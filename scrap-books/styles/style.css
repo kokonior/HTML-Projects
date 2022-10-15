@@ -1,0 +1,928 @@
+body {
+    background: #f7eee7 url(../images/pattern.gif) repeat top center;
+    color: #7A6B4E;
+    font-family: Arial;
+    font-size: 14px;
+    margin: 0;
+    min-width: 960px;
+    padding: 0;
+}
+
+a {
+    outline: none;
+}
+
+img {
+    border: none;
+}
+
+p a,
+ol li a {
+    color: #7A6B4E;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h4 a {
+    color: #133E73;
+    text-decoration: underline;
+}
+
+#header div.section:after,
+#header div#featured ul:after,
+#content div div#section:after,
+#footer div:after,
+#footer div ul:after,
+#content div div.section div ul:after,
+#content div div.section ul li div:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#header {
+    background: url(../images/bg-top-bar.gif) repeat-x center top;
+    margin-top: 20px;
+}
+
+#header div.section {
+    height: 203px;
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+#header div.section span#ribbon {
+    background: url(../images/curly-ribbon.gif) no-repeat top left;
+    display: block;
+    height: 316px;
+    left: -90px;
+    position: absolute;
+    top: -20px;
+    width: 99px;
+}
+
+#header div.section span#button {
+    background: url(../images/buttones.gif) no-repeat;
+    display: block;
+    height: 82px;
+    position: absolute;
+    right: 0;
+    top: 145px;
+    width: 85px;
+}
+
+#header div.section div {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#header div.section div div#logo {
+    float: left;
+    margin-left: 10px;
+    margin-top: 35px;
+    width: auto;
+}
+
+#header div.section div div#logo a {
+    display: block;
+}
+
+#header div.section div div#navigation {
+    float: right;
+    margin-top: 60px;
+    text-transform: lowercase;
+    width: auto;
+}
+
+#header div.section div div#navigation ul.primary {
+    line-height: 35px;
+    padding-left: 20px;
+}
+
+#header div.section div div#navigation ul.primary,
+#header div.section div div#navigation ul.secondary {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+#header div.section div div#navigation ul.primary li {
+    float: left;
+    padding: 0 15px;
+}
+
+#header div.section div div#navigation ul.primary li a {
+    color: #5a534d;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#header div.section div div#navigation ul.primary li.current a,
+#header div.section div div#navigation ul.primary li a:hover {
+    color: #02327c;
+}
+
+#header div.section div div#navigation ul.secondary {
+    background: url(../images/bg-menu-shadow.gif) no-repeat center top;
+    padding-left: 35px;
+    padding-top: 2px;
+    width: 410px;
+}
+
+#header div.section div div#navigation ul.secondary li {
+    float: left;
+    color: #fff;
+}
+
+#header div.section div div#navigation ul.secondary li a {
+    color: #5c4c3f;
+    display: block;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 13px;
+    text-decoration: none;
+}
+
+#header div.section div div#navigation ul.secondary li a:hover,
+#header div.section div div#navigation ul.secondary li.current a {
+    background: url(../images/bg-secondary-menu.gif) repeat-x;
+    color: #e9dbd0;
+}
+
+#header span#tagline {
+    background: url(../images/step-by-step-guide.gif) no-repeat;
+    display: block;
+    height: 154px;
+    margin: 25px auto 0;
+    width: 725px;
+}
+
+#header div#featured {
+    height: 400px;
+    margin: 58px auto 0;
+    width: 960px;
+}
+
+#header div#featured ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#header div#featured ul li {
+    float: left;
+    margin-left: 33px;
+    width: 287px;
+}
+
+#header div#featured ul li.first {
+    margin-left: 20px;
+}
+
+#header div#featured ul li h2 {
+    background: url(../images/bg-heading.gif) no-repeat;
+    font-family: 'MarkerFeltNormal';
+    font-size: 30px;
+    font-weight: normal;
+    height: 64px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 25px;
+}
+
+#header div#featured ul li h2 a {
+    color: #7c4914;
+    text-decoration: none;
+}
+
+#header div#featured ul li div {
+    height: 264px;
+    overflow: hidden;
+    position: relative;
+    width: 287px;
+}
+
+#header div#featured ul li div img {
+    margin: 12px 15px 15px 18px;
+}
+
+#header div#featured ul li div span {
+    background: url(../images/image-frame.gif) no-repeat center;
+    display: block;
+    height: 264px;
+    left: 0;
+    position: absolute;
+    top: -3px;
+    width: 287px;
+}
+
+#header div#featured ul li a.view {
+    background: url(../images/shadow-left.gif) no-repeat right -3px;
+    color: #f8fff8;
+    display: block;
+    float: right;
+    font-family: 'MarkerFeltNormal';
+    font-size: 20px;
+    height: 55px;
+    line-height: 36px;
+    margin-right: 7px;
+    margin-top: -5px;
+    padding-right: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#header div#featured ul li a.view span {
+    background: url(../images/bg-green-pattern.gif) repeat-x;
+    display: block;
+    padding: 0 10px;
+}
+
+#content {
+    background: #f7eee7 url(../images/content-bg.gif) repeat-x top;
+    height: auto;
+    margin-top: 65px;
+    width: 100%;
+}
+
+#content span.background {
+    background: url(../images/spiral.gif) no-repeat center;
+    display: block;
+    height: 51px;
+    position: relative;
+    top: -29px;
+    width: 960px;
+}
+
+#content div {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+#content div div.section,
+#content div div#about {
+    min-height: 200px;
+    padding: 0 15px 40px;
+    *padding-bottom: 60px;
+    width: 930px;
+}
+
+#content div div.section h3,
+#content div div#about h3 {
+    background: url(../images/heading-shadow.png) no-repeat right 22px;
+    color: #f8fff8;
+    float: left;
+    font-family: 'MarkerFeltNormal';
+    font-size: 40px;
+    font-weight: normal;
+    height: 79px;
+    line-height: 62px;
+    margin: 0;
+    padding-right: 8px;
+    text-align: center;
+}
+
+#content div div.section h3 span,
+#content div div#about h3 span {
+    background: url(../images/bg-inner-page-heading.gif) repeat-x;
+    display: block;
+    padding: 0 15px;
+}
+
+#content div div.section div.first,
+#content div div.section div.tips {
+    border-top: 1px solid #D8D1C7;
+    height: auto;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 930px;
+}
+
+#content div div.section div.first {
+    border: 0;
+    padding-top: 0;
+}
+
+#content div div.section div.first ul {
+    list-style: disc;
+    float: left;
+}
+
+#content div div.section div.first ul li {
+    float: none;
+    height: auto;
+    line-height: 30px;
+    margin-left: 15px;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 300px;
+}
+
+#content div div.section div.tips ol {
+    margin-bottom: 0;
+    margin-left: -20px;
+    *margin-left: 25px;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+#content div div.section div.tips ol li {
+    line-height: 20px;
+    padding: 5px 0;
+}
+
+#content div div.section div.tips p {
+    float: left;
+    width: 450px;
+}
+
+#content div div.section div.tips p.first {
+    margin-right: 30px;
+}
+
+#content div div.section div,
+#content div div#about div,
+#content div div.section div#blog {
+    padding-top: 100px;
+    *padding-top: 20px;
+    width: 930px;
+}
+
+#content div div.section h4,
+#content div div#about h4,
+#content div div.section ul li h2 {
+    color: #133e73;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0;
+    text-align: left;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div.section h4,
+#content div div#about h4 {
+    text-align: justify;
+}
+
+#content div div.section p,
+#content div div#about p,
+#content div div.section ul li p {
+    line-height: 20px;
+    margin: 0;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+#content div div#about div div {
+    padding-bottom: 40px;
+    padding-top: 0;
+}
+
+#content div div.section p,
+#content div div#about p {
+    padding-bottom: 10px;
+}
+
+#content div div.section div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#content div div.section div ul li {
+    float: left;
+    margin-left: 70px;
+    padding-bottom: 20px;
+    width: 447px;
+}
+
+#content div div.section div ul li.first {
+    margin-left: 0;
+}
+
+#content div div.section div ul li h5 {
+    color: #133E73;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 20px 0 0;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div.section div ul li {
+    height: 214px;
+    width: 430px;
+}
+
+#content div div.section div ul.accessories {
+    overflow: hidden;
+}
+
+#content div div.section div ul.accessories li {
+    float: left;
+    height: auto;
+    margin: 0 0 0 24px;
+    padding-bottom: 0;
+    width: 214px;
+}
+
+#content div div.section div ul.gallery li {
+    float: left;
+    height: 360px;
+    margin: 0 0 0 37px;
+    padding-bottom: 0;
+    width: 285px;
+}
+
+#content div div.section div ul.accessories li.first,
+#content div div.section div ul.gallery li.first {
+    margin-left: 0;
+}
+
+#content div div.section div ul.accessories li div,
+#content div div.section div ul.gallery li div {
+    *margin-bottom: 20px;
+    padding: 10px 0 20px 37px;
+}
+
+#content div div.section div ul.gallery li div {
+    padding-bottom: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+#content div div.section div ul.gallery li div p {
+    color: #16466c;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#content div div.section div ul.gallery li div span {
+    color: #685e52;
+    display: block;
+    font-style: italic;
+    font-size: 12px;
+}
+
+#content div div.section div ul li a.thumbnail,
+#content div div.section div ul.accessories a.thumbnail {
+    background: url(../images/frame-accesories-image.jpg) no-repeat top left;
+    float: left;
+    height: 214px;
+    margin-right: 15px;
+}
+
+#content div div.section div ul.accessories a.thumbnail,
+#content div div.section div ul.gallery a.thumbnail {
+    display: block;
+    float: none;
+    margin-right: 0;
+}
+
+#content div div.section div ul.gallery a.thumbnail {
+    background: url(../images/frame-gallery-image.jpg) no-repeat top left;
+    height: 283px;
+}
+
+#content div div.section div ul li a.thumbnail img,
+#content div div.section div ul.accessories li a.thumbnail img {
+    border: 1px solid #FFFFFF;
+    margin: 11px;
+}
+
+#content div div.section div ul li h2 a {
+    color: #133E73;
+    padding-right: 26px;
+    text-decoration: none;
+}
+
+#content div div.section div ul li p {
+    text-align: left;
+}
+
+#content div div.section div ul li div {
+    padding: 0;
+    width: auto;
+}
+
+#content div div.section div ul li div a {
+    background: #a5967f;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    color: #FFFDE8;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 10px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#content div div.section div ul li div a:hover,
+#content div div.section div ul li div a.selected {
+    background: #7b6b4a;
+}
+
+#content div div.section div div#paging {
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
+    width: 300px;
+}
+
+#content div div.section div div#paging a {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#content div div.section div div#paging a.prev {
+    background: url(../images/prev-btn.gif) no-repeat 0 0;
+    color: #958878;
+    display: inline-block;
+    height: 17px;
+    line-height: 17px;
+    padding-left: 20px;
+}
+
+#content div div.section div div#paging a.prev:hover {
+    background: url(../images/prev-btn-hover.gif) no-repeat 0 0;
+    color: #797061;
+}
+
+#content div div.section div div#paging a.next {
+    background: url(../images/next-btn.gif) no-repeat 50px 0;
+    color: #797061;
+    display: inline-block;
+    height: 17px;
+    line-height: 17px;
+    padding-left: 9px;
+    padding-right: 23px;
+}
+
+#content div div.section div div#paging a.next:hover,
+#content div div.section div div#paging a.current {
+    background: url(../images/next-btn-hover.gif) no-repeat 50px 0;
+    color: #797061;
+}
+
+#content div div#section {
+    background: url(../images/dashed-border.gif) repeat-y center;
+    margin-top: -20px;
+}
+
+#content div div#section div#article {
+    background: none;
+    float: left;
+    margin: 0;
+    padding: 20px 15px;
+    width: 448px;
+}
+
+#content div div#section div#news {
+    background: none;
+    float: left;
+    margin: 0 0 0 5px;
+    padding: 20px 15px;
+    width: 205px;
+}
+
+#content div div#section div#contact {
+    background: none;
+    float: left;
+    margin: 0 0 0 5px;
+    padding: 20px 15px;
+    width: 207px;
+}
+
+#content div div#section div#article h4,
+#content div div#section div#news h4,
+#content div div#section div#contact h4 {
+    color: #174873;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div#section div#article ul,
+#content div div#section div#news ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#content div div#section div#article ul li ul {
+    list-style-type: disc;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+#content div div#section div#article ul li ul li {
+    padding-top: 5px;
+}
+
+#content div div#section div#article ul li ul li a {
+    color: #7A6B4E;
+    text-decoration: none;
+}
+
+#content div div#section div#article ul li {
+    padding: 15px 0 0;
+}
+
+#content div div#section div#news ul li,
+#content div div.section div#blog ul.sidebar li {
+    background: url(../images/bottom-border.gif) repeat-x center 8px;
+    padding: 5px 0;
+}
+
+#content div div.section div#blog ul.sidebar li.first {
+    background: none;
+    padding-top: 0;
+}
+
+#content div div#section div#news ul li.first {
+    background: none;
+}
+
+#content div div#section div#article ul li.first,
+#content div div#section div#news ul li.first {
+    padding-top: 0;
+}
+
+#content div div#section div#article ul li img {
+    border: 1px solid #7c6b4f;
+    float: left;
+    margin: 10px 10px 0 0;
+}
+
+#content div div#section div#article ul li h2 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0;
+    padding: 15px 0 0;
+}
+
+#content div div#section div#article ul li h2 a {
+    color: #7a6b4e;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div#section div#article ul li p {
+    line-height: 20px;
+    margin: 0;
+    padding-top: 10px;
+    text-align: justify;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div#section div#news ul li p {
+    line-height: 20px;
+    *padding-top: 15px;
+    text-align: left;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div#section div#news ul li div {
+    width: auto;
+}
+
+#content div div#section div#contact p {
+    line-height: 20px;
+    text-align: left;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div#section div#article ul li div,
+#content div div.section div#blog ul.sidebar li div {
+    background: none;
+    font-size: 10px;
+    width: auto;
+}
+
+#content div div#section div#article ul li div {
+    padding-top: 15px;
+}
+
+#content div div.section div#blog ul.sidebar li div {
+    float: none;
+}
+
+#content div div#section div#article ul li div a,
+#content div div#section div#news ul li div a,
+#content div div.section div#blog ul.sidebar li div a {
+    color: #7e6a52;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+#content div div#section div#news ul li div #content div div.section div#blog ul.sidebar li div {
+    *margin-top: -5px;
+}
+
+#content div div#section div#article ul li div span.separator,
+#content div div.section div#blog ul.sidebar li div span.separator {
+    padding: 0 2px;
+}
+
+#content div div.section div#blog ul.sidebar li div a {
+    background: none;
+    border-radius: 0 0 0 0;
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+#content div div#section div#contact form {
+    margin-top: -5px;
+}
+
+#content div div#section div#contact form .inputbox {
+    background: #fff;
+    border: 1px solid #BFB8A8;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    color: #9d9d9d;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 0;
+    padding: 0 5px;
+    width: 190px;
+}
+
+#content div div#section div#contact form .submit,
+#content div div.section div form .submit {
+    background: url(../images/submit-btn.gif) no-repeat;
+    border: 0 none;
+    display: block;
+    height: 27px;
+    margin-left: 130px;
+    margin-top: 5px;
+    width: 70px;
+}
+
+#content div div.section div form .submit {
+    margin-left: 0;
+}
+
+#content div div#section div#contact table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 10px;
+    *margin-top: -10px;
+}
+
+#content div div#section div#contact table td {
+    line-height: 20px;
+    padding: 5px 0;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    vertical-align: baseline;
+}
+
+#content div a.twitter,
+#content div a.facebook {
+    color: #7A6B4E;
+    display: block;
+    text-decoration: none;
+    text-indent: 35px;
+}
+
+#content div a.twitter {
+    background: url(../images/icon-tweeter.gif) no-repeat;
+}
+
+#content div a.facebook {
+    background: url(../images/icon-facebook.gif) no-repeat;
+    margin-top: 5px;
+}
+
+#content div div.section table {
+    margin-top: 35px;
+}
+
+#content div div.section table tr td a.twitter,
+#content div div.section table tr td a.facebook {
+    background-position: left 10px;
+}
+
+#content div div.section table tr td a.facebook {
+    margin-top: 0;
+}
+
+#content div div.section table tr td {
+    line-height: 40px;
+}
+
+#content div div.section div ol {
+    margin-left: -20px;
+    *margin-left: 25px;
+}
+
+#content div div.section div ol li {
+    line-height: 20px;
+    padding: 10px 0;
+    text-align: justify;
+}
+
+#content div div.section div form table {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#content div div.section div form table tr td input {
+    background: #fff;
+    border: 1px solid #C2B6A8;
+    height: 28px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+#content div div.section div#blog {
+    clear: both;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+#content div div.section div#blog div {
+    float: left;
+    padding: 0;
+    width: 630px;
+}
+
+#content div div.section div#blog ul.sidebar {
+    float: right;
+    padding: 0;
+    width: 275px;
+}
+
+#content div div.section div#blog ul.sidebar li {
+    float: none;
+    height: auto;
+    margin-left: 0;
+    padding-bottom: 0;
+    width: auto;
+}
+
+#content div div.section div#blog ul.sidebar li h6 {
+    font-size: 14px;
+    margin: 0;
+    padding: 15px 0 0;
+}
+
+#content div div.section div#blog ul.sidebar li.first h6 {
+    padding-top: 0;
+}
+
+#footer {
+    background: #fff url(../images/footerbg.gif) repeat-x;
+}
+
+#footer p {
+    background: url(../images/footer-top-bg.gif) no-repeat center 30px;
+    font-size: 12px;
+    line-height: 50px;
+    *line-height: 40px;
+    margin: 0 auto;
+    min-height: 12px;
+    width: 930px;
+    color: #AAAAAA;
+    text-align: center;
+    padding-top: 39px;
+    *padding-top: 40px;
+}
+
+#footer p a {
+    color: #AAAAAA;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MarkerFeltNormal';
+    src: url('font/markerfeltnormal-webfont.eot');
+    src: url('font/markerfeltnormal-webfont.eot?#iefix') format('embedded-opentype'), url('font/markerfeltnormal-webfont.woff') format('woff'), url('font/markerfeltnormal-webfont.ttf') format('truetype'), url('font/markerfeltnormal-webfont.svg#MarkerFeltNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
