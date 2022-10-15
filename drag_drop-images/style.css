@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #415f70;
+    max-height: 100vh;
+}
+.container{
+    width: 100%;
+}
+.drag-drop{
+    text-align: center;
+}
+h1{
+    /* text-align: center; */
+    margin-top: 5em;
+    font-size: 33px;
+    font-family: sans-serif;
+    color: darkgray;
+    font-weight: 700;
+}
+.drag-drop span{
+    font-size: 34px;
+    font-family: system-ui;
+    color: salmon;
+}
+button{
+    margin-top: 40px;
+    padding: 17px 35px;
+    border-radius: 8px;
+    border-style: none;
+    font-size: 18px;
+    font-family: monospace;
+    color: purple;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover{
+    background: tomato;
+    color: white;
+    transition: 0.7s linear;
+}
