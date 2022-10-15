@@ -3,11 +3,12 @@ body{
     padding: 0;
     background: #415f70;
     height: 100vh;
+    /* display: flex; */
 }
 .container{
-    width: 100%;
+    width: 80%;
+    margin: auto;
     height: 90vh;
-    position: fixed;
 }
 .drag-drop{
     text-align: center;
@@ -40,4 +41,13 @@ button:hover{
     background: tomato;
     color: white;
     transition: 0.7s linear;
+}
+
+#img-box{
+    width: 100%;
+    margin: 100px 0px;
+}
+img{
+    width: 100%;
+    margin: auto;
 }
