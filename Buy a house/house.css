@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: 'Lexend Tera', sans-serif;
+  }
+  
+  .outer {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .outer-empty {
+    
+    max-width: 900px;
+    margin: auto;
+    display: none;
+  }
+  
+  nav {
+    background: #fff;
+    padding: 12px;
+    box-shadow: 0px 0px 10px 0px #3f51b5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  nav .title {
+    float: left;
+    font-weight: bold;
+    color: #7e4c4c;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+  }
+  nav .input {
+    float: right;
+    padding: 10px;
+    border: 1px solid #3f51b5;
+    border-radius: 9000px;
+    width: 55%;
+    font-size: 20px;
+  }
+  
+  nav::after {
+    content: "x";
+    font-size: 0;
+    opacity: 0;
+    clear: both;
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  .contents {
+     margin-top: 70px;
+    }
+ 
+  
+  .no-data {
+    text-align: center;
+    padding-top: 50px;
+  }
+  .no-data h1 {
+    font-family: 'Lexend Tera';
+    font-size: 30px;
+    color: #7a2626;
+  }
+
+  .card{
+    display: inline-block;
+    padding: 5px;
+    margin: 0 30px 10px 0;
+    border:5px groove;
+   }
+
+  div .outline{
+     border: 50px solid transparent;
+     /*border-bottom: 0px;*/
+  padding: 15px;
+  text-align: center;
+  border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTF8KvdG9r9_za_hhY0ElwjRWYaenYKD449uw&usqp=CAU) 30 stretch;
+  background: linear-gradient(-45deg,#fed6e3, #a8edea);
+  
+}
+
+div .container{
+
+}
+.btn {     
+     padding: 0.45rem 0.85rem;
+     font-size: 0.8rem;
+     border-radius: 0.2rem
+ }
+ .btn-primary {
+     color: #fff;
+     background-color: #3167eb;
+     border-color: #3167eb;
+ }
+
+  img{
+   height: 200px;
+   width: 250px;
+   padding: 10px;
+    }
+
+a{
+  float: right;
+ text-align: center;
+     font-size: 0.8rem;
+     border-radius: 1rem;
+     color: #fff;
+     background-color:#DC143C;
+     border: 2px red;
+}
+
+.validate{
+padding: -5px;
+  border: 2px;
+ background: transparent;
+}
+
+
+input[type=text], input[type=email] {
+   border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea.materialize-textarea {
+    line-height: normal;
+    overflow-y: hidden;
+    padding: .8rem 0 .8rem 0;
+    min-height: 10rem;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #111;
+  }
+
+footer{
+   text-align: center;
+    background: #fff;
+    padding: 12px;
+    box-shadow: 10px 0px 0px 0px #3f51b5;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.btnbtm {
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 18px 60px;
+  color: #fff;
+  font-weight: 600;
+  margin: 20px;
+  transition: box-shadow .2s ease, transform .2s ease, background .2s ease;
+  cursor: pointer;
+}
