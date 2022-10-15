@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* background: linear-gradient(to left, #dd5e89, #f7bb97);  */
+    /* background: url("Cloud - 48501.mp4"); */
+    background-size: cover;
+}
+
+form{
+   margin-top: 50px ; 
+   text-align: center;
+}
+
+input{
+    display: block;
+    width: 350px;
+    height: 40px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+
+button{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    background-color: blue;
+    border: none;
+    color: white;
+    margin-top: 30px;
+}
+
+button:hover{
+    background-color: rgb(91, 91, 237);
+}
+
+form h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+::placeholder{
+    color: black;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    /* bottom: 0; */
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: #f1f1f1;
+    /* width: 100%; */
+    /* padding: 20px; */
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
