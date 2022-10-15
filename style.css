@@ -1,228 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-:root{
-    --navbar-height: 59px;
+.navigation-bar{
+    transition:  transform 0.3s ease-in;
 }
 
-#navbar{
+nav{
     display: flex;
-    align-items: center;
-    position: relative;
-    top: 0px;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(207, 200, 200);
 }
 
-#pic1{
-    margin: 10px 35px;
-}
-
-#pic1 img{
-    height : 56px;
-    margin : 13px 15px;
-
-}
-
-
-#navbar ul{
-    display: flex;
-}
-
-#navbar::before{
-    content: "";
-    background-color: black;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
-
-#navbar ul li{
+nav ul{
     list-style: none;
-    font-size: 1.3rem;
+    line-height: 100px;
+    margin-left: 32px;
+    margin-top: 73px;
 }
 
-#navbar ul li a{
-    color: white;
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
+nav ul li a{
     text-decoration: none;
-}
-
-#navbar ul li a:hover{
-    color: yellow;
-    background-color: rgb(5, 5, 5);
-    
-}
-
-#home{
-    display: flex;
-    flex-direction: column;
-    padding: 3px 200px;
-    height: 650px;
-    justify-content: center;
-    align-items: center;
-}
-
-#home::before{
-    content: "";
-    background: url('../PIC_1.jpg') no-repeat center center/cover;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 80%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.89;  
-}
-
-#home.h1{
     color: black;
-    text-align: center;
-    font-size: 3.5rem;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 26px;
 }
 
-/* services*/
-
-
-#services{
-    margin: 30px;
-    display: flex;
-}
-
-#services .box{
-    border: 5px solid yellow;
-    padding: 34px;
-    margin: 3px 6px;
-    border-radius: 29px;
-    background: rgb(10, 10, 6);   
-    
-}
-
-#services .box img{
-    height: 120px;
-    margin: auto;
-    display: block;
-}
-
-
-#client-section{
-    position: relative;
-    height: 344px;
-}
-
-#client-section::before{
-    content: "";
-    position: absolute;
-    background: url('../bg1.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 200%;
-    z-index: -1;
-    opacity: 0.89;;
-}
-
-#clients{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-} 
-
-.client-item{
-    padding: 34px;
-}
-
-#client img{
- height: 60px;
-}
-
-#contact{
-    position: relative;
-}
-
-#contact::before{
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: rgb(240, 241, 241);
-}
-
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 34px;
-}
-
-#contact-box input,#contact-box textarea{
-    width: 100%;
-    padding: 9px 20px;
-    border-radius: 9px;
-    font-size: 1.1rem;
-}
-
-#contact-box form{
-    width: 40%;
-}
-
-#contact-box label{
-    font-size: 1.5rem;
-    font-family: 'Noto Sans', sans-serif;
-
-}
-
-footer{
-    background: black;
+nav ul li a:hover{
+    text-decoration: none;
     color: white;
-    padding: 10px 20px;
-}
-.h-primary{
-    font-size: 3.4rem;
-    padding: 50px;    
-
+    font-family: 'League Spartan', sans-serif;
+    font-size: 26px;
 }
 
-.h-secondary{
-    font-size: 2.8rem;
-    padding: 45px;
-    font-family: 'Noto Sans', sans-serif;
-    color:azure
-
-}
-
-.btn{
-    padding: 6px 20px;
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-    margin: 25px;
-    font-size: 1.2rem;
-    border-radius: 20px;
+.cross{
     cursor: pointer;
+    margin-left: 149px;
+    position: absolute;
+    top: 22px;
 }
 
-.center{
-    text-align: center;
-    color: azure;
+.ham{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 21px;
+    margin-left: 23px;
 }
 
-.c1{
-    text-align: center;
+.nav-images{
+    display: flex;
+    position: absolute;
 }
 
+.nav-images img{
+    position: absolute;
+    top: 11px;
+}
 
-
-
-
-
-
+.nav-go{
+    transform: translate(-225px, 10px);
+    position: absolute;
+}
 
