@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Montserrat";
+}
+
+.wrapper{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.wrapper ul{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper ul li{
+    display: inline-block;
+    padding: 40px 15px;
+}
+
+.wrapper ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 15px 20px;
+}
+
+.wrapper ul li a:hover{
+    background: white;
+    color: black;
+    border-radius: 35px;
+}
+
+.wrapper h1{
+    color: white;
+    padding: 40px;
+    font-size: 50px;
+}
+.wrapper h2{
+    text-align: center;
+    /* color: black; */
+    color: white;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 15px;
+}
+
+.wrapper p{
+    text-align: center;
+    font-size: 18px;
+    width: 45%;
+    margin: auto;
+    /* color: black; */
+    color: white;
+    line-height: 1.7;
+
+}
+
+
+
+.animation-area {
+	/* background: linear-gradient(to left, #9c56ba, #da5148); */
+    /* background: rgb(61, 61, 220); */
+    background: linear-gradient(to right, #000428, #004e92); 
+	width: 100%;
+	height: 100vh;
+    z-index: -1;
+}
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box-area li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	background: rgba(255, 255, 255, 0.2);
+	animation: animate 20s linear infinite;
+	bottom: -150px;
+	border-radius: 100%;
+}
+.box-area li:nth-child(1) {
+	left: 86%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+}
+.box-area li:nth-child(2) {
+	left: 12%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+	left: 70%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 5.5s;
+}
+.box-area li:nth-child(4) {
+	left: 42%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+.box-area li:nth-child(5) {
+	left: 65%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+	left: 15%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 3.5s;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+

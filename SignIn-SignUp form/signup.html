@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>SignUp</title>
+     <link rel="stylesheet"type="text/css"href="signup.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="Cloud - 48501.mp4" type="video/mp4">
+      </video>
+    <form action="" class="content">
+        <h1>SignUp</h1>
+
+        <input type="text" name="" placeholder="Name">
+        <input type="number" name="" placeholder="Mobile number">
+
+        <datalist id="gender">
+            <option value="">Male</option>
+            <option value="">Female</option>
+            <option value="">others</option>
+        </datalist>
+
+        <button type="submit">Sign Up</button>
+
+        <!-- <datalist id="lang">
+            <option>English</option>
+            <option>Kannada</option>
+            <option>Hindi</option>
+            <option>other</option>
+        </datalist> -->
+    </form>
+
+    <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+        
+        // Pause and play the video, and change the button text
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+        
+</body>
+
+       
