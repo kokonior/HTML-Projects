@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TT Score</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="./conor-samuel-vPKGcFEbmjc-unsplash.jpg">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class='title is-1'><span id='p1Display'>0</span> to <span id='p2Display'>0</span>
+                                </h1>
+                                <p class="subtitle">Use the buttons below to keep score</p>
+                                <label for="playTo" class="label is-inline is-large">Playing To</label>
+                                <div class="select is-rounded">
+                                    <select id="playTo">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="card-footer">
+                            <button id='p1Button' class="is-primary button card-footer-item is-large">+1 Player
+                                one</button>
+                            <button id='p2Button' class="is-info button card-footer-item is-large">+1 Player
+                                two</button>
+                            <button id='reset' class="is-danger button card-footer-item is-large">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src='score_keeper.js'></script>
+</body>
+
+</html>
