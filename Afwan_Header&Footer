@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header And Footer</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#sejarah">Sejarah</a></li>
+            <li><a href="#geografis">Geografis</a></li>
+            <li><a href="#wisata">Wisata</a></li>
+        </ul>
+     </nav>
+    <header>
+        <h1>Bandung</h1>
+        <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+        <nav>
+            <ul>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#geografis">Geografis</a></li>
+                <li><a href="#wisata">Wisata</a></li>
+            </ul>
+        </nav>
+     </header>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eaque impedit dolorem quam praesentium dolore ipsum. Ipsam, iste ex facere omnis aliquam molestias! Ad iusto fuga corporis illo veritatis iure.
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam, est quas impedit deserunt ipsum accusantium exercitationem quod voluptate tempore optio animi qui esse distinctio debitis minus at accusamus repudiandae?
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nobis id vitae cumque dolore, eligendi at natus illum est? Cumque, culpa. Enim voluptate illo dolore rerum consequatur culpa repellendus sint!
+
+     <footer>
+        &copy; 2021, Afwan Sutdrajat
+     </footer>
+
+     <article>
+        <header>
+            <h1>Judul Artikel</h1>
+            <h2>Oleh: Dicoding Indonesia</h2>
+        </header>
+        <p>....... Konten artikel dimulai dari sini ......</p>
+        <footer>
+            <p>Bagikan artikel ini melalui</p>
+            <ul>
+                <li> <a href="www.twitter.com">twitter</a></li>
+                <li>Facebook</li>
+                <li>......</li>
+            </ul>
+        </footer>
+     </article>
+
+</body>
+</html>
