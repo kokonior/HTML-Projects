@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title></title>
+    </head>
+  <body>
+       <!-- by default method is GET and by default action will submit the form at the same page -->
+      <form method="POST/GET" action="after filling form yai form lekr kaha jana hai " action="submit.php">               
+        <!-- diff bw get and post 
+        
+        in get -> the data will be shown to  user 
+      and in post -> its not shown vo hide hoke jata hai -->
+        <div>
+          
+          Name:
+          <input type="text">
+
+        </div> 
+        <div>
+          <input type="submit" value="ToChangeTheName">
+
+        </div> 
+      </form>
+
+      <hr>
+      
+                                      TYPES OF FORMS  
+                                      
+      <form>
+
+        <div>
+          :
+          <input type="">
+          
+      </div>
+
+      <div>
+        colour:
+        <input type="color">
+      </div>      
+
+      <div>
+        date:
+        <input type="date">
+      </div>
+
+      <div>
+       email:
+       <input type="email">
+      </div>
+
+      <div>
+       hidden:
+       <input type="hidden">
+      </div>
+
+      <div>
+        number:
+       <input type="number">
+      </div>
+      
+      <div>
+       password:
+       <input type="password">
+      </div>
+      
+     <div>
+       reset:
+       <input type="reset">
+      </div>
+
+      <div>
+        time:
+        <input type="time">
+      </div>
+      
+     <div>
+       url:
+       <input type="url">
+      </div>
+
+      <div>
+       range:
+       <input type="range" min="100"  max="500">
+      </div>
+      
+    </form>
+    
+    <br>
+     <hr>
+                                            TO UPLOAD A FILE
+          <form enctype="multipart/form-data">
+
+            <input type="file" multiple>
+          
+          </form>
+          <hr>
+          value pahele sai hi ai likha hua
+          <form>
+            <!-- size visible ek baar mai kitna hoga 
+                 readonly -> edit nai kr sakta
+                 disabled -> pahele tha ab disable kr dia 
+                 maxlenth -> zaida sai zaida itna hi likh sakte ho -->
+
+            <input type="text" size="20" maxlength="5" value="FixName" readonly disabled>
+            
+            <input type="submit" value="GO">
+
+            <input type="number" min="0" max="12" placeholder="Enter No" value="1" step="2"  required>
+            
+            <input type="submit" value="go">
+
+            <input type="number"  placeholder="Enter No" value="1" step="2"  required>
+
+            <input type="text" autofocus autocomplete="on" >
+          </form>
+  
+     ------------------------------------------------------------------------------------------------------------
+   
+     <form>
+
+      <!-- name -> yai form age jub submit hoga to vo recive hoga firstname sai then lasyt name sai
+                   and we dont use space we use underscore  -->
+      <input type="text" name="first_name">
+      <input type="text" name="last_name" >
+     
+      <textarea placeholder="enter txt here " cols="30" rows="10">
+        by default txt .....
+      </textarea>
+      <!-- to make a submit in image form -->
+      <input type="image" src="link of image" width="100" height="50">
+     ----------------------------------------------------------------------------------------------------------
+     <!-- HTML forms select option -->
+     <!-- size ek time pr kitne option show hoge-->
+     <!-- optgroup group alag ban jaiga options ka
+          and lable is to lable the grp name -->
+     <!-- multiple is for selecting multiple iteams-->
+
+     <select size="2" multiple > 
+       <optgroup label="select grp">
+
+         <option value="tata" selected > this option is selected </option>
+        </optgroup>
+        <optgroup label="hi why bye group">
+
+          <option value="t" > hi </option>
+          <option value="ta" > why </option>     
+          <option value="tat" > bye </option>
+         </optgroup>
+       </select>
+     </form>
+     
+    </body>
+</html>
