@@ -1,0 +1,14 @@
+<html>
+<head>
+<h2>Table with bgcolor:<h2>
+<table width="100%" border=`2`>
+<tr bgcolor="yellow"> <th>Name</th>
+<th>Age</th>
+</tr>
+<tr bgcolor="red">
+<td>Ankush</td>
+<td>25</td>  
+</tr>
+</table>
+</body>
+</html>
