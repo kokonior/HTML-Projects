@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --my-font: 'Ubuntu', sans-serif;
+    --lg-color: linear-gradient(to left, #74ebd5, #9face6);
+    --light-color: linear-gradient(to right, rgb(76, 216, 190), rgba(131, 185, 231, 0.7));
+
+}
+
+body {
+    background-image: var(--light-color) ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--my-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0.048);
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    width: calc(100vw-65vw);
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+
+.bi{
+    font-size: 1.3rem;
+    margin: 6px;
+}
+
+.form {
+
+    padding: 40px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-table;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #06612c;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    visibility: hidden;
+}
+
+.form-control.success i.bi-check-circle-fill {
+    color: #06612c;
+    visibility: visible;
+}
+
+.form-control.error i.bi-exclamation-circle-fill {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+   margin-bottom: 30px;
+    left: 0;
+    color: rgb(243, 92, 117);
+}
+
+.form-control.error small{
+    visibility: visible;
+    margin-top: 48px;
+    margin-left: 15px;
+}
+
+.header {
+    background-image: var(--lg-color);
+    padding: 15px;
+
+}
+
+.header h1 {
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+}
+
+.form .btn {
+    background: var(--lg-color);
+    border-radius: none;
+    outline: none;
+    display: block;
+    font: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+
+}
+
+.form .btn:hover {
+    background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+@media(max-width:998px){
+    .container
+    {
+        width: calc(100vw-35vw);
+        max-width: 100%;
+    }
+}
