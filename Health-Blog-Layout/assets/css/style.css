@@ -1,0 +1,865 @@
+/*===== globals =====*/
+.bg-color-black {
+  background-color: #000000 !important;
+}
+
+.btn-black {
+  background: black;
+}
+
+.red-col {
+  color: #ea4232;
+}
+
+/* header section css starts here */
+
+.top-right-btns {
+  color: white;
+  justify-content: flex-end;
+}
+
+.format-heading {
+  font-family: Boogaloo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  color: #000000;
+}
+
+.small-heading {
+  font-family: Boogaloo;
+  font-style: Regular;
+  font-size: 27px;
+  line-height: 10px;
+  line-height: 80%;
+  vertical-align: center;
+  color: rgba(0, 0, 0, 0.53);
+  padding-bottom: 3rem;
+}
+
+.main-menubar {
+  justify-content: space-between;
+}
+
+.format-main-menubar {
+  font-family: "Nova Cut";
+  font-size: 1.3rem;
+}
+
+/* header section css ends here */
+
+/* homepage 3 images banner section css starts here */
+.banner-img-left {
+  width: 100%;
+  height: 24rem;
+  background: url("../images/pexels-li-sun-2294361\ \(1\).jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.banner-img-right {
+  width: 100%;
+  height: 24rem;
+  background: url("../images/pexels-pixabay-35009\ \(1\).jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.centered {
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* homepage 3 images banner section css ends here */
+
+.format-heading-2 {
+  text-align: center;
+  font-family: Nova Cut;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 2rem;
+}
+
+.format-card-image {
+  width: 100%;
+  height: 20rem;
+}
+
+.format-underline {
+  width: 4rem;
+  border: 2px solid #991414;
+  margin-bottom: 3rem;
+  margin-left: 46.5rem;
+}
+
+.homepage-line-design {
+  border-top: 2px solid rgb(225, 225, 225);
+  border-bottom: 2px solid rgb(225, 225, 225);
+  width: 100%;
+  height: 1.5rem;
+}
+
+.format-health {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Nova Cut;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.format-health-image {
+  position: absolute;
+  width: 550.01px;
+  height: 404.45px;
+}
+
+.health-section {
+  width: 550px;
+  /* height: 405px; */
+  /* transform: matrix(1, 0, 0, 1, 0, 0); */
+}
+
+.card-body-1 {
+  width: 100%;
+  text-align: center;
+}
+
+.font-format {
+  font-family: Red Hat Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
+}
+
+.format-text-popular {
+  /* position: absolute; */
+  /* width: 54px; */
+  /* height: 10px; */
+  /* s */
+
+  font-family: Nova Cut;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* display: flex; */
+  /* align-items: center;
+text-align: center; */
+
+  color: #991414;
+}
+
+.format-text-para {
+  font-family: Nova Cut;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  /* margin-right: 8rem; */
+  color: #000000;
+}
+
+.div-spacing-0 {
+  padding-top: 2rem;
+  padding-left: 4rem;
+  margin-bottom: 4rem;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0.25rem !important;
+}
+
+.format-text-health {
+  font-family: Nova Cut;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+.color-health {
+  color: #991414;
+}
+
+.format-text-health-1 {
+  font-family: Red Rose;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  height: 27px;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.5rem;
+  color: #000000;
+}
+
+.line-health {
+  position: absolute;
+  width: 60px;
+  height: 0px;
+  left: 371px;
+  top: 1944px;
+
+  border: 2px solid #000000;
+}
+
+.spacing-section {
+  padding-top: 5rem;
+}
+
+.temp-line-format {
+  width: 15%;
+  border: 0.5px solid #000000;
+}
+
+.format-div {
+  margin: 4rem 0;
+}
+
+.main-hr-for {
+  width: 100%;
+}
+
+.line-format {
+  border: top bottom #000000;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.section-spacing-1 {
+  padding: 3rem 0 1rem 0;
+}
+
+.edit-font {
+  font-family: Rasa;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 0.5rem;
+  color: #ffffff;
+}
+.edit-font-1 {
+  font-family: Rasa;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* identical to box height */
+
+  /* display: flex; */
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.line-class {
+  width: 6%;
+  border: 1px solid #991414;
+}
+
+/* Styling of login form */
+
+.box {
+  height: 672px;
+  width: 1128px;
+  /* border-radius: 12px; */
+  /* position: absolute; */
+
+  margin-top: 10rem;
+  /* bottom: -100px; */
+  left: 180px;
+  /* right: 100px; */
+  /* display: flex; */
+
+  background: #fff;
+  /* padding: 30px; */
+  box-shadow: 0px 4px 99px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(218, 50, 50, 1) 50%,
+    rgba(206, 105, 73, 1) 100%
+  );
+}
+
+.login-img {
+  /* position: absolute; */
+
+  height: 676px;
+  width: 643px;
+  padding-top: 1.7rem;
+
+  /* padding-left: 1.2rem; */
+}
+
+.com {
+  font-weight: bold;
+}
+.login {
+  /* position: absolute; */
+
+  font-family: Righteous;
+  /* font-style: normal; */
+  font-weight: normal;
+  font-size: 53px;
+  text-align: left;
+  /* line-height: 66px; */
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.inp {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-bottom-color: #da3232;
+  border-bottom-width: 2px;
+  width: 71%;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+.btn-col {
+  background: #da3232;
+  box-shadow: 0px 4px 99px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  width: 71%;
+}
+
+.company {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 29px;
+  line-height: 34px;
+  /* identical to box height */
+
+  color: #da3232;
+}
+
+.head {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #da3232;
+  /* padding-left: 30px; */
+}
+
+.com {
+  font-weight: bolder;
+}
+.sign-up {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  padding-left: 30px;
+}
+
+.log-txt-for {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 29px;
+  line-height: 34px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* text-align: center; */
+
+  color: #ffffff;
+}
+
+/* Sign up page styling */
+
+.head-sign {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.sign-up-page {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #da3232;
+  padding-left: 30px;
+}
+
+.check {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+/*--------------------------Blog Post Page and categories page styling starts--------------------------*/
+
+/* Fonts used in Blog Post Page
+
+font-family: 'Nova Cut', cursive;
+font-family: 'Red Hat Text', sans-serif;
+font-family: 'Red Rose', cursive;
+font-family: 'Redressed', cursive;
+*/
+
+#blogPost .container {
+  margin-bottom: 30px;
+}
+#blogPost .container .fitness-title span {
+  font-family: "Nova Cut", cursive;
+  font-size: 19px;
+  color: #e5e5e5;
+  background-color: #991414;
+}
+
+#blogPost .container h3 {
+  font-family: "Red Rose", cursive;
+  size: 37px;
+  font-weight: bold;
+}
+
+.blog-text {
+  size: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 0px;
+  padding-right: 50px;
+}
+
+#blogPost .container .col-md-9 hr {
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.blog-like {
+  margin-top: -10px;
+  margin-left: 60px;
+  padding-bottom: 1%;
+  display: flex;
+}
+
+.blog-like .col-md-6 p {
+  color: #991414;
+  font-family: "Red Rose", cursive;
+}
+
+.blog-like .col-md-6 p::before {
+  content: "By - ";
+  color: rgba(0, 0, 0, 0.39);
+}
+
+.blog-like .fab {
+  margin-right: 8px;
+}
+
+.blog-like .col-md-3 {
+  display: flex;
+}
+
+.blog-like .col-md-3 .far.fa-heart::after {
+  content: " 10 ";
+  color: #000000;
+}
+
+textarea {
+  position: relative;
+  width: 100%;
+  height: 294px;
+  font-family: "Red Rose", cursive;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(0, 0, 0, 0.72);
+  box-sizing: border-box;
+}
+.Post-btn input {
+  font-family: "Nova Cut", cursive;
+  background-color: #991414;
+  color: #e5e5e5;
+  font-size: 19px;
+  padding: 6px 23px 6px 23px;
+  width: auto !important;
+  border: 0;
+}
+
+.Post-btn {
+  position: relative;
+  text-align: right;
+  margin-top: -55px;
+  z-index: 1 !important;
+  margin-right: 10px;
+}
+
+.row-md-3 hr {
+  border: 0.5px solid #991414;
+  margin-bottom: -1px;
+}
+
+.row-md-3 {
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: -15px;
+}
+
+.row-md-3 h4 {
+  font-family: "Red Hat Text", sans-serif;
+  size: 26px;
+}
+
+.social-blogpost {
+  display: flex;
+  justify-content: space-between;
+}
+
+.connectAndFollow-title {
+  margin-bottom: 28px;
+}
+
+.categories .row-md-4 {
+  margin-bottom: 100px !important;
+}
+
+.categories .row-md-4 img {
+  height: 120px !important;
+}
+
+.categories-title {
+  margin-bottom: 60px;
+}
+
+.textblock {
+  margin-top: -80px;
+  font-family: "Redressed", cursive;
+}
+
+.textblock span {
+  background-color: white;
+  padding: 1px 25px 1px 25px;
+}
+
+.latestPosts-title {
+  margin-bottom: 37px;
+}
+.latestPosts hr {
+  margin-top: 150px;
+}
+
+.latestPosts .row-md-4 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px !important;
+}
+
+.latestPosts .row-md-4 .col-md-6 img {
+  height: 110px !important;
+}
+
+.latestPosts .row-md-4 .col-md-6 h6 {
+  font-family: "Red Rose", cursive;
+  size: 17px;
+
+  font-weight: 400px;
+  text-align: left;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.latestPosts .row-md-4 .col-md-6 p {
+  color: rgba(0, 0, 0, 0.68);
+  font-family: "Red Rose", cursive;
+  font-weight: 400px;
+  size: 12px !important;
+  line-height: 15px;
+  text-align: left;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* ------------- Category Page Styling Start ------------------- */
+
+.rectangle-nav {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0px;
+  /* top: 390px; */
+  background: rgba(196, 196, 196, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-sizing: border-box;
+}
+
+.fitness-rectangle {
+  font-family: Red Rose;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  justify-content: center;
+}
+
+.category-rectangle {
+  font-family: Red Rose;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #991414;
+  justify-content: center;
+}
+
+.category-with-date {
+  font-family: Nova Cut;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1vh;
+  color: #991414;
+}
+
+.category-grey {
+  color: rgba(0, 0, 0, 0.37);
+}
+
+.readmore-button span {
+  display: flex;
+  font-family: "Nova Cut", cursive;
+  font-size: 19px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 0.8vh;
+}
+
+.readmore-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------- Category Page Styling End ------------------- */
+
+/* ------------- Footer Styling Start ------------------- */
+
+/*
+FOOTER FONTS
+font-family: 'Nova Cut', cursive;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Red Hat Text', sans-serif;
+font-family: 'Red Rose', cursive;
+*/
+
+#footer {
+  background-color: #000000;
+  color: white;
+}
+
+.footer-title {
+  font-family: "Nova Cut", cursive;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 15px;
+  margin-bottom: 2rem;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.footer-title hr {
+  margin-top: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-title hr::before {
+  border: 1px solid #da3232;
+  content: "";
+  display: block;
+  height: 0px;
+  margin-top: -1px;
+  margin-left: -1px;
+  width: 90px;
+  z-index: 1;
+}
+
+/* footer section 1 */
+
+.footer-social {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem 0;
+}
+
+.footer-about-text {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  color: white;
+}
+
+/* footer section 2 */
+
+.footer-connect-text {
+  font-family: "Red Hat Display";
+  font-size: 20px;
+  color: white;
+}
+
+.footer-icon-gap {
+  padding: 0 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* footer section 3 */
+
+.footer-form-group {
+  width: 90%;
+  padding: 1rem 0;
+}
+
+.footer-form-group input[type="email"] {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 0px;
+  width: 90%;
+  border-radius: 0px;
+}
+
+.footer-form-group input[type="email"]:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.footer-form-group textarea[name="message"] {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 0px;
+  height: 100%;
+  width: 90%;
+}
+
+.submit-btn {
+  background: #991414;
+  width: 90%;
+  text-align: center;
+  font-family: Red Rose;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+/* copyright section */
+
+.copyrights p {
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.copyrights hr {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 0 3rem;
+}
+
+/* ------------- Footer Styling End ------------------- */
+
+/* ------------- Media Queries Start ------------------- */
+
+@media screen and (max-width: 576px) {
+  .top-right-btns {
+    margin: 0;
+    justify-content: space-around;
+  }
+
+  .format-heading {
+    font-family: Boogaloo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+  }
+
+  .small-heading {
+    font-size: 1.5rem;
+  }
+
+  .centered {
+    font-size: 1rem;
+  }
+
+  .temp-2 {
+    display: none;
+  }
+
+  .main-menubar li {
+    text-align: center;
+  }
+
+  .format-card-image {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer-connect-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blog-like .col-md-3 {
+    margin-bottom: 20px;
+  }
+  .row-md-3 {
+    margin-top: 50px;
+  }
+
+  .form-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
