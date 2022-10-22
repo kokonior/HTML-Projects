@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 3D Isometric Text</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="text" id="input-text" placeholder="input your text" >
+  <div id="text" data-text="Hello World">Hello World</div>
+  <script>
+    const text = document.querySelector('#text');
+    const inputText = document.querySelector('#input-text');
+
+    inputText.addEventListener('input', function (){
+      text.innerHTML = inputText.value
+      text.dataset.text = inputText.value
+      console.log(inputText.value)
+    })
+    let shadow = ''
+    for(let i = 0; i < 30; i++){
+      shadow +=(shadow? ',':'')+`${-i*1}px ${i*1}px 0 #d9d9d9`;
+    }
+    text.style.textShadow = shadow;
+  </script>
+</body>
+</html>
