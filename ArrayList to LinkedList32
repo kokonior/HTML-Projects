@@ -1,0 +1,45 @@
+// Java Program to convert
+// ArrayList to LinkedList
+// using Naive method
+
+import java.util.*;
+import java.util.stream.*;
+
+class GFG {
+
+	// Generic function to convert an ArrayList to LinkedList
+	public static <T> List<T> convertALtoLL(List<T> aL)
+	{
+
+		// Create an empty LinkedList
+		List<T> lL = new LinkedList<>();
+
+		// Iterate through the aL
+		for (T t : aL) {
+
+			// Add each element into the lL
+			lL.add(t);
+		}
+
+		// Return the converted LinkedList
+		return lL;
+	}
+
+	public static void main(String args[])
+	{
+		// Create an ArrayList
+		List<String> aL = Arrays.asList("Geeks",
+									"forGeeks",
+									"A computer Portal");
+
+		// Print the ArrayList
+		System.out.println("ArrayList: " + aL);
+
+		// convert the ArrayList to LinkedList
+		List<String>
+			lL = convertALtoLL(aL);
+
+		// Print the LinkedList
+		System.out.println("LinkedList: " + lL);
+	}
+}
