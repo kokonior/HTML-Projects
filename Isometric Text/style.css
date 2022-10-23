@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+#text{
+  position: relative;
+  color: white;
+  font-weight: 700;
+  font-size: 12em;
+  line-height: 0.9em;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: rotate(-28deg) skew(25deg);
+}
+
+#text:before{
+  content: attr(data-text);
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+#input-text
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  width: 250px;
+  height: 30px;
+  margin: 10px;
+}
+#input-text:focus
+{
+  outline: none;
+  border: 2px solid rgb(42, 110, 199);
+}
