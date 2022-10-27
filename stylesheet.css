@@ -1,0 +1,300 @@
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /*h2 heading */
+       .heading{
+        margin-top: -50px;
+        font-size: 50px;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      button{
+        font-size: 1px;
+      }
+
+.container{
+    font-size: 50px;
+    font-weight: bolder;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: -10px;
+}/*counter css*/
+.container{
+    margin-top:100px;
+}
+
+.counter-box {
+	display: block;
+	background: #3acf87;
+	padding: 40px 20px 37px;
+	text-align: center
+}
+
+.counter-box p {
+	margin: 5px 0 0;
+	padding: 0;
+	color: white;
+	font-size: 18px;
+	font-weight: 500
+}
+
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: white;
+}
+
+.counter { 
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+	color: white;
+	line-height: 28px
+}
+
+.counter-box.colored {
+      background: #3acf87;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+	color: #fff
+}
+/* box padding in main page*/
+.box1{
+  background-color:#f2f2f2;
+    border: 5px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50px;
+  }
+  .para{
+    font-size: 15px;
+  }
+
+ 
+ /*modal style*/
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 400px;
+  }
+  .modal-dialog .modal-content {
+    padding: 1rem;
+  }
+}
+.modal-header .close {
+  margin-top: -1.5rem;
+}
+
+.form-title {
+  margin: -2rem 0rem 2rem;
+}
+
+.btn-round {
+  border-radius: 3rem;
+}
+
+.delimiter {
+  padding: 1rem;
+}
+
+
+
+.signup-section {
+  padding: 0.3rem 0rem;
+}
+
+/*---------------------- student dashboard navbar--------*/
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+  margin-top: 50px;
+}
+
+.sidebar a {
+  
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar a.active {
+  color: black;
+  background-color: white;
+  border: 5px solid black;
+}
+.slidebar a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+  
+}
+
+.main {
+  
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+/* table of profile of candidate */
+.row {
+  display: flex;
+  margin-left:20px;
+  margin-right:-5px;
+}
+
+.column {
+  flex: 0;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: auto;
+  border: 1px solid #ddd;
+  font-family: sans-serif;
+}
+
+th, td {
+  text-align: left;
+  padding: 17px;
+  font-family: sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+/* announcement section */
+p.ex3 {
+  text-align: left;
+  border: 2px solid black;
+  background-color:#f2f2f2;
+  width: 100%;
+  height: 250px;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+
+/* paging section */
+.pagination {
+  display: inline-block;
+  font-size: 10px;
+ 
+}
+
+.pagination a {
+  border:1px solid white ;
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: black;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+  border: 1px solid black;
+
+}
+/* tpc css*/
+
+
+.search{
+  margin-top: 100px;
+  width: 700px;
+  border: 2px solid black ;
+  border-radius: 15px;
+  height: 40px;
+  text-align: center;
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 90%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.borderless {
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+ }
+.borderless2{
+  border: none;
+}
+.borderless3{
+  border: none;
+}
+.borderless4{
+  border-left: none;
+  border-bottom: none;
+  border-top: none;
+}
+.buttondesign{
+  font-size: 25px;
+  padding: 10px;
+  width: 100%;
+  background-color: #4CAF50;
+  border: 2px solid black;
+  border-radius: 20px;
+}
