@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel</title>
+</head>
+<body>
+    <div class="container cf">
+        <div class="garis"></div>
+        <div class="ribbon"></div>
+        <div class="header">
+            <h1 class="judul">Travel</h1>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">produk</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="banner"></div>
+        <div class="content cf">
+            <div class="content1">
+                <h2>Judul Artikel</h2>
+            <p class="penulis"> Ditulis oleh <a href="#">Bima Laroi Bafih</a> Pada 4 Oktober 2022</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, necessitatibus hic aspernatur, sint, voluptates suscipit distinctio explicabo vitae autem totam eveniet rerum incidunt laudantium sequi quo ipsa quisquam ab soluta.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ad corporis ab eligendi, maiores quisquam eius nemo dolorum voluptatum quaerat voluptates consequuntur commodi debitis porro pariatur iure quibusdam fugiat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates natus consectetur magnam fugit, reprehenderit non quod delectus? Dolore pariatur, sint enim est voluptas quasi neque impedit quam. Provident, ratione alias?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ad corporis ab eligendi, maiores quisquam eius nemo dolorum voluptatum quaerat voluptates consequuntur commodi debitis porro pariatur iure quibusdam fugiat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates natus consectetur magnam fugit, reprehenderit non quod delectus? Dolore pariatur, sint enim est voluptas quasi neque impedit quam. Provident, ratione alias?
+            </p>
+            </div>
+            <div class="content2">
+                <h3>Tempat Wisata</h3>
+                <div class="foto1" alt="">
+                    <img src="img/foto1.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem quas libero explicabo! Sunt aut esse deleniti dolorem et, quibusdam recusandae ducimus, atque perferendis minus possimus inventore aliquam, saepe enim? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit earum sed iusto cupiditate nostrum distinctio eaque tempore rem facere asperiores non, fugiat reprehenderit temporibus consequuntur magni eveniet harum? Ea, cum.</p>
+                </div>
+                <div class="foto2">
+                    <img src="img/foto2.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non nemo excepturi eligendi quia nisi est deserunt, atque, dolor veniam ex perferendis doloribus temporibus quod. Reprehenderit rerum ipsa perspiciatis minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde sunt labore! Tempora cum quisquam consectetur at, velit nisi odit sit a, nulla, ipsum eligendi repellendus laudantium excepturi illum qui.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="footer">
+            Copyright 2022
+        </div>
+    </div>
+    
+</body>
+</html>
