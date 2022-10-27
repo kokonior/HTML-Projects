@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = (100/16)*10 */
+    font-size: 62.5%;
+}
+
+.login-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain {
+    width: 50rem;
+    height: 18rem;
+    margin: 5rem auto;
+    padding: 3rem;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    border-radius: 1rem;
+    background-color: #e4e4e4;
+    box-shadow: 2px 1rem 1.5rem 3px rgb(34 35 50 / 30%);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    padding: 0.2rem;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+}
+
+input[type="submit"] {
+    background: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
+    padding: 0.5rem 1rem;
+    border: none;
+    color: #f3f4ff;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.log_in {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 2rem 5rem;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    box-shadow: -2px 1rem 2rem 0 rgb(132 144 255 / 30%);
+}
+
+@media (max-width:1150px) {
+    html {
+        font-size: 51%;
+    }
+
+    .contain {
+        height: 20rem;
+    }
+}
+
+@media (max-width:912px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contain {
+        width: 50%;
+        height: 19rem;
+    }
+}
+
+@media (max-width:810px) {
+    html {
+        font-size: 47%;
+    }
+
+    .contain {
+        height: 19rem;
+    }
+}
+
+@media (max-width:760px) {
+    html {
+        font-size: 46%;
+    }
+
+    .contain {
+        height: 22rem;
+    }
+}
+
+
+@media (max-width:660px) {
+    html {
+        font-size: 46%;
+    }
+
+    .contain {
+        height: 25rem;
+    }
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: 46%;
+    }
+
+    .contain {
+        width: 58%;
+        height: 25rem;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 35%;
+    }
+
+    .contain {
+        width: 50%;
+        height: 25rem;
+    }
+
+    .log_in {
+        margin: 1rem 2rem;
+    }
+}
+
+@media (max-width:300px) {
+    html {
+        font-size: 25%;
+    }
+
+    .contain {
+        height: 25rem;
+    }
+
+    .log_in {
+        margin: 1.5rem 2rem;
+    }
+}
