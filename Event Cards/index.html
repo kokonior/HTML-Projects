@@ -1,0 +1,213 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cards.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela" />
+</head>
+<body>
+    <section class="section" >
+    <h1 class="heading">Events</h1><br>
+<div>
+    <button class="button" onclick="myfunction1()">All</button>
+    <button class="button" onclick="myfunction2()">Open-Source</button>
+    <button class="button" onclick="myfunction3()">Mobile</button>
+    <button class="button" onclick="myfunction4()">Design</button>
+    <button class="button" onclick="myfunction5()">Internet of Things</button>
+    <button class="button" onclick="myfunction6()">Hackathons</button>
+    <button class="button" onclick="myfunction7()">Robotics</button>
+</div>
+
+
+
+<br><br>
+<section class="container">
+    <div class="row">
+     <div id="open-source" style="cursor: pointer;" class="card-h col-9 col-sm-9 col-md-5 col-lg-4 col-xl-3 " onclick="window.location = 'https://github.com';">
+     <div class="card-image card-1"></div>
+     <h2 class="title">Title1</h2>
+     <p class="p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     <br>
+    <span style="color:grey;" class="span">flutter</span>  
+  <span style="color:grey;" class="span">mobile</span>  
+  <span style="color:grey;" class="span">hackthon</span>  
+</div>
+    
+
+<div id="Mobile" style="cursor: pointer;" class="card-h col-9 col-sm-9 col-md-5 col-lg-4 col-xl-3 " onclick="window.location = 'https://github.com';">
+  <div class="card-image card-2"></div>
+  <h2 class="title">Title2</h2>
+  <p class="p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<br>
+  <span style="color:grey;" class="span">flutter</span>  
+<span style="color:grey;" class="span">mobile</span>  
+<span style="color:grey;" class="span">hackthon</span>  
+</div>
+  
+      
+<div id="Design" style="cursor: pointer;" class="card-h col-9 col-sm-9 col-md-5 col-lg-4 col-xl-3 " onclick="window.location = 'https://github.com';">
+  <div class="card-image card-3"></div>
+  <h2 class="title">Title3</h2>
+  <p class="p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<br>
+  <span style="color:grey;" class="span">flutter</span>  
+<span style="color:grey;" class="span">mobile</span>  
+<span style="color:grey;" class="span">hackthon</span>  
+</div>
+
+
+<div id="Internet of Things" style="cursor: pointer;" class="card-h col-9 col-sm-9 col-md-5 col-lg-4 col-xl-3 " onclick="window.location = 'https://github.com';">
+  <div class="card-image card-4"></div>
+  <h2 class="title">Title4</h2>
+  <p class="p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<br>
+  <span style="color:grey;" class="span">flutter</span>  
+<span style="color:grey;" class="span">mobile</span>  
+<span style="color:grey;" class="span">hackthon</span>  
+</div>
+  
+          
+<div id="Hackathons" style="cursor: pointer;" class="card-h col-9 col-sm-9 col-md-5 col-lg-4 col-xl-3 " onclick="window.location = 'https://github.com';">
+  <div class="card-image card-5"></div>
+  <h2 class="title">Title5</h2>
+  <p class="p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<br>
+  <span style="color:grey;" class="span">flutter</span>  
+<span style="color:grey;" class="span">mobile</span>  
+<span style="color:grey;" class="span">hackthon</span>  
+</div>
+
+
+<div id="Robotics" style="cursor: pointer;" class="card-h col-9 col-sm-9 col-md-5 col-lg-4 col-xl-3 " onclick="window.location = 'https://github.com';">
+  <div class="card-image card-6"></div>
+  <h2 class="title">Title6</h2>
+  <p class="p">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<br>
+  <span style="color:grey;" class="span">flutter</span>  
+<span style="color:grey;" class="span">mobile</span>  
+<span style="color:grey;" class="span">hackthon</span>  
+</div>
+
+  
+ </div></section>
+</section>
+<script> 
+
+  function myfunction1() {
+
+    document.getElementById("open-source").style.display = "block";
+
+    document.getElementById("Mobile").style.display = "block";
+
+    document.getElementById("Design").style.display = "block";
+
+    document.getElementById("Internet of Things").style.display = "block";
+
+    document.getElementById("Hackathons").style.display = "block";
+
+    document.getElementById("Robotics").style.display = "block";
+
+
+}
+
+function myfunction2() {
+
+  document.getElementById("open-source").style.display ="block";
+
+    document.getElementById("Mobile").style.display ="none";
+
+    document.getElementById("Design").style.display = "none";
+
+    document.getElementById("Internet of Things").style.display = "none";
+
+    document.getElementById("Hackathons").style.display = "none";
+
+    document.getElementById("Robotics").style.display = "none";
+
+}
+
+function myfunction3() {
+
+  document.getElementById("open-source").style.display = "none";
+
+    document.getElementById("Mobile").style.display = "block";
+
+    document.getElementById("Design").style.display = "none";
+
+    document.getElementById("Internet of Things").style.display = "none";
+
+    document.getElementById("Hackathons").style.display = "none";
+
+    document.getElementById("Robotics").style.display = "none";
+}
+
+function myfunction4() {
+
+  document.getElementById("open-source").style.display = "none";
+
+    document.getElementById("Mobile").style.display = "none";
+
+    document.getElementById("Design").style.display = "block";
+
+    document.getElementById("Internet of Things").style.display = "none";
+
+    document.getElementById("Hackathons").style.display = "none";
+
+    document.getElementById("Robotics").style.display = "none";
+
+}
+
+
+function myfunction5() {
+
+  document.getElementById("open-source").style.display = "none";
+
+document.getElementById("Mobile").style.display = "none";
+
+document.getElementById("Design").style.display = "none";
+
+document.getElementById("Internet of Things").style.display = "block";
+
+document.getElementById("Hackathons").style.display = "none";
+
+document.getElementById("Robotics").style.display = "none";
+}
+
+
+function myfunction6() {
+
+  document.getElementById("open-source").style.display = "none";
+
+document.getElementById("Mobile").style.display = "none";
+
+document.getElementById("Design").style.display = "none";
+
+document.getElementById("Internet of Things").style.display = "none";
+
+document.getElementById("Hackathons").style.display = "block";
+
+document.getElementById("Robotics").style.display = "none";
+
+}
+
+
+function myfunction7() {
+
+  document.getElementById("open-source").style.display = "none";
+
+document.getElementById("Mobile").style.display = "none";
+
+document.getElementById("Design").style.display = "none";
+
+document.getElementById("Internet of Things").style.display = "none";
+
+document.getElementById("Hackathons").style.display = "none";
+
+document.getElementById("Robotics").style.display = "block";
+}
+
+</script>
+</body>
+</html>
