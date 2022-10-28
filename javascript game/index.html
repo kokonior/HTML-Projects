@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Number Guessing Game</title>
+  
+    <style>
+
+    body {
+    width: 100%;  
+    margin: 10px 10px;
+    overflow-x: hidden;
+    align-items: center;
+    }
+
+    </style>
+</head>
+  
+<body>
+<h1>Number Guessing</h1>
+  
+<p>Choose a number from 1-5 and try to guess the number right</p>
+  
+<div class="form">
+    <label for="guessField">Your guess -> </label>
+    <input type = "text" id = "guessField" class = "guessField">
+    <button type = "submit" class = "guessSubmit" id = "submitguess">SUBMIT</button>
+</div>
+
+<div>
+    <label for="Output">The number of guesses were</label>
+    <button id="output">Show result</button>
+</div>
+  
+<script>
+
+    var y = Math.floor(Math.random() * 5 + 1);
+
+    var guess = 1;
+      
+    document.getElementById("submitguess").onclick = function(){ 
+   var x = document.getElementById("guessField").value;  
+   if(x == y)
+   {    
+       alert("Congrats! The guess is correct."+ guess + " number of guesses taken.");
+   }
+   else if(x > y) 
+   {    
+      alert("Try again with a smaller number");
+      guess++;
+   }
+   else
+   {
+       alert("Try again with a larger number");
+       guess++;
+   }
+
+   document.getElementById("output").onclick = function(){
+        GamepadButton
+   }
+}
+</script>
+</body>
+</html>             
