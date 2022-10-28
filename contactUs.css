@@ -1,0 +1,109 @@
+.about {
+    display: inline-flex;
+    margin-left: 70px;
+    margin-top: 30px;
+
+}
+
+#Contactus {
+    background-color: #358073;
+    width: 650px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+#open {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #358073;
+    margin-top: 100px;
+    font-size: 30px;
+
+}
+
+#visit {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #358073;
+    margin-top: -5px;
+    font-size: 20px;
+}
+
+#time {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #358073;
+    margin-top: -5px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+button:hover {
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    padding: 30px;
+    background-color: black;
+    color: whitesmoke;
+    padding-bottom: 0px;
+}
+
+.col-1 {
+    flex-grow: 2;
+    width: 30%;
+}
+
+.col-2 {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.col-3 {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.col-4 {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.social-icons {
+    padding-top: 20px;
+}
+
+.copyright {
+    align-content: center;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.s1 {
+    width: 30px;
+}
+
+.s2 {
+    width: 30px;
+}
+
+.s3 {
+    width: 30px;
+}
+
+.icon-right {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
