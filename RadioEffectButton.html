@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Radio Effect</title>
+        <style>
+            html{
+                background-color: #1c4435;
+            }
+
+            div{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            input{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border-radius: 50%;
+                width: 2.5vw;
+                height: 2.5vw;
+                box-shadow: 0px 0px 5px #AAC5C6;
+                border: 0.2vw solid rgba(2, 231, 36, 0.8);
+                background-color: #562323;
+                transition: 0.2s all linear;
+                margin-right: 10px;
+                position: relative;
+                top: 4px;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+            }
+
+            input:checked{
+                border: 0.7vw solid #345651;
+                background-color: rgba(2, 228, 231, 0.8);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="radio" name="contact" value="radio1" checked>
+            <input type="radio" name="contact" value="radio2">
+            <input type="radio" name="contact" value="radio3">
+        </div>
+    </body>
+</html>
