@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fbd3f9;
+  font-family: "Oswald", sans-serif;
+}
+
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+.logo {
+  height: 70px;
+  width: 95px;
+  margin-top: -15px;
+}
+nav {
+  background-color: #875c74;
+  height: 80px;
+  width: 100%;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+li .active {
+  background-color: #e08e45;
+}
+
+li a:hover {
+  /*background-color: #B4DC7F; */
+  background: #d5b942;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #22333b;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  li a:hover,
+  li a.active {
+    background: none;
+    color: #f0803c;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/*PASTELES*/
+
+.sabor {
+  color: #02111b;
+  text-shadow: 2px 2px 2px white;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.cake-cards {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #fbd3f9;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50vh;
+}
+
+.flavor-cakes {
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cards .card {
+  height: 440px;
+  background: #e4a8e1;
+  border-radius: 4px;
+  box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  min-width: 260px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s ease;
+  margin: 0 10px;
+}
+
+.cards .card:before {
+  height: 190px;
+  width: calc(100% + 100px);
+  content: "";
+  position: absolute;
+  border-radius: 4px 4px 100% 100%;
+  transition: all 0.4s ease-out;
+  top: 0;
+}
+
+.cajeta:before {
+  background-image: linear-gradient(to top, #694207 0%, #bf6b36 100%);
+}
+
+.chocolate:before {
+  background-image: linear-gradient(to top, #2c1102 0%, #843104 100%);
+}
+
+.fresa:before {
+  background-image: linear-gradient(to top, #eb144e 0%, #bb0505 100%);
+}
+
+.limon:before {
+  background-image: linear-gradient(to top, #cfe446 0%, #689500 100%);
+}
+
+.naranja:before {
+  background-image: linear-gradient(to top, #d57209 0%, #f7b51a 100%);
+}
+
+.vainilla:before {
+  background-image: linear-gradient(to top, #d7ee6e 0%, #ebde53 100%);
+}
+
+.cards .card .close {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  background-image: url("https://rafaelalvucas.github.io/assets/icons/misc/cross.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+.cards .card .close:hover {
+  background-size: 100%;
+  opacity: 0.8;
+}
+.cards .card .arrow {
+  display: none;
+}
+
+.cards .card article {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cards .card article h2 {
+  color: white;
+  margin: 0;
+  padding: 40px 20px 10px 20px;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+.cards .card article .title {
+  color: white;
+  padding: 10px 20px;
+  letter-spacing: 0.8px;
+  transition: all 0.4s ease;
+}
+.cards .card article .desc {
+  padding: 10px 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+  color: #666;
+  height: 90px;
+  transition: all 0.4s ease-out;
+}
+
+.cards .card article .pic {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 20px 0;
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.3);
+  transition: all 0.6s ease;
+}
+
+.cards .card article .pic img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.cards .card:hover:before {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.cards .card:hover .desc {
+  color: white;
+}
+
+.cards .card:hover .pic {
+  box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+.cards .card:hover .pic img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.cards .card.closed {
+  min-width: 120px;
+  max-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+
+.cards .card.closed .title,
+.cards .card.closed .desc,
+.cards .card.closed .actions,
+.cards .card.closed .close {
+  display: none;
+}
+
+.cards .card.closed h2 {
+  padding: 0;
+  height: 100%;
+  transform: rotate(-90deg);
+  width: 440px;
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+.cards .card.closed .pic {
+  border-radius: 100%;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: -20px;
+  margin: 0;
+  box-shadow: 0;
+  transition: all 0.6s ease;
+}
+.cards .card.closed .pic img {
+  object-fit: cover;
+  height: 100%;
+  transform: translateY(20px);
+}
+.cards .card.closed .pic:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+  transition: all 0.4s ease;
+  transform: translateY(20px);
+}
+.cards .card.closed:before {
+  height: 100%;
+  border-radius: 4px;
+}
+.cards .card.closed .arrow {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  bottom: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://rafaelavlucas.github.io/assets/icons/misc/expand.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease;
+}
+.cards .card.closed:hover .arrow {
+  background-size: 100%;
+  opacity: 0.6;
+}
+/*PASTELES - ADORNOS*/
+.ornament {
+  color: #02111b;
+  text-shadow: 2px 2px 2px white;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.blue-candle:before {
+  background-image: linear-gradient(to top, #43abf0 0%, #14517a 100%);
+}
+
+.red-candle:before {
+  background-image: linear-gradient(to top, #f04343 0%, #ec0f0f 100%);
+}
+
+.number-candle:before {
+  background-image: linear-gradient(to top, #02652a 0%, #47f18b 100%);
+}
+
+.draw:before {
+  background-image: linear-gradient(to top, #fa7e61 0%, #e14623 100%);
+}
+
+.fruit:before {
+  background-image: linear-gradient(to top, #e6b839 0%, #e14623 100%);
+}
+
+.fruit-list li {
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  margin: auto;
+}
+
+.figure:before {
+  background-image: linear-gradient(to top, #0b7189 0%, #0e1c36 100%);
+}
