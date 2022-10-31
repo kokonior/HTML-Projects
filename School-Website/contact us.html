@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type ="text/css" href="css/contact us.css">
+<title>Contact Us-SRM</title>
+<style>
+    ul{
+ float: right;
+ list-style-type: none;
+ margin-top: 25px;
+}
+ul li{
+display: inline-block;
+}
+
+ul li a{
+text-decoration: none;
+color: rgb(46, 8, 8);
+padding: 5px 20px;
+border: 1px solid transparent;
+transition: 0.6s ease;
+}
+
+ul li a:hover{
+background-color: #fff;
+color: #000;
+
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="main">
+            
+            
+            
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about us.html">Abouts Us</a></li>
+                <li><a href="curricular activites.html">Extra-Curricular Activities</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="guardians.html">Guardian’s Section</a></li>
+                <li><a href="achievements.html">Achievement’s</a></li>
+                <li><a href="contact us.html">Contact us</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+   
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="1.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="India">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="ger">Germany</option>
+          <option value="aus">AUS</option>
+          <option value="uk">UK</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" name="" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
