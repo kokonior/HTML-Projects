@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume Generator</title>
+  </head>
+  <body id="body">
+    <!-- header -->
+    <div id="cv-form">
+      <!-- form-content -->
+      <div class="container background form my-3">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="mt-1 h3form">Personal Information</h3>
+            <!-- name -->
+            <div class="form-group my-3">
+              <label for="nameField" class="labelform">Name</label>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                id="nameField"
+                class="form-control"
+              />
+            </div>
+            <!-- email -->
+            <div class="form-group my-3">
+              <label for="emailField" class="labelform">Email</label>
+              <input
+                type="text"
+                placeholder="Enter your email"
+                id="emailField"
+                class="form-control"
+              />
+            </div>
+            <!-- phone-number -->
+            <div class="form-group my-3">
+              <label for="contactField" class="labelform">Phone number</label>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                id="contactField"
+                class="form-control"
+              />
+            </div>
+            <!-- Address -->
+            <div class="form-group my-3">
+              <label for="addressField" class="labelform">Adderess</label>
+              <textarea
+                placeholder="Enter your address"
+                id="addressField"
+                class="form-control"
+              >
+              </textarea>
+            </div>
+
+            <!-- profile photo -->
+            <div calss="form-group">
+              <label for="" class="labelform">Select Photo</label>
+              <input id="imgField" class="form-control" type="file" />
+            </div>
+
+            <!-- social URL -->
+            <div class="my-3">
+              <p class="pform">Social Accounts</p>
+              <div class="input-group">
+                <label for="LinkedInField"></label>
+                <span class="input-group-text socialLIn">LinkedIn</span>
+                <input
+                  type="text"
+                  placeholder="Enter URL"
+                  class="form-control"
+                  aria-label="LinkedIn"
+                  id="LinkedInField"
+                />
+              </div>
+              <div class="input-group my-3">
+                <label for="GithubField"></label>
+                <span class="input-group-text socialGh">GitHub</span>
+                <input
+                  type="text"
+                  placeholder="Enter URL"
+                  class="form-control"
+                  aria-label="GitHub"
+                  id="GithubField"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="mt-1 h3form">Professional Information</h3>
+
+            <!-- Academic Qualifications -->
+
+            <div class="form-group my-3" id="acdq">
+              <label for="acdqField" class="labelform"
+                >Academic Qualifications</label
+              >
+
+              <textarea
+                placeholder="Enter your Academic Qualifications"
+                class="form-control acdqField"
+                name=""
+              >
+              </textarea>
+
+              <!-- new text area -->
+
+              <div class="container text-center mt-3" id="acdqAddButton">
+                <button
+                  onclick="addNewAcdqField()"
+                  class="btn btn-primary addBtn"
+                >
+                  Add more
+                </button>
+                <button
+                  onclick="deleteAcdqField()"
+                  class="btn btn-primary delBtn"
+                >
+                  delete
+                </button>
+              </div>
+            </div>
+
+            <!-- skills -->
+
+            <div class="form-group my-3" id="skills">
+              <label for="skillsField" class="labelform">Skills</label>
+              <textarea
+                placeholder="Enter your skills"
+                class="form-control skillsField"
+              >
+              </textarea>
+
+              <!-- new text area -->
+
+              <div class="container text-center mt-3" id="skillsAddButton">
+                <button
+                  onclick="addNewskillsField()"
+                  class="btn btn-primary btn-sm addBtn"
+                >
+                  Add more
+                </button>
+                <button
+                  onclick="deletskills()"
+                  class="btn btn-primary btn-sm delBtn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+
+            <!-- projects -->
+
+            <div class="form-group my-3" id="projects">
+              <label for="projectsField" class="labelform">Projects</label>
+              <textarea
+                placeholder="Enter your projects"
+                class="form-control projectsField"
+              >
+              </textarea>
+
+              <!-- new text area -->
+
+              <div class="container text-center mt-3" id="projectsAddButton">
+                <button
+                  onclick="addNewprojectsField()"
+                  class="btn btn-primary btn-sm addBtn"
+                >
+                  Add more
+                </button>
+                <button
+                  onclick="deleteproject()"
+                  class="btn btn-primary btn-sm delBtn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+
+            <!-- work experience -->
+            <div class="form-group my-3" id="wexp">
+              <label for="wexpField" class="labelform">Work Experience</label>
+              <textarea
+                placeholder="Enter your work experiences"
+                class="form-control wexpField"
+              >
+              </textarea>
+
+              <!-- new text area -->
+
+              <div class="container text-center mt-3" id="wexpAddButton">
+                <button
+                  onclick="addNewWexpField()"
+                  class="btn btn-primary btn-sm addBtn"
+                >
+                  Add more
+                </button>
+                <button
+                  onclick="deleteexp()"
+                  class="btn btn-primary btn-sm delBtn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+
+            <!-- hobbies -->
+            <div class="form-group my-2" id="hobbies">
+              <label for="hobbiesField" class="labelform">Hobbies</label>
+              <textarea
+                placeholder="Enter your hobbies"
+                class="form-control hobbiesField"
+              >
+              </textarea>
+
+              <!-- new text area -->
+
+              <div class="container text-center mt-3" id="hobbiesAddButton">
+                <button
+                  onclick="addNewhobbiesField()"
+                  class="btn btn-primary btn-sm addBtn"
+                >
+                  Add more
+                </button>
+                <button
+                  onclick="deletehobby()"
+                  class="btn btn-primary btn-sm delBtn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="form-group my-2" id="achievements">
+              <label for="achievementsField" class="labelform"
+                >Achievements</label
+              >
+              <textarea
+                placeholder="Enter your achievements & activities"
+                class="form-control achievementsField"
+              >
+              </textarea>
+
+              <!-- new text area -->
+
+              <div
+                class="container text-center mt-3"
+                id="achievementsAddButton"
+              >
+                <button
+                  onclick="addNewachievementsField()"
+                  class="btn btn-primary addBtn"
+                >
+                  Add more
+                </button>
+                <button
+                  onclick="deleteAchievement()"
+                  class="btn btn-primary btn-sm delBtn"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Generate Resume button -->
+        <div class="container text-center mb-3 pb-4 mt-3">
+          <button onclick="generateCV()" class="Genbtn btn-success">
+            Generate Resume
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Template -->
+
+    <div class="container cvBackground mb-4 mt-4" id="cv-template">
+      <div class="row mt-3">
+        <!-- first column -->
+        <div class="col-md-4 personalColumn">
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/avatar-profile/449/avatar_user_default_contact_profile_male-512.png"
+            alt=""
+            class="profilePicture img-fluid mx-auto d-block"
+            id="imgTemplate"
+          />
+
+          <div class="container text-center">
+            <p class="mt-3 pCVtemplate" id="nameT1">Rushiraj Kudapane</p>
+            <p class="pCVtemplate" id="emailT">kudapanerishi13gmail.com</p>
+            <p class="pCVtemplate" id="contactT">+917744850616</p>
+            <p class="pCVtemplate" id="addressT">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, culpa.
+            </p>
+            <hr />
+
+            <p>
+              <a href="#" id="LinkedInT">LinkedIn</a>
+              <span>&nbsp; &nbsp;|&nbsp; &nbsp;</span>
+              <a href="#" id="GithubT">GitHub</a>
+            </p>
+            <hr />
+          </div>
+          <div class="container mt-5">
+            <div>
+              <div class="personalColumn">
+                <h3 class="h3CVtemplate">Skills</h3>
+                <hr />
+              </div>
+              <div class="container pl-3">
+                <ul id="skillsT" class="skillsList listCVtemplate">
+                  <li class="">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Libero, facere?
+                  </li>
+                  <li class="">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Libero, facere?
+                  </li>
+                  <li class="">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Libero, facere?
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- second column -->
+        <div class="col-md-8 py-3">
+          <h1
+            class="text-center cvHeading mt-3 mb-3"
+            style="font-weight: 700"
+            id="nameT2"
+          >
+            Rushiraj Kudapane
+          </h1>
+
+          <!-- Academic Qualifications -->
+          <div class="mt-4">
+            <div class="container py-4">
+              <h3 class="h3CVtemplate">Academic Qualifications</h3>
+              <hr />
+            </div>
+            <div class="container pl-3">
+              <ul id="acdqT" class="listCVtemplate">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- skills -->
+          <!-- <div class="card mt-4">
+                    <div class="card-header personalColumn">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skillsT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, facere?
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, facere?
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, facere?
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
+          <!-- projects -->
+          <div class="mt-4">
+            <div class="container py-4">
+              <h3 class="h3CVtemplate">Projects</h3>
+              <hr />
+            </div>
+            <div class="container pl-3">
+              <ul id="projectsT" class="listCVtemplate">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--  Work Experience -->
+          <div class="mt-4">
+            <div class="container py-4">
+              <h3 class="h3CVtemplate">Work Experience</h3>
+              <hr />
+            </div>
+            <div class="container pl-3">
+              <ul id="wexpT" class="listCVtemplate">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hobbies cARD -->
+          <div class="mt-4">
+            <div class="container py-4">
+              <h3 class="h3CVtemplate">Hobbies</h3>
+              <hr />
+            </div>
+            <div class="container pl-3">
+              <ul id="hobbiesT" class="listCVtemplate">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- achievements cARD -->
+          <div class="mt-4">
+            <div class="container py-4">
+              <h3 class="h3CVtemplate">Achievements & other activities</h3>
+              <hr />
+            </div>
+            <div class="container pl-3">
+              <ul id="achievementsT" class="listCVtemplate">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Libero, facere?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Print Resume Button -->
+          <div class="container text-center mt-5" id="printButton">
+            <button onclick="printCV()" class="cvBtn1">Print Resume</button>
+            <button onclick="back()" class="cvBtn2">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
