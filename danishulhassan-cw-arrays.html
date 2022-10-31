@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS - Arrays</title>
+    <style>
+        body {
+            font-size: 17px;
+            background-color: rgb(114, 195, 191);
+            font-family: monospace;
+            padding: 9px;
+        }
+    </style>
+</head>
+
+<body>
+
+ <h1>JavaScript - Objects & Arrays</h1>
+
+    <script type="text/javascript">
+
+
+        // Objects
+        var stuInfo = {
+            sName: 'Kamran Khan',
+            sClass: '10th',
+            eng: 67,
+            urdu: 76,
+            phy: 36,
+            tot: function() {
+               return this.eng + this.urdu + this.phy
+            }
+        };
+        
+        
+        var total = stuInfo.eng + stuInfo.urdu + stuInfo.phy;
+
+        document.write('<h3>JS - OBJECTS</h3>');
+
+        document.write('Student Name: ' + stuInfo['sName']);
+        document.write('<br>' + 'Class: ' + stuInfo['sClass']);
+        document.write('<br>' + 'Total Marks: ' + total);
+        stuInfo.eng = 78;
+        document.write('<br>' + 'Total Marks from function: ' + stuInfo.tot());
+        
+
+
+        //Arrays 
+
+        document.write('<br>');
+
+        var stuData = ['Kamran', '10th', 58, 75, 68];
+
+        document.write('<h3>JS - ARRAYS</h3>');
+        document.write('Name: ' + stuData[0]);
+
+        stuData[1] = '9th';
+
+        document.write('<br>' + 'Class: ' + stuData[1]);
+        document.write('<br>' + 'English Marks: ' + stuData[2]);
+        document.write('<br>' + 'Urdu Marks: ' + stuData[3]);
+        document.write('<br>' + 'Physics Marks: ' + stuData[4]);
+
+
+        stuData[5] = 98;
+        stuData.push(55);
+
+        // stuData.pop(); It is used to delete value from the arrays last index. 
+
+        document.write('<br> Student Data: ' + stuData);
+        document.write('<br>' + 'Mathematics Marks: ' + stuData[5]);
+        document.write('<br>' + 'Chemistry Marks: ' + stuData[6]);
+
+        // 2D Arrays
+        document.write('<h3>2-Dimensional - ARRAYS</h3>');
+
+        var myStudents = new Array();
+
+        myStudents[0] = ['Kamran', '10th', 45, 75, 85];
+        myStudents[1] = ['Ahmad', '9th', 78, 68, 58];
+        myStudents.push(['Haider', '12th', 43, 93, 33]);
+
+        document.write('Student Data (2D): ' + myStudents);
+
+        document.write('<br> Data at Index [0]: ' + myStudents[0]);
+        document.write('<br> Data at Index [1]: ' + myStudents[1]);
+        document.write('<br> Data at Index [2]: ' + myStudents[2]);
+
+        document.write('<br> Data at Index [2][0]: ' + myStudents[2][0]);
+
+
+
+
+
+
+        
+
+    </script>
+
+</body>
+
+</html>
