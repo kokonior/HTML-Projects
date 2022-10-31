@@ -23,6 +23,6 @@ app.post('/bmicalculator', function (req, res) {
   var ans = n / (m * m);
   res.send('The BMI for the given values is:' + ans);
 });
-app.listen(3000, function () {
-  console.log('Server start on port 3000');
+app.listen(3001, function () {
+  console.log('Server start on port 3001');
 });
