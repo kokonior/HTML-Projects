@@ -1,1 +1,1 @@
-Hektoberfest
+Hacktoberfest 2022 is over!!
