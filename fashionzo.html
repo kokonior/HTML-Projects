@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <img src="logo-removebg-preview.png" width="135px"> 
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="cart.html">Cart<img src="cart.png" alt=""></a></li> 
+                </ul>
+            </nav>
+            <img src="menu.png" class="menu" onclick="menuToggle()">
+        </div> 
+           <div class="row">
+            <div class="col-2">
+                <h1>Give Your Wardrobe <br> A New Style!</h1>
+                <p>A style which implies distinctive fashion adopted by people of <br> taste with comfort. Shop now on fashion to find your go to style and adopt the fashion.</p>
+                <a href="account.html" class="btn">Explore Now &#8594;</a>
+            </div>
+            <div class="background">
+              <img src="image-removebg-preview-21.png" >  
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- js for toggle menu -->
+<script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight="0px";
+    function menuToggle(){
+        if(menuitems.style.maxHeight=="0px"){
+            menuitems.style.maxHeight="200px"
+        }
+        else{
+            menuitems.style.maxHeight="0px"
+        }
+    }
+</script>
+
+</body>
+</html>
