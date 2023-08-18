@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+
+a {text-decoration: none; color: #5a5a5a;}
+
+img {cursor: pointer;}
+
+.upper__navbar {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav__right img {
+    width: 2rem;
+    margin-right: 20px;
+}
+
+.nav__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__left .menu__icon {
+    width: 2rem;
+    margin-right: 20px;
+}
+
+.nav__left .logo {
+    width: 8rem;
+}
+
+.nav__middle {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 8px 20px;
+}
+
+.nav__middle input {
+    width: 400px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+}
+
+/* navbar css ends  */
+
+/* siderbar section css starts  */
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+    background: #fff;
+}
+
+.shortcut__link a img {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.shortcut__link a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.shortcut__link a:first-child {
+    color: red;
+}
+
+.shortcut__link hr {
+    border: 0;
+    width: 85%;
+    height: 1px;
+    background: #ccc;
+}
+
+.subscriber__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    width: 100%;
+}
+
+.subscriber__list a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* small sidebar class for the toggle  */
+.small__sidebar {
+    width: 6%;
+}
+
+.small__sidebar a p {
+    display: none;
+}
+
+.small__sidebar .shortcut__link a img {
+    width: 22px;
+}
+
+.small__sidebar .subscriber__list h3 {display: none;}
+
+.small__sidebar .subscriber__list a img {
+    width: 30px;
+    height: 30px;
+}
+
+.small__sidebar .shortcut__link hr {
+    margin-bottom: 20px;
+}
+
+/* banner styling starts  */
+.banner__container .banner__img {
+    background: url('https://static.vecteezy.com/system/resources/previews/004/299/835/original/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* cards container css starts  */
+.card__container {
+    /* border: 2px solid green; */
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+}
+
+.card__outer__body {
+    border: 1px solid #ccc;
+    padding: 12px 22px;
+    width: 300px;
+    margin: 10px;
+}
+
+.card__outer__body .thumbnail__img {
+    width: 250px;
+    height: 200px;
+}
+
+.card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__details img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.card__details p {
+    font-size: 15px;
+}
+
+.thumbnail__img:hover {
+    transition: all .3s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width : 1524px) {
+    .card__container {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width : 1000px) {
+    .local__img {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width : 964px) {
+    .sidebar {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width : 788px) {
+    .nav__middle {
+        display: none;
+    }
+    
+}
