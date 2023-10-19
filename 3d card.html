@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Card</title>
+    <style>
+        .container{
+    width: 400px;
+    height: 240px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(
+        to bottom right, 
+        #6e6677 0%,
+        #c447ff 100%
+    );
+    --x-pos: 0;
+    --y-angle: calc(var(--x-pos) * 5deg);
+
+    --y-pos: 0;
+    --x-angle: calc(var(--y-pos) * 5deg);
+
+    transform:
+    perspective(200px)
+    rotateY(var(--y-angle))
+    rotateX(var(--x-angle));
+
+}
+
+.card h1 {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Card content here -->
+            <h1>Happy New Years</h1>
+        </div>
+    </div>
+
+    <script>
+        prompt("Apakah Kamu Merayakan Tahun Baru?")
+        alert ("Happy New Year Card");
+        
+
+        const container = document.querySelector('.container');
+        const card = document.querySelector('.card');
+        const { width, height } = container.getBoundingClientRect();
+
+        container.addEventListener('mousemove', (event) => {
+        const { offsetX, offsetY } = event;
+
+        card.style.setProperty('--x-pos', (offsetX / width) - 0.5);
+        card.style.setProperty('--y-pos', (offsetY / height) - 0.5);
+        });
+    </script>
+</body>
+</html>
+
