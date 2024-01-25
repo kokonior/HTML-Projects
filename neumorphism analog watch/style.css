@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body{
+    height: 100%;
+  }
+  body{
+    display: grid;
+    place-items: center;
+    background: #dde1e7;
+    text-align: center;
+  }
+  .clock{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dde1e7;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    box-shadow: -5px -5px 9px #ffffff73,
+                5px 5px 7px rgba(94,104,121,0.288);
+  }
+  .clock:before{
+    position: absolute;
+    content: '';
+    height: 420px;
+    width: 420px;
+    background: #dde1e7;
+    border-radius: 50%;
+    box-shadow: inset -6px -6px 9px #ffffff73,
+                inset 6px 6px 7px rgba(94,104,121,0.288);
+  }
+  .clock:after{
+    position: absolute;
+    content: '';
+    height: 220px;
+    width: 220px;
+    background: #dde1e7;
+    border-radius: 50%;
+    box-shadow: -3px -3px 9px #ffffff73,
+                3px 3px 6px rgba(94,104,121,0.288);
+  }
+  .clock .center-nut{
+    height: 15px;
+    width: 15px;
+    background: #404040;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+  }
+  .clock .center-nut2{
+    height: 9px;
+    width: 9px;
+    background: #5b34db;
+    border-radius: 50%;
+    z-index: 15;
+    position: absolute;
+  }
+  .indicators div{
+    position: absolute;
+    width: 2px;
+    height: 5px;
+    background: #404040;
+  }
+  .indicators div:nth-child(1){
+    transform: rotate(30deg) translateY(-200px);
+  }
+  .indicators div:nth-child(2){
+    transform: rotate(60deg) translateY(-200px);
+  }
+  .indicators div:nth-child(3){
+    background: #5b34db;
+    transform: rotate(90deg) translateY(-200px);
+  }
+  .indicators div:nth-child(4){
+    transform: rotate(120deg) translateY(-200px);
+  }
+  .indicators div:nth-child(5){
+    transform: rotate(150deg) translateY(-200px);
+  }
+  .indicators div:nth-child(6){
+    background: #5b34db;
+    transform: rotate(180deg) translateY(-200px);
+  }
+  .indicators div:nth-child(7){
+    transform: rotate(210deg) translateY(-200px);
+  }
+  .indicators div:nth-child(8){
+    transform: rotate(240deg) translateY(-200px);
+  }
+  .indicators div:nth-child(9){
+    background: #5b34db;
+    transform: rotate(270deg) translateY(-200px);
+  }
+  .indicators div:nth-child(10){
+    transform: rotate(300deg) translateY(-200px);
+  }
+  .indicators div:nth-child(11){
+    transform: rotate(330deg) translateY(-200px);
+  }
+  .indicators div:nth-child(12){
+    background: #5b34db;
+    transform: rotate(360deg) translateY(-200px);
+  }
+  .sec-hand,.min-hand,.hr-hand{
+    position: absolute;
+  }
+  .sec-hand, .sec{
+    height: 180px;
+    width: 180px;
+    z-index: 6;
+  }
+  .min-hand, .min{
+    height: 140px;
+    width: 140px;
+    z-index: 5;
+  }
+  .hr-hand, .hr{
+    height: 110px;
+    width: 110px;
+    z-index: 4;
+  }
+  .sec,.min,.hr{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  .sec:before{
+    position: absolute;
+    content: '';
+    height: 110px;
+    width: 3px;
+    background:#ff1900 ;
+  }
+  .sec:after{
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 7px;
+    background:#ff1900;
+    top: 105px;
+    border-radius: 5px;
+  }
+  .min:before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    top: -15px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 60px solid #5b34db;
+  }
+  .min:after{
+    position: absolute;
+    content: '';
+    width: 3px;
+    top: 40px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 30px solid #5b34db;
+  }
+  .hr:before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 35px solid #303030;
+  }
+  .hr:after{
+    position: absolute;
+    content: '';
+    width: 3px;
+    top: 34px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 25px solid #303030;
+  }
