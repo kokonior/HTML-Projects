@@ -1,0 +1,366 @@
+html {
+    scroll-behavior: smooth;
+}
+.design{
+font-family: 'KoHo', sans-serif;
+font-family: 'Libre Baskerville', serif;
+}
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navi {
+    font-family: 'Princess Sofia', cursive;
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+.navigate {
+             box-shadow: 0 0 15px 5px rgb(0 0 0 / 30%);
+            
+
+}
+
+.nav-link {
+    color: #fffcfc !important;
+    font-size: 20px;
+}
+
+.navbar-toggler {
+    border-color: #feffff !important;
+    color: #ffffff !important;
+}
+
+.navbar-nav {
+    font-weight: bold;
+}
+
+#servi {
+    background: url(images/jiij.jpg) no-repeat;
+    background-attachment: fixed;
+}
+
+#contacts {
+    background-color: black;
+}
+
+
+/* ANIMATION */ 
+
+.buton {
+position: relative;
+padding: 10px 30px;
+margin: 0px 15px;
+font-size:20px;
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 2px;
+transition: 0.5s;
+padding: 10px;
+font-family: 'Varela Round', sans-serif;
+
+}
+
+#neon:before {
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+width:60px;
+height: 30px;
+border-top:2px solid #FF0000;
+border-left: 2px solid #FF0000;
+transition: 0.5s;
+
+}
+#neon:hover::before{
+width: 98%;
+height: 87%;
+border-top:2px solid #7FF000;
+border-left:2px solid #7FF000;
+
+}
+#neon:hover{
+background: #7FF000;
+color: black;
+box-shadow: 0 0 50px #7FF000;
+transition-delay: 0.5%;
+font-weight: 300;
+}
+#neon:after{
+content:'';
+position: absolute;
+bottom: 0;
+right: 0;
+width:60px;
+height: 30px;
+border-bottom:2px solid #FF0000;
+border-right: 2px solid #FF0000;
+transition: 0.5s;
+}
+#neon:hover::after{
+width: 98%;
+height: 89%;
+border-bottom:2px solid #7FF000;
+border-right:2px solid #7FF000;
+}
+
+.callme{
+border-top: 7px dashed   #FF0000 ;
+
+}
+
+@keyframes text {
+0%{
+color: white;
+margin-bottom: -10px;
+/* margin-top: -10px; */
+}
+30%{
+letter-spacing: 5px;
+margin-bottom:-10px;
+}
+/* 85%{
+letter-spacing:8px;
+margin-bottom:-10px;
+} */
+
+}
+
+.design{
+animation: text 2s 1 ;
+}
+
+/* MY WORK HOVER */
+.buon {
+position: relative;
+padding: 10px 30px;
+margin: 0px 15px;
+font-size:20px;
+color: red;
+top: 15px;
+right: 15px;
+text-decoration: none;
+ letter-spacing: 2px;
+ transition: 0.5s;
+ padding: 10px;
+ font-family: 'Varela Round', sans-serif;
+
+}
+
+#work:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      border-top:2px solid red;
+      transition: 0.5s;
+     
+ }
+
+ #work:hover{
+     background: crimson;
+     color: white;
+     box-shadow: 0 0 60px crimson;
+     transition-delay: 0.5%;
+ }
+ #work:after{
+      content:'';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width:100%;
+      border-bottom:2px solid red; 
+      transition: 0.5s;
+ }
+
+.testimonials{
+    border-top: 4px ridge   #FF0000 ;
+    background-color:#fdcccc;
+    font-family: 'Josefin Sans', sans-serif;
+    background: url(images/foot.jpg) no-repeat center ;
+    background-attachment: fixed;
+}
+.font{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.nav-font{
+    font-family: 'Anton', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+}
+.intro{
+    font-family: 'Josefin Sans', sans-serif;
+} 
+/* SCROLL BAR */
+::-webkit-scrollbar 
+{
+     width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+  
+    background:linear-gradient(transparent,crimson);
+    border-radius:6px;
+
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background:linear-gradient(transparent,black);
+}
+/* PROGRESS BAR */
+.progress-heading{
+    font-size:20px !important;
+    font-weight: 500 !important;
+}
+.progress{
+   height: 20px; 
+   border-radius: 50px;
+  background:#f0f0f0;
+}
+
+.skill-bars .bar{
+margin: 20px 0;
+}
+.skill-bars .bar .info{
+margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+font-weight: 700;
+font-size: 20px;
+opacity: 0;
+animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+100%{
+opacity: 2;
+}
+}
+.skill-bars .bar .progress-line{
+height: 15px;
+width: 100%;
+background: #f79898;
+position: relative;
+transform: scaleX(0);
+transform-origin: left;
+border-radius: 10px;
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+      0 1px rgba(255,255,255,0.8);
+animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+100%{
+transform: scaleX(1);
+}
+}
+.bar .progress-line span{
+height: 100%;
+position: absolute;
+border-radius: 10px;
+transform: scaleX(0);
+transform-origin: left;
+background: #e00000;
+animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+width: 90%;
+}
+.bar .progress-line.css span{
+width: 80%;
+}
+.bar .progress-line.javascript span{
+width: 60%;
+}
+.bar .progress-line.c-lang span{
+width: 70%;
+}
+.bar .progress-line.bootstrap span{
+width: 85%;
+}
+.bar .progress-line.WordPress span{
+width: 50%;
+}
+.progress-line span::before{
+position: absolute;
+content: "";
+top: -10px;
+right: 0;
+height: 0;
+width: 0;
+border: 7px solid transparent;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-color: #000;
+opacity: 0;
+animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+position: absolute;
+top: -28px;
+right: 0;
+font-weight: 500;
+background: #000;
+color: #fff;
+padding: 1px 8px;
+font-size: 12px;
+border-radius: 3px;
+opacity: 0;
+animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+100%{
+opacity: 1;
+}
+}
+.progress-line.html span::after{
+content: "90%";
+}
+.progress-line.css span::after{
+content: "85%";
+}
+.progress-line.javascript span::after{
+content: "60%";
+}
+.progress-line.c-lang span::after{
+content: "70%";
+}
+.progress-line.bootstrap span::after{
+content: "85%";
+}
+.progress-line.WordPress span::after{
+content: "50%";
+}
+.bord{
+border-radius: 185px;
+box-shadow: 4px 9px 27px;
+}
+.hell{
+background-color: #e1d9d9;
+border: 2px dashed crimson;
+border-radius: 4px !important;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:crimson;
+
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:11px;
+  
+}

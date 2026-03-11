@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+
+    <style>
+      body {
+        background-color: #395b64;
+      }
+
+      .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        width: 240px;
+        margin: auto;
+        border-radius: 20px;
+        padding: 6px;
+        margin-top: 100px;
+      }
+      input {
+        outline: none;
+        border: none;
+        font-size: 14px;
+      }
+      img {
+        cursor: pointer;
+      }
+
+      #img-loader {
+        margin: auto;
+        display: none;
+        width: 400px;
+        margin-top: 40px;
+        animation: ease-in 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-bar">
+      <input type="text" placeholder="Search" />
+      <img id="icon-search" src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" />
+    </div>
+
+    <img src="https://ibb.co/1qppzyb" alt="loader" id="img-loader" />
+
+    <script>
+      let iconSearch = document.querySelector("#icon-search");
+      iconSearch.addEventListener("click", function () {
+        document.getElementById("img-loader").style.display = "block";
+      });
+    </script>
+  </body>
+</html>

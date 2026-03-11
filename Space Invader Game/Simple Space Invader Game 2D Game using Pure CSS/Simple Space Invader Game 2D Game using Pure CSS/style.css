@@ -1,0 +1,433 @@
+@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+body {margin: 0; padding: 0; background: #333; color: white; font-family: 'Press Start 2P', sans-serif; text-align: center; text-transform: uppercase;}
+input {position: absolute; left: -100vw;}
+label {display: block; cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+p {margin: 0; padding: 0;}
+#title,
+form {position: absolute; width: 100vmin; height: 100vmin; left: 50%; top: 0; transform: translateX(-50%); background: black; overflow: hidden;}
+#title {display: none;}
+#title #text {perspective: 15vmin;}
+#title h1 {position: absolute; left: 0; top: -2.5vmin; color: magenta; margin: 10vmin 0 2vmin; font-size: 12vmin; line-height: 15vmin; transform: rotateX(-10deg);}
+#title h1::before {content: "Space Invaders";}
+#title h1:nth-of-type(2) {top: -1.75vmin; color: cyan; transform: scale(1.025) rotateX(-10deg);}
+#title h1:nth-of-type(3) {top: -1vmin; color: yellow; transform: scale(1.05) rotateX(-10deg);}
+#pointText {margin: 60vmin 0 5vmin; font-size: 3vmin;}
+[for="state_play-active"],
+#title > [for="reset"] {top: 40vmin;}
+#wave0:checked ~ #title > [for="reset"] {visibility: hidden;}
+#lives {position: absolute; width: 20vmin; height: 4vmin; left: 40vmin; top: 8vmin; display: flex; justify-content: center;}
+#lives div,
+#base {width: 6vmin; height: 4vmin; background-size: 6vmin 4vmin; image-rendering: pixelated; image-rendering: crisp-edges;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAYAAADpeqZqAAAAIUlEQVQYlWNgwAX+M/zHKYdTAwwOAk3/SYAka4BrHNSaALAfkW80h7cHAAAAAElFTkSuQmCC);}
+#lives div + div {margin-left: 1vmin;}
+#state_life2-active:checked ~ form #lives div:nth-of-type(2) ~ div,
+#state_life1-active:checked ~ form #lives div:nth-of-type(1) ~ div {display: none;}
+#hiscoreText,
+#livesText,
+#scoreText {position: absolute; left: 3vmin; top: 3vmin; font-size: 4vmin; line-height: 5vmin;}
+#livesText {width: 20vmin; left: 40vmin;}
+#scoreText {left: initial; right: 3vmin;}
+#game {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: black; --delaypause: paused; animation: none 0.1s;}
+#state_restart:checked ~ form #game .game,
+#state_lose:checked ~ form #game .game {display: none;}
+#state_restart:checked ~ form #title {display: block;}
+#state_restart:checked ~ form #hiscores,
+#state_restart:checked ~ form #score {visibility: hidden;}
+@keyframes delaypause1 {0% {--delaypause: running;} 100% {--delaypause: running;}}
+@keyframes delaypause2 {0% {--delaypause: running;} 100% {--delaypause: running;}}
+form {margin: 0; padding: 0; overflow: hidden;}
+#hiscores + p {display: none; margin: 12vmin 0 0; font-size: 3vmin;}
+#state_lose:checked ~ form #hiscores + p {display: block;}
+#hiscores,
+#score {display: flex; position: absolute; top: 7vmin; width: 20vmin; height: 5vmin; overflow: hidden;}
+#hiscores {left: 3vmin; flex-direction: column; flex-wrap: wrap; list-style: none; margin: 0; padding: 0;}
+#score {right: 3vmin;}
+#state_lose:checked ~ form #hiscores {height: 25vmin; left: 40vmin; top: 20vmin;}
+@keyframes hiscore {100% {order: -1000;}}
+#hiscores > li {display: flex; height: 5vmin; margin: 0; padding: 0; overflow: hidden; animation-name: hiscore;
+  animation-duration: 100s; animation-timing-function: steps(1000); animation-iteration-count: infinite; animation-play-state: paused;}
+@keyframes score {100% {transform: translateY(-100%);}}
+#hiscores > li ul,
+#score ul {counter-reset: score -1; list-style: none; width: 4vmin; height: 50vmin; margin: 0; padding: 0;
+  animation-name: score; animation-timing-function: steps(10); animation-iteration-count: infinite; animation-play-state: paused;}
+#score ul {animation-play-state: var(--delaypause);}
+#state_restart:checked ~ form #score ul {animation-name: none;}
+.tens {animation-duration: 1s;}
+.hundreds {animation-duration: 10s;}
+.thousands {animation-duration: 100s;}
+.tenthousands {animation-duration: 1000s;}
+#hiscores > li ul li,
+#score li {height: 5vmin; margin: 0; padding: 0;}
+#hiscores > li ul li::before,
+#score li::before {counter-increment: score; content: counter(score); display: block; font-size: 4vmin; line-height: 5vmin;}
+@keyframes ufo {100% {transform: translateX(200vmin);}}
+div[id^="ufo"] {position: absolute; width: 8vmin; height: 4vmin; left: -60vmin; top: 14vmin; animation: none 50s steps(100) 1s 20 alternate;}
+div[id^="ufo"]::before {content: ""; position: absolute; height: 4vmin;}
+div[id^="ufo"]::before,
+#points li:nth-of-type(1)::before {width: 8vmin; background-size: 8vmin 4vmin; image-rendering: pixelated; image-rendering: crisp-edges;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAM0lEQVQYlWNgwAL+MzD8R8fY1BHURJQhxGjEagCyIDKNT5xkG3G6AJtN+PhY/U0oQJH5ABcvd4lY0Y62AAAAAElFTkSuQmCC);}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #ufo0,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #hitufo-0:checked ~ #game #ufo1 {animation-name: ufo;}
+[id^="state_"][id$="-active"]:checked ~ form #hitufo-0:checked ~ #game #ufo0,
+[id^="state_"][id$="-active"]:checked ~ form #hitufo-1:checked ~ #game #ufo1 {animation-play-state: paused;}
+@keyframes move-lr {100% {transform: translateX(32vmin);}}
+@keyframes move-down {100% {transform: translateY(60vmin);}}
+#wave {position: absolute; width: 66vmin; height: 30vmin; left: 0; top: 12vmin; padding: 8vmin 31vmin 0 3vmin; display: none; flex-wrap: wrap; overflow: hidden; animation: none 160s steps(10) 1s; animation-fill-mode: forwards;}
+#wave div {width: 4vmin; height: 4vmin; margin: 0 2vmin 2vmin 0; animation: none 16s steps(16) 1s 10 alternate; animation-fill-mode: forwards; overflow: hidden;}
+@keyframes animate {100% {transform: translateY(-100%);}}
+#wave div::before {content: ""; position: absolute; width: 15vmin; height: 8vmin; left: 0; animation: none 2s steps(2) 2s 80;}
+#wave div::before,
+#points li::before {background-size: 15vmin 8vmin; image-rendering: pixelated; image-rendering: crisp-edges; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAYCAYAAABurXSEAAAAxUlEQVRYhe2UwQ6AIAxD/f+f1pMJmdv6CjEmhp5gtGu3A8ex8RHOAEfn1Dtvi6zgBp8JjLxoYNVsdVhLl5Gqe9VofItcOmx3xlPS6Ve0RF8Nm05NtnRzlPnIU30ItxTRJioUCR0Hnw5OAmfcLADxzJbkeG9s/Ar2PznonHrnbZEVVKjIcf5ea1k0cNXsrilNF8RZ0kMQax2nelP3St+d8ZR0+hUt0ZfbVhumuhXz6CvDxoDVmZqSuuK0OnebM8Fe2/TGy7gAe75T5XBUltAAAAAASUVORK5CYII=);}
+#points {list-style: none; width: 25vmin; margin: 0 auto;}
+#points li {position: relative; width: 100%; height: 5vmin; font-size: 2vmin; line-height: 5vmin;}
+#points li::before {content: ""; position: absolute; width: 4vmin; height: 4vmin; left: -5vmin;}
+#points li:nth-of-type(1)::before {left: -7vmin;}
+#points li:nth-of-type(2)::before {background-position-x: 5vmin;}
+#points li:nth-of-type(3)::before {background-position-x: 10vmin;}
+[id="wave0"]:checked ~ #game [id="wave"] {display: flex;}
+#wave div:nth-of-type(-n+33)::before {left: -5vmin;}
+#wave div:nth-of-type(-n+11)::before {left: -10vmin;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #wave {animation-name: move-down;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #wave div {animation-name: move-lr;}
+[id^="state_"][id$="-active"]:checked ~ form [id="wave0"]:checked ~ #game #wave div::before {animation-name: animate;}
+@keyframes fade {100% {opacity: 0;}}
+#shields {position: absolute; width: 94vmin; height: 4vmin; left: 3vmin; top: 68vmin;}
+#shields > div > div {display: flex;}
+#shields > div > div > div {width: 10vmin; height: 4vmin; margin-left: 6vmin; display: flex; flex-wrap: wrap; justify-content: space-between;}
+#shields > div > div > div + div {margin-left: 14vmin;}
+#shields > div > div > div div {width: 2vmin; height: 2vmin; background: green; visibility: hidden;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv0-"]:checked ~ #game #shields,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv1-"]:checked ~ #game #shields > div,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv2-"]:checked ~ #game #shields > div > div,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv3-"]:checked ~ #game #shields > div > div > div,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv4-"]:checked ~ #game #shields > div > div > div > div {animation-play-state: running;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #shields {animation: fade 1s linear 129s paused forwards;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #shields > div {animation: fade 1s linear 113s paused forwards;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #shields > div > div {animation: fade 1s linear 97s paused forwards;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #shields > div > div > div {animation: fade 1s linear 81s paused forwards;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game #shields > div > div > div > div {animation: fade 1s linear 65s paused forwards;}
+[id^="state_"][id$="-active"]:checked ~ form #hitufo-0:checked ~ #game #ufo0::before,
+[id^="state_"][id$="-active"]:checked ~ form #hitufo-1:checked ~ #game #ufo1::before,
+#hit0-0:checked ~ #game #wave div:nth-of-type(1)::before,#hit0-1:checked ~ #game #wave div:nth-of-type(2)::before,#hit0-2:checked ~ #game #wave div:nth-of-type(3)::before,
+#hit0-3:checked ~ #game #wave div:nth-of-type(4)::before,#hit0-4:checked ~ #game #wave div:nth-of-type(5)::before,#hit0-5:checked ~ #game #wave div:nth-of-type(6)::before,
+#hit0-6:checked ~ #game #wave div:nth-of-type(7)::before,#hit0-7:checked ~ #game #wave div:nth-of-type(8)::before,#hit0-8:checked ~ #game #wave div:nth-of-type(9)::before,
+#hit0-9:checked ~ #game #wave div:nth-of-type(10)::before,#hit0-10:checked ~ #game #wave div:nth-of-type(11)::before,#hit1-11:checked ~ #game #wave div:nth-of-type(12)::before,
+#hit1-12:checked ~ #game #wave div:nth-of-type(13)::before,#hit1-13:checked ~ #game #wave div:nth-of-type(14)::before,#hit1-14:checked ~ #game #wave div:nth-of-type(15)::before,
+#hit1-15:checked ~ #game #wave div:nth-of-type(16)::before,#hit1-16:checked ~ #game #wave div:nth-of-type(17)::before,#hit1-17:checked ~ #game #wave div:nth-of-type(18)::before,
+#hit1-18:checked ~ #game #wave div:nth-of-type(19)::before,#hit1-19:checked ~ #game #wave div:nth-of-type(20)::before,#hit1-20:checked ~ #game #wave div:nth-of-type(21)::before,
+#hit1-21:checked ~ #game #wave div:nth-of-type(22)::before,#hit2-22:checked ~ #game #wave div:nth-of-type(23)::before,#hit2-23:checked ~ #game #wave div:nth-of-type(24)::before,
+#hit2-24:checked ~ #game #wave div:nth-of-type(25)::before,#hit2-25:checked ~ #game #wave div:nth-of-type(26)::before,#hit2-26:checked ~ #game #wave div:nth-of-type(27)::before,
+#hit2-27:checked ~ #game #wave div:nth-of-type(28)::before,#hit2-28:checked ~ #game #wave div:nth-of-type(29)::before,#hit2-29:checked ~ #game #wave div:nth-of-type(30)::before,
+#hit2-30:checked ~ #game #wave div:nth-of-type(31)::before,#hit2-31:checked ~ #game #wave div:nth-of-type(32)::before,#hit2-32:checked ~ #game #wave div:nth-of-type(33)::before,
+#hit3-33:checked ~ #game #wave div:nth-of-type(34)::before,#hit3-34:checked ~ #game #wave div:nth-of-type(35)::before,#hit3-35:checked ~ #game #wave div:nth-of-type(36)::before,
+#hit3-36:checked ~ #game #wave div:nth-of-type(37)::before,#hit3-37:checked ~ #game #wave div:nth-of-type(38)::before,#hit3-38:checked ~ #game #wave div:nth-of-type(39)::before,
+#hit3-39:checked ~ #game #wave div:nth-of-type(40)::before,#hit3-40:checked ~ #game #wave div:nth-of-type(41)::before,#hit3-41:checked ~ #game #wave div:nth-of-type(42)::before,
+#hit3-42:checked ~ #game #wave div:nth-of-type(43)::before,#hit3-43:checked ~ #game #wave div:nth-of-type(44)::before,#hit4-44:checked ~ #game #wave div:nth-of-type(45)::before,
+#hit4-45:checked ~ #game #wave div:nth-of-type(46)::before,#hit4-46:checked ~ #game #wave div:nth-of-type(47)::before,#hit4-47:checked ~ #game #wave div:nth-of-type(48)::before,
+#hit4-48:checked ~ #game #wave div:nth-of-type(49)::before,#hit4-49:checked ~ #game #wave div:nth-of-type(50)::before,#hit4-50:checked ~ #game #wave div:nth-of-type(51)::before,
+#hit4-51:checked ~ #game #wave div:nth-of-type(52)::before,#hit4-52:checked ~ #game #wave div:nth-of-type(53)::before,#hit4-53:checked ~ #game #wave div:nth-of-type(54)::before,
+#hit4-54:checked ~ #game #wave div:nth-of-type(55)::before {left: 0; visibility: hidden; animation: miss0 0.5s steps(1); background-size: 4vmin 4vmin;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAMElEQVQYlWNgQAL/////z4AGsImhCBLDxm0SEXKEwX8ooJY6/CYQLUdWKOESRBcDAKjNT7G/g0oVAAAAAElFTkSuQmCC);}
+#shield0-0:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(1),#shield0-1:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(2),
+#shield0-2:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(3),#shield0-3:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(4),
+#shield0-4:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(5),#shield0-5:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(6),
+#shield0-6:checked ~ #game #shields > div > div > div:nth-of-type(1) div:nth-of-type(7),#shield1-0:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(1),
+#shield1-1:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(2),#shield1-2:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(3),
+#shield1-3:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(4),#shield1-4:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(5),
+#shield1-5:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(6),#shield1-6:checked ~ #game #shields > div > div > div:nth-of-type(2) div:nth-of-type(7),
+#shield2-0:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(1),#shield2-1:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(2),
+#shield2-2:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(3),#shield2-3:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(4),
+#shield2-4:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(5),#shield2-5:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(6),
+#shield2-6:checked ~ #game #shields > div > div > div:nth-of-type(3) div:nth-of-type(7),#shield3-0:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(1),
+#shield3-1:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(2),#shield3-2:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(3),
+#shield3-3:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(4),#shield3-4:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(5),
+#shield3-5:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(6),#shield3-6:checked ~ #game #shields > div > div > div:nth-of-type(4) div:nth-of-type(7) {visibility: visible;}
+#base {position: absolute; top: 78vmin; left: 3vmin;}
+#base::before {content: ""; position: absolute; width: 4vmin; height: 4vmin; left: 0; top: -64vmin; visibility: hidden; animation: none 1s steps(1); background-size: 4vmin 4vmin; background-repeat: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAMElEQVQYlWNgQAL/////z4AGsImhCBLDxm0SEXKEwX8ooJY6/CYQLUdWKOESRBcDAKjNT7G/g0oVAAAAAElFTkSuQmCC);}
+#land {position: absolute; width: 100%; height: 6vmin; left: 0; top: 78vmin; background: black;}
+#controls {position: absolute; width: 100%; height: 16vmin; left: 0; bottom: 0; background: #444;}
+.arrows {position: absolute; left: 10vmin; top: 3vmin;}
+.arrows div {position: absolute; width: 0; height: 0; left: 0; border-top: 5vmin transparent solid; border-right: 5vmin yellow solid; border-bottom: 5vmin transparent solid;}
+.arrows .arrow2 {left: 2vmin; border-right-color: orange;}
+.arrows .arrow3 {left: 4vmin; border-right-color: red;}
+.arrows .arrow4 {left: 6vmin; border-right-color: black;}
+.arrowsr {transform: rotate(180deg); left: 60vmin; top: 13vmin;}
+.arrowsu {transform: rotate(90deg); left: 88vmin; top: 0;}
+#move {position: absolute; width: 30vmin; height: 10vmin; left: 20vmin; top: 3vmin; overflow: hidden;}
+#move div {position: absolute; width: calc(10vmin * 46); height: 10vmin; display: flex; z-index: 1;}
+#move label {width: 10vmin; height: 10vmin;}
+#move::before,
+#move::after {content: ""; left: 0; top: 0; z-index: 0;}
+#move::before,
+#move::after,
+#fire {position: absolute; width: 10vmin; height: 10vmin; background: white; border-radius: 50%; box-shadow: inset 0 0 0 0.5vmin white, inset 0 0 0.5vmin 1vmin #999;}
+#move::after {left: 20vmin;}
+#pos0:checked ~ #game #move div {transform: translateX(10vmin);}#pos1:checked ~ #game #move div {transform: translateX(0);}
+#pos2:checked ~ #game #move div {transform: translateX(-10vmin);}#pos3:checked ~ #game #move div {transform: translateX(-20vmin);}
+#pos4:checked ~ #game #move div {transform: translateX(-30vmin);}#pos5:checked ~ #game #move div {transform: translateX(-40vmin);}
+#pos6:checked ~ #game #move div {transform: translateX(-50vmin);}#pos7:checked ~ #game #move div {transform: translateX(-60vmin);}
+#pos8:checked ~ #game #move div {transform: translateX(-70vmin);}#pos9:checked ~ #game #move div {transform: translateX(-80vmin);}
+#pos10:checked ~ #game #move div {transform: translateX(-90vmin);}#pos11:checked ~ #game #move div {transform: translateX(-100vmin);}
+#pos12:checked ~ #game #move div {transform: translateX(-110vmin);}#pos13:checked ~ #game #move div {transform: translateX(-120vmin);}
+#pos14:checked ~ #game #move div {transform: translateX(-130vmin);}#pos15:checked ~ #game #move div {transform: translateX(-140vmin);}
+#pos16:checked ~ #game #move div {transform: translateX(-150vmin);}#pos17:checked ~ #game #move div {transform: translateX(-160vmin);}
+#pos18:checked ~ #game #move div {transform: translateX(-170vmin);}#pos19:checked ~ #game #move div {transform: translateX(-180vmin);}
+#pos20:checked ~ #game #move div {transform: translateX(-190vmin);}#pos21:checked ~ #game #move div {transform: translateX(-200vmin);}
+#pos22:checked ~ #game #move div {transform: translateX(-210vmin);}#pos23:checked ~ #game #move div {transform: translateX(-220vmin);}
+#pos24:checked ~ #game #move div {transform: translateX(-230vmin);}#pos25:checked ~ #game #move div {transform: translateX(-240vmin);}
+#pos26:checked ~ #game #move div {transform: translateX(-250vmin);}#pos27:checked ~ #game #move div {transform: translateX(-260vmin);}
+#pos28:checked ~ #game #move div {transform: translateX(-270vmin);}#pos29:checked ~ #game #move div {transform: translateX(-280vmin);}
+#pos30:checked ~ #game #move div {transform: translateX(-290vmin);}#pos31:checked ~ #game #move div {transform: translateX(-300vmin);}
+#pos32:checked ~ #game #move div {transform: translateX(-310vmin);}#pos33:checked ~ #game #move div {transform: translateX(-320vmin);}
+#pos34:checked ~ #game #move div {transform: translateX(-330vmin);}#pos35:checked ~ #game #move div {transform: translateX(-340vmin);}
+#pos36:checked ~ #game #move div {transform: translateX(-350vmin);}#pos37:checked ~ #game #move div {transform: translateX(-360vmin);}
+#pos38:checked ~ #game #move div {transform: translateX(-370vmin);}#pos39:checked ~ #game #move div {transform: translateX(-380vmin);}
+#pos40:checked ~ #game #move div {transform: translateX(-390vmin);}#pos41:checked ~ #game #move div {transform: translateX(-400vmin);}
+#pos42:checked ~ #game #move div {transform: translateX(-410vmin);}#pos43:checked ~ #game #move div {transform: translateX(-420vmin);}
+#pos44:checked ~ #game #move div {transform: translateX(-430vmin);}
+#pos0:checked ~ #game #base {transform: translateX(0);}#pos1:checked ~ #game #base {transform: translateX(2vmin);}
+#pos2:checked ~ #game #base {transform: translateX(4vmin);}#pos3:checked ~ #game #base {transform: translateX(6vmin);}
+#pos4:checked ~ #game #base {transform: translateX(8vmin);}#pos5:checked ~ #game #base {transform: translateX(10vmin);}
+#pos6:checked ~ #game #base {transform: translateX(12vmin);}#pos7:checked ~ #game #base {transform: translateX(14vmin);}
+#pos8:checked ~ #game #base {transform: translateX(16vmin);}#pos9:checked ~ #game #base {transform: translateX(18vmin);}
+#pos10:checked ~ #game #base {transform: translateX(20vmin);}#pos11:checked ~ #game #base {transform: translateX(22vmin);}
+#pos12:checked ~ #game #base {transform: translateX(24vmin);}#pos13:checked ~ #game #base {transform: translateX(26vmin);}
+#pos14:checked ~ #game #base {transform: translateX(28vmin);}#pos15:checked ~ #game #base {transform: translateX(30vmin);}
+#pos16:checked ~ #game #base {transform: translateX(32vmin);}#pos17:checked ~ #game #base {transform: translateX(34vmin);}
+#pos18:checked ~ #game #base {transform: translateX(36vmin);}#pos19:checked ~ #game #base {transform: translateX(38vmin);}
+#pos20:checked ~ #game #base {transform: translateX(40vmin);}#pos21:checked ~ #game #base {transform: translateX(42vmin);}
+#pos22:checked ~ #game #base {transform: translateX(44vmin);}#pos23:checked ~ #game #base {transform: translateX(46vmin);}
+#pos24:checked ~ #game #base {transform: translateX(48vmin);}#pos25:checked ~ #game #base {transform: translateX(50vmin);}
+#pos26:checked ~ #game #base {transform: translateX(52vmin);}#pos27:checked ~ #game #base {transform: translateX(54vmin);}
+#pos28:checked ~ #game #base {transform: translateX(56vmin);}#pos29:checked ~ #game #base {transform: translateX(58vmin);}
+#pos30:checked ~ #game #base {transform: translateX(60vmin);}#pos31:checked ~ #game #base {transform: translateX(62vmin);}
+#pos32:checked ~ #game #base {transform: translateX(64vmin);}#pos33:checked ~ #game #base {transform: translateX(66vmin);}
+#pos34:checked ~ #game #base {transform: translateX(68vmin);}#pos35:checked ~ #game #base {transform: translateX(70vmin);}
+#pos36:checked ~ #game #base {transform: translateX(72vmin);}#pos37:checked ~ #game #base {transform: translateX(74vmin);}
+#pos38:checked ~ #game #base {transform: translateX(76vmin);}#pos39:checked ~ #game #base {transform: translateX(78vmin);}
+#pos40:checked ~ #game #base {transform: translateX(80vmin);}#pos41:checked ~ #game #base {transform: translateX(82vmin);}
+#pos42:checked ~ #game #base {transform: translateX(84vmin);}#pos43:checked ~ #game #base {transform: translateX(86vmin);}
+#pos44:checked ~ #game #base {transform: translateX(88vmin);}
+#fire {left: 70vmin; top: 3vmin; overflow: hidden;}
+#fire div {height: 10vmin; pointer-events: none;}
+#fire > div {position: absolute; width: 450vmin;}
+#fire label {height: 10vmin; top: 0; pointer-events: initial; visibility: hidden; transition: visibility 0.15s steps(1);}
+#fire [for^="miss-"] {position: absolute; width: 450vmin; left: 0; visibility: visible;}
+#miss-0:checked ~ #game [for="miss-0"], #miss-1:checked ~ #game [for="miss-1"] {visibility: hidden;}
+@keyframes miss0 {0% {visibility: visible;}}
+@keyframes miss1 {0% {visibility: visible;}}
+#miss-0:checked ~ #game #base::before {animation-name: miss0;}
+#miss-1:checked ~ #game #base::before {animation-name: miss1;}
+@keyframes labels-ufo {100% {left: 1000vmin;}}
+#fire [for^="hitufo-"] {position: absolute; width: 40vmin; visibility: visible; transform: translateX(-300vmin); left: 0; animation: none 50s steps(50) 1s 20 alternate;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game [for="hitufo-0"],
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #hitufo-0:checked ~ #game [for="hitufo-1"] {animation-name: labels-ufo;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #hitufo-0:checked ~ #game [for="hitufo-0"],
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #hitufo-1:checked ~ #game [for="hitufo-1"] {animation-name: none;}
+.inv-labels {position: absolute; width: 320vmin; left: -10vmin; top: 0; display: flex; justify-content: space-between; animation: none 16s steps(16) 1s 10 alternate; animation-fill-mode: forwards; }
+.inv-labels label {width: 20vmin; height: 10vmin; left: 0;}
+@keyframes labels-lr {100% {left: 150vmin;}}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game .inv-labels {animation-name: labels-lr;}
+@keyframes hide {100% {transform: translateY(-100vmax);}}
+.shield-labels {position: absolute; width: 410vmin; left: 20vmin; top: 0;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game .shield-labels {animation: hide 1s steps(1) 127s paused forwards;}
+.shield-labels > div {display: flex; justify-content: space-between;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game .shield-labels > div {animation: hide 1s steps(1) 113s paused forwards;}
+.shield-labels > div > div {position: relative; width: 50vmin;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game .shield-labels > div > div {animation: hide 1s steps(1) 97s paused forwards;}
+.shield-labels > div > div > div {position: absolute; width: 50vmin; display: flex; justify-content: space-between;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game .shield-labels > div > div > div {animation: hide 1s steps(1) 81s paused forwards;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ #game [for^="shield"] {animation: hide 1s steps(1) 65s paused forwards;}
+[for^="shieldhit"] {width: 10vmin; left: 0;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv0-"]:checked ~ #game .shield-labels,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv1-"]:checked ~ #game .shield-labels > div,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv2-"]:checked ~ #game .shield-labels > div > div,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv3-"]:checked ~ #game .shield-labels > div > div > div,
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv4-"]:checked ~ #game [for^="shieldhit"] {animation-play-state: running;}
+#pos0:checked ~ #game #fire > div {transform: translateX(0);}#pos1:checked ~ #game #fire > div {transform: translateX(-10vmin);}
+#pos2:checked ~ #game #fire > div {transform: translateX(-20vmin);}#pos3:checked ~ #game #fire > div {transform: translateX(-30vmin);}
+#pos4:checked ~ #game #fire > div {transform: translateX(-40vmin);}#pos5:checked ~ #game #fire > div {transform: translateX(-50vmin);}
+#pos6:checked ~ #game #fire > div {transform: translateX(-60vmin);}#pos7:checked ~ #game #fire > div {transform: translateX(-70vmin);}
+#pos8:checked ~ #game #fire > div {transform: translateX(-80vmin);}#pos9:checked ~ #game #fire > div {transform: translateX(-90vmin);}
+#pos10:checked ~ #game #fire > div {transform: translateX(-100vmin);}#pos11:checked ~ #game #fire > div {transform: translateX(-110vmin);}
+#pos12:checked ~ #game #fire > div {transform: translateX(-120vmin);}#pos13:checked ~ #game #fire > div {transform: translateX(-130vmin);}
+#pos14:checked ~ #game #fire > div {transform: translateX(-140vmin);}#pos15:checked ~ #game #fire > div {transform: translateX(-150vmin);}
+#pos16:checked ~ #game #fire > div {transform: translateX(-160vmin);}#pos17:checked ~ #game #fire > div {transform: translateX(-170vmin);}
+#pos18:checked ~ #game #fire > div {transform: translateX(-180vmin);}#pos19:checked ~ #game #fire > div {transform: translateX(-190vmin);}
+#pos20:checked ~ #game #fire > div {transform: translateX(-200vmin);}#pos21:checked ~ #game #fire > div {transform: translateX(-210vmin);}
+#pos22:checked ~ #game #fire > div {transform: translateX(-220vmin);}#pos23:checked ~ #game #fire > div {transform: translateX(-230vmin);}
+#pos24:checked ~ #game #fire > div {transform: translateX(-240vmin);}#pos25:checked ~ #game #fire > div {transform: translateX(-250vmin);}
+#pos26:checked ~ #game #fire > div {transform: translateX(-260vmin);}#pos27:checked ~ #game #fire > div {transform: translateX(-270vmin);}
+#pos28:checked ~ #game #fire > div {transform: translateX(-280vmin);}#pos29:checked ~ #game #fire > div {transform: translateX(-290vmin);}
+#pos30:checked ~ #game #fire > div {transform: translateX(-300vmin);}#pos31:checked ~ #game #fire > div {transform: translateX(-310vmin);}
+#pos32:checked ~ #game #fire > div {transform: translateX(-320vmin);}#pos33:checked ~ #game #fire > div {transform: translateX(-330vmin);}
+#pos34:checked ~ #game #fire > div {transform: translateX(-340vmin);}#pos35:checked ~ #game #fire > div {transform: translateX(-350vmin);}
+#pos36:checked ~ #game #fire > div {transform: translateX(-360vmin);}#pos37:checked ~ #game #fire > div {transform: translateX(-370vmin);}
+#pos38:checked ~ #game #fire > div {transform: translateX(-380vmin);}#pos39:checked ~ #game #fire > div {transform: translateX(-390vmin);}
+#pos40:checked ~ #game #fire > div {transform: translateX(-400vmin);}#pos41:checked ~ #game #fire > div {transform: translateX(-410vmin);}
+#pos42:checked ~ #game #fire > div {transform: translateX(-420vmin);}#pos43:checked ~ #game #fire > div {transform: translateX(-430vmin);}
+#pos44:checked ~ #game #fire > div {transform: translateX(-440vmin);}
+#ufo-0:checked ~ #game [for="hitufo-0"], #hitufo-1:checked ~ #game [for="hitufo-1"],
+#inv0-0:checked ~ #game [for="hit0-0"], #inv0-1:checked ~ #game [for="hit0-1"], #inv0-2:checked ~ #game [for="hit0-2"], #inv0-3:checked ~ #game [for="hit0-3"], #inv0-4:checked ~ #game [for="hit0-4"],
+#inv0-5:checked ~ #game [for="hit0-5"], #inv0-6:checked ~ #game [for="hit0-6"], #inv0-7:checked ~ #game [for="hit0-7"], #inv0-8:checked ~ #game [for="hit0-8"], #inv0-9:checked ~ #game [for="hit0-9"], #inv0-10:checked ~ #game [for="hit0-10"],
+#inv1-11:checked ~ #game [for="hit1-11"], #inv1-12:checked ~ #game [for="hit1-12"], #inv1-13:checked ~ #game [for="hit1-13"], #inv1-14:checked ~ #game [for="hit1-14"], #inv1-15:checked ~ #game [for="hit1-15"],
+#inv1-16:checked ~ #game [for="hit1-16"], #inv1-17:checked ~ #game [for="hit1-17"], #inv1-18:checked ~ #game [for="hit1-18"], #inv1-19:checked ~ #game [for="hit1-19"], #inv1-20:checked ~ #game [for="hit1-20"], #inv1-21:checked ~ #game [for="hit1-21"],
+#inv2-22:checked ~ #game [for="hit2-22"], #inv2-23:checked ~ #game [for="hit2-23"], #inv2-24:checked ~ #game [for="hit2-24"], #inv2-25:checked ~ #game [for="hit2-25"], #inv2-26:checked ~ #game [for="hit2-26"],
+#inv2-27:checked ~ #game [for="hit2-27"], #inv2-28:checked ~ #game [for="hit2-28"], #inv2-29:checked ~ #game [for="hit2-29"], #inv2-30:checked ~ #game [for="hit2-30"], #inv2-31:checked ~ #game [for="hit2-31"], #inv2-32:checked ~ #game [for="hit2-32"],
+#inv3-33:checked ~ #game [for="hit3-33"], #inv3-34:checked ~ #game [for="hit3-34"], #inv3-35:checked ~ #game [for="hit3-35"], #inv3-36:checked ~ #game [for="hit3-36"], #inv3-37:checked ~ #game [for="hit3-37"],
+#inv3-38:checked ~ #game [for="hit3-38"], #inv3-39:checked ~ #game [for="hit3-39"], #inv3-40:checked ~ #game [for="hit3-40"], #inv3-41:checked ~ #game [for="hit3-41"], #inv3-42:checked ~ #game [for="hit3-42"], #inv3-43:checked ~ #game [for="hit3-43"],
+#inv4-44:checked ~ #game [for="hit4-44"], #inv4-45:checked ~ #game [for="hit4-45"], #inv4-46:checked ~ #game [for="hit4-46"], #inv4-47:checked ~ #game [for="hit4-47"], #inv4-48:checked ~ #game [for="hit4-48"],
+#inv4-49:checked ~ #game [for="hit4-49"], #inv4-50:checked ~ #game [for="hit4-50"], #inv4-51:checked ~ #game [for="hit4-51"], #inv4-52:checked ~ #game [for="hit4-52"], #inv4-53:checked ~ #game [for="hit4-53"], #inv4-54:checked ~ #game [for="hit4-54"],
+#shield0-0:checked ~ #game [for="shieldhit0-0"], #shield0-1:checked ~ #game [for="shieldhit0-1"], #shield0-2:checked ~ #game [for="shieldhit0-2"],
+#shield0-3:checked ~ #game [for="shieldhit0-3"], #shield0-4:checked ~ #game [for="shieldhit0-4"], #shield0-5:checked ~ #game [for="shieldhit0-5"], #shield0-6:checked ~ #game [for="shieldhit0-6"],
+#shield1-0:checked ~ #game [for="shieldhit1-0"], #shield1-1:checked ~ #game [for="shieldhit1-1"], #shield1-2:checked ~ #game [for="shieldhit1-2"],
+#shield1-3:checked ~ #game [for="shieldhit1-3"], #shield1-4:checked ~ #game [for="shieldhit1-4"], #shield1-5:checked ~ #game [for="shieldhit1-5"], #shield1-6:checked ~ #game [for="shieldhit1-6"],
+#shield2-0:checked ~ #game [for="shieldhit2-0"], #shield2-1:checked ~ #game [for="shieldhit2-1"], #shield2-2:checked ~ #game [for="shieldhit2-2"],
+#shield2-3:checked ~ #game [for="shieldhit2-3"], #shield2-4:checked ~ #game [for="shieldhit2-4"], #shield2-5:checked ~ #game [for="shieldhit2-5"], #shield2-6:checked ~ #game [for="shieldhit2-6"],
+#shield3-0:checked ~ #game [for="shieldhit3-0"], #shield3-1:checked ~ #game [for="shieldhit3-1"], #shield3-2:checked ~ #game [for="shieldhit3-2"],
+#shield3-3:checked ~ #game [for="shieldhit3-3"], #shield3-4:checked ~ #game [for="shieldhit3-4"], #shield3-5:checked ~ #game [for="shieldhit3-5"], #shield3-6:checked ~ #game [for="shieldhit3-6"] {visibility: visible;}
+@keyframes show {100% {visibility: visible;}}
+[id^="landed"],
+#cleared,
+#restart,
+#gameover {position: absolute; width: 100vmin; height: 26vmin; left: 50%; top: 12vmin; transform: translateX(-50%); padding: 20vmin 0; background: black; font-size: 4vmin; z-index: 1;}
+[id^="landed"] {visibility: hidden; animation: none 160s steps(1) 1s; animation-fill-mode: forwards;}
+#restart {display: none;}
+#landed1 {animation-duration: 144s;}
+#landed2 {animation-duration: 128s;}
+#landed3 {animation-duration: 112s;}
+#landed4 {animation-duration: 96s;}
+[id^="landed"] label {display: none;}
+[id^="landed"]::after,
+#cleared::after,
+#restart::after {content: ""; position: absolute; width: 100vmin; height: 22vmin; left: 0; bottom: -22vmin;}
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv0-"]:checked ~ #game [id="landed0"],
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv1-"]:checked ~ #game [id="landed1"],
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv2-"]:checked ~ #game [id="landed2"],
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv3-"]:checked ~ #game [id="landed3"],
+[id^="state_"][id$="-active"]:checked ~ form #wave0:checked ~ [id^="inv4-"]:checked ~ #game [id="landed4"],
+#wave1:checked ~ #game [id^="landed"],
+#wave2:checked ~ #game [id^="landed"] {animation-name: show;}
+#state_life2-active:checked ~ form #wave1:checked ~ #game [id^="landed"],
+#state_life1-active:checked ~ form #wave2:checked ~ #game [id^="landed"] {animation-name: none;}
+#state_play-active:checked ~ form #wave0:checked ~ #game [id^="landed"] [for="wave1"],
+#state_play-active:checked ~ form #wave1:checked ~ #game [id^="landed"] [for="state_life2-active"],
+#state_life2-active:checked ~ form #wave1:checked ~ #game #restart,
+#state_life2-active:checked ~ form #wave0:checked ~ #game [id^="landed"] [for="wave2"],
+#state_life2-active:checked ~ form #wave2:checked ~ #game [id^="landed"] [for="state_life1-active"],
+#state_life1-active:checked ~ form #wave2:checked ~ #game #restart,
+#state_life1-active:checked ~ form #wave0:checked ~ #game [id^="landed"] [for="state_lose"] {display: block;}
+#wave0:checked ~ #game [for="wave0"],
+#wave1:checked ~ #game [for="wave1"],
+#wave2:checked ~ #game [for="wave2"],
+#state_life2-active:checked ~ form #game [for="state_life2-active"],
+#state_life1-active:checked ~ form #game [for="state_life1-active"] {visibility: hidden;}
+[id^="inv"]:checked ~ #game #cleared {visibility: hidden;}
+[for^="score"],
+[for^="state_"],
+[for^="wave"],
+[for="reset"] {position: absolute; width: 50vmin; left: 50%; padding: 1vmin; transform: translateX(-50%); margin-top: 3vmin; font-size: 3vmin; background: black; box-shadow: 0.5vmin 0 white, -0.5vmin 0 white, 0 -0.5vmin white, 0 0.5vmin white;}
+[id^="landed"]::before {content: "They Landed!";}
+#cleared::before {content: "More waves coming!";}
+[for^="wave"]::before {content: "Try Again";}
+#cleared [for^="wave"]::before {content: "Ready?";}
+[for="state_life2-active"]::before,
+[for="state_life1-active"]::before {content: "Get Ready";}
+[for="state_lose"]::before {content: "Game Over";}
+[for="state_restart"]::before {content: "Restart";}
+[for^="score"]::before {content: "New Hiscore";}
+[for="reset"]::before {content: "Play";}
+#title > [for="reset"]::before {content: "Insert Coin";}
+#gameover {visibility: hidden; top: 50vmin;}
+#state_lose:checked ~ form #gameover {visibility: visible;}
+@keyframes next {100% {z-index: 0;}}
+#gameover > div {position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 10000; background: black; animation-name: next; animation-duration: 1000s; animation-timing-function: steps(10000); animation-iteration-count: infinite; animation-play-state: paused;}
+#state_lose:checked ~ #score1:checked ~ form #high1 li,
+#state_lose:checked ~ #score2:checked ~ form #high2 li,
+#state_lose:checked ~ #score3:checked ~ form #high3 li,
+#state_lose:checked ~ #score4:checked ~ form #high4 li,
+#state_lose:checked ~ #score5:checked ~ form #high5 li,
+#state_lose:checked ~ #score6:checked ~ form #high6 li,
+#gameover > div [for^="score"] {color: yellow;}
+#score1:checked ~ form [for="score1"],
+#score2:checked ~ form [for="score2"],
+#score3:checked ~ form [for="score3"],
+#score4:checked ~ form [for="score4"],
+#score5:checked ~ form [for="score5"],
+#score6:checked ~ form [for="score6"] {visibility: hidden;}
+#score1:checked ~ form #hiscores #high1,#score2:checked ~ form #hiscores #high2,#score3:checked ~ form #hiscores #high3,
+#score4:checked ~ form #hiscores #high4,#score5:checked ~ form #hiscores #high5,#score6:checked ~ form #hiscores #high6,
+#score1:checked ~ form #hiscores #high1 ul,#score2:checked ~ form #hiscores #high2 ul,#score3:checked ~ form #hiscores #high3 ul,
+#score4:checked ~ form #hiscores #high4 ul,#score5:checked ~ form #hiscores #high5 ul,#score6:checked ~ form #hiscores #high6 ul,
+#score1:checked ~ form #go1,#score2:checked ~ form #go2,#score3:checked ~ form #go3,
+#score4:checked ~ form #go4,#score5:checked ~ form #go5,#score6:checked ~ form #go6 {animation-play-state: var(--delaypause);}
+[id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause2;}
+[id^="hit"]:checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ :checked ~ [id^="hit"]:checked ~ #game {animation-name: delaypause1;}
+@keyframes delaycheck {0% {--delaycheck: 0;} 100% {--delaycheck: 100vw; left: 0;}}
+#browsercheck {position: absolute; top: 35vmin; left: -100vw; width: 100vmin; height: 20vmin; animation: delaycheck 1s steps(1) forwards; pointer-events: none;}
+#browsercheck div {position: absolute; top: 0; left: var(--delaycheck); width: 100%; height: 100%; background: black; font-size: 2vmin; pointer-events: initial;}
+#browsercheck a:link,
+#browsercheck a:visited,
+#browsercheck a:hover,
+#browsercheck a:active,
+#browsercheck label {display: block; position: relative; width: 50%; margin: 3vmin 0; padding: 1vmin; left: 50%; transform: translateX(-50%); color: white; text-decoration: none; box-shadow: 0.5vmin 0 white, -0.5vmin 0 white, 0 -0.5vmin white, 0 0.5vmin white;}
+#trybrowser:checked ~ form #browsercheck {display: none;}
+#tryother {position: absolute; width: 100%; left: 0; bottom: 2vmin; font-size: 2vmin;}
+#tryother:link,
+#tryother:visited,
+#tryother:hover,
+#tryother:active {color: blue;}

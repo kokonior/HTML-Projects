@@ -1,0 +1,102 @@
+body {
+	background:#000 !important;
+  color:#FFF;
+ 
+}
+p {font-family: 'Montserrat Alternates', sans-serif;font-size:18px; font-weight:700;padding-bottom:20px;color:#FFF;}
+
+.loader {
+   width:50px;
+   height:50px;
+   display:inline-block;
+   padding:0px;
+   opacity:0.5;
+   border:3px solid #09acfd;
+   -webkit-animation: loader 1s ease-in-out infinite alternate;
+   animation: loader 1s ease-in-out infinite alternate;
+}
+
+.loader:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid #09acfd;
+}
+
+.loader:after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid #09acfd;
+}
+
+@keyframes loader {
+   from {transform: rotate(0deg) scale(1,1);border-radius:0px;}
+   to {transform: rotate(360deg) scale(0, 0);border-radius:50px;}
+}
+@-webkit-keyframes loader {
+   from {-webkit-transform: rotate(0deg) scale(1, 1);border-radius:0px;}
+   to {-webkit-transform: rotate(360deg) scale(0,0 );border-radius:50px;}
+}
+
+.loader2 {
+   width:25px;
+   height:25px;
+   display:inline-block;
+   padding:0px;
+   border-radius:100%;
+   border:5px solid;
+   border-top-color:rgba(254, 168, 23, 0.65);
+   border-bottom-color:rgba(57, 154, 219, 0.65);
+   border-left-color:rgba(188, 84, 93, 0.95);
+   border-right-color:rgba(137, 188, 79, 0.95);
+   -webkit-animation: loader2 2s ease-in-out infinite alternate;
+   animation: loader2 2s ease-in-out infinite alternate;
+}
+@keyframes loader2 {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(720deg);}
+}
+@-webkit-keyframes loader2 {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(720deg);}
+}
+
+.loader3 {
+   width:50px;
+   height:50px;
+   display:inline-block;
+   padding:0px;
+   text-align:left;
+}
+.loader3 span {
+   position:absolute;
+   display:inline-block;
+   width:50px;
+   height:50px;
+   border-radius:100%;
+   background:rgba(135, 211, 124,1);
+   -webkit-animation:loader3 1.5s linear infinite;
+   animation:loader3 1.5s linear infinite;
+}
+.loader3 span:last-child {
+   animation-delay:-0.9s;
+   -webkit-animation-delay:-0.9s;
+}
+@keyframes loader3 {
+   0% {transform: scale(0, 0);opacity:0.8;}
+   100% {transform: scale(1, 1);opacity:0;}
+}
+@-webkit-keyframes loader3 {
+   0% {-webkit-transform: scale(0, 0);opacity:0.8;}
+   100% {-webkit-transform: scale(1, 1);opacity:0;}
+}
+

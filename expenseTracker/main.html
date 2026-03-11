@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+
+  <!-- Title -->
+  <title>Expense Tracker</title>
+</head>
+
+<body>
+  <div class="heading">
+    <h1>EXPENSE TRACKER</h1>
+  </div>
+
+  <div class="container section">
+    <div class="row">
+
+      <div class="col-12 col-md-4 order-md-1 my-1">
+        <div class="balance">
+          <h4>BALANCE</h4>
+          <div class="amount-1">
+            <p id="balance">₹0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 order-first order-md-2 my-1">
+        <div class="name d-flex justify-content-center align-items-center">
+          <h4 id="uname">Full name</h4>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 order-md-3 my-1">
+        <div class="balance">
+          <h4>EXPENSE</h4>
+          <div class="amount-1">
+            <p id="expense">₹0</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container section">
+    <div class="table-responsive">
+      <table class="table" id="table">
+        <h3 class="py-3">HISTORY</h3>
+        <tr>
+          <th scope="col">Information</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Status</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container section">
+    <form method="post">
+      <h3 class="py-3">NEW TRANSACTION</h3>
+
+      <div class="form-group">
+        <label for="transaction-text" style="font-size:18px">Text</label>
+        <input type="text" class="form-control p-3" id="transaction-text" placeholder="Description of Amount">
+      </div>
+
+      <div class="form-group">
+        <label for="transaction-amount" style="font-size:18px">Amount</label>
+        <input type="number" class="form-control p-3" id="transaction-amount" placeholder="Enter the amount">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-lg mr-3" id="credit">Credit</button>
+        <button type="submit" class="btn btn-danger btn-lg mr-3" id="debit">Debit</button>
+        <button class="btn btn-info btn-lg">Expense Rate</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

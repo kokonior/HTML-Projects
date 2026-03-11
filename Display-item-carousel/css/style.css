@@ -1,0 +1,114 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#main-home{
+    width: 100%;
+    min-height: 650px;
+    background-size: 100% 100%;
+}
+
+/*-------------------------nav bar-------------------------*/
+
+.header-top .items a{
+    color: black;
+}
+
+.header-top .items a :hover{
+    color: #ff004d;
+    background-color: ##c8c8c8;
+}
+
+.cart-icon {
+    padding: 5px 10px !important;
+    background-color:  #FF004D;
+    border-radius: 5px;
+}
+
+.nav-item {
+    padding: 0 15px;
+}
+
+.navbar .nav-item .nav-link {
+    color: #000000;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #FF004D;
+}
+
+/*--------------------------------------banner-----------------------------*/
+.btn{
+
+    color:#c8c8c8;
+    background-color: #FF004D;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.btn:hover{
+
+    color: #fff;
+    box-shadow: 0px 0px 0px 4px rgba(255, 0, 70, 0.5), 0px 0px 0px 7px rgba(255, 0, 77, 0.3);
+}
+
+#demo
+{
+ padding-top: 2%;
+  align-content: center;
+  width: auto;
+    
+  max-height: auto;
+ padding-right: 2rem;
+ padding-left: 2rem;
+ padding-bottom: 1rem;
+ 
+}
+
+.carousel
+{
+
+    margin-top: 3rem;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 10px 10px 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #c8c8c8;    
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0 10px 0 10px;
+    background-color: #ff004d;
+}
+
+.carousel-control-prev .fas{
+    margin-right: 10rem;
+    width: 10rem;
+    height: 10rem;
+    color: #ff004d;
+}
+
+.carousel-control-next .fas{
+    margin-left: 10rem;
+    width: 10rem;
+    height: 10rem;
+    color: #ff004d;
+}
+
+.h1c
+{
+    color: #FF004D;
+}

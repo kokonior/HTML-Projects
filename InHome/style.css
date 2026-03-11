@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Serif+Pro:ital,wght@1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Source+Serif+Pro:ital,wght@0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+:root{
+    --blue:rgb(6, 6, 95);
+    --orange:rgb(228, 120, 81);
+}
+
+::-webkit-scrollbar{
+    width: 5.5px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 2px;
+    box-shadow: inset 0 0 5px rgb(233, 233, 233);
+}
+::-webkit-scrollbar-thumb{
+    background:  rgb(236, 130, 91);
+    border-radius: 2px;
+
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(241, 130, 26);
+    border-radius: 2px;
+
+}
+
+
+/* nav */
+.bl{
+    color:var(--blue) !important;
+}
+
+*{ margin: 0;
+    padding: 0 ;
+    box-sizing: border-box !important;
+    background-color: rgb(255, 254, 252);
+}
+.bfs{
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 19px;
+    color: white;
+    text-align: right !important;
+}
+.ly{
+ padding: 4px 8px;
+}
+.bop{
+    background-color: rgb(228, 120, 81) !important;
+    border-radius: 40px !important;
+    font-size: 13px !important;
+
+}
+.bo{
+    background-color: rgb(241, 248, 255) !important;
+    text-align: right;
+    /* font-weight: 500; */
+
+}
+.bg-pri{background-color: rgb(241, 248, 255) !important;}
+
+
+
+.blb{   
+     color: var(--blue) !important;
+font-family: serif;
+font-size: 24px !important;
+
+    font-weight: 650 !important;
+}
+.blbp{    color: var(--blue) !important;
+font-family: serif;
+font-size: 15px !important;
+text-align: right !important;
+    font-weight: 500 !important;
+}
+.blbe{    color: var(--blue) !important;
+font-family: serif;
+font-size: 20px !important;
+    font-weight: 520 !important;
+}
+ul li{
+    padding: 0 5px;
+}
+.io{ 
+ 
+    padding-top: -100px;
+}
+
+.p{
+    max-width: 60%;
+    font-size: 18px;
+    color: var(--blue);
+}
+.lc{
+    background-color: rgb(225, 230, 245) ;
+
+}
+.fa-truck,.fa-couch,.fa-cube{ 
+    font-size: 22px;
+    color: rgb(14, 14, 114);
+    text-align: center !important;
+    border-radius:2rem !important;
+}
+.s{
+    font-size: 13px;
+    color: var(--blue);
+
+}
+.mk{
+    padding-top: -24px !important;
+}
+.mar{
+    margin-top: 95px;
+}
+
+.hg{
+    font-size: 1.6rem;
+}
+
+
+.ek{
+    padding: 20px;
+    background-color:rgb(241, 248, 255) ;
+}
+
+/* ----footer------ */
+footer {
+    background-color:  rgb(241, 248, 255);
+    color: var(--blue);
+}
+
+.anc{
+    color: var(--blue);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+.sie{
+    background-color: rgb(241, 248, 255);
+}
+
+
+.yel{
+    background-color: rgb(243, 243, 243);
+}
+/* media Query */
+
+
+.card-1{
+    width: 100%;
+    height:98% ;
+    border: none !important;
+    position: relative;
+    /* border-radius: 5px; */
+    
+}
+.card-2{
+    /* border-radius: 5px; */
+    width: 100%;
+    height:98% ;
+    border: none !important;
+    position: relative;
+    
+}
+.lorem{
+    position:relative;
+
+}
+.lore{
+    position:absolute;
+    bottom: 0px;
+    color: var(--blue);
+    background-color: white !important;
+    padding: 2px 7px;
+     border-radius:4px;
+    left: 20px;
+    font-size: 18px;
+    font-family: serif;
+
+
+}
+.iu{  
+      position:absolute;
+    bottom: 20px;
+    padding: 30px;
+    border-radius:4px;
+    color: var(--blue);
+    background-color: rgba(255, 255, 255, 0.897) !important;
+    left: 20px;
+}
+
+.card img{ 
+   object-fit:fill;
+    width: 100%;
+    height:100% ;
+    
+}
+
+
+@media (max-width:768px){
+    .p{  max-width: 92%;
+        font-size: 13px !important;
+    }
+    .bo{
+        text-align: center !important;
+    }
+    .coo{
+        text-align: center !important;
+
+    }
+    .lore{
+        font-size: 14px;
+    }
+   
+
+}
+
+@media (max-width:552px){
+    .p{  max-width: 90%;
+        font-size: 12px !important;
+    }
+    .bo{
+        text-align: center !important;
+    }
+    .coo{
+        text-align: center !important;
+
+    }
+    .lore{
+        font-size: 11px;
+        
+    }
+   
+
+}
+#preloader{
+    background: rgb(255, 255, 255) url("https://cdn.dribbble.com/users/801336/screenshots/4343366/comp_5.gif") no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-size: 260px;
+    z-index: 100 !important;
+}

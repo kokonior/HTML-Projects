@@ -1,0 +1,30 @@
+body {
+    background-color: #272327;
+    font-family: "Nunito",sans-serif;
+}
+#mainNavbar .navbar-brand {
+    color: #d21242;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar{
+    color: #8309CA;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar .nav-link{
+    color: white;
+}
+
+#mainNavbar .nav-link:hover{
+    color: #d21242;
+}
+#Luffy
+{
+    color: rgb(95, 156, 31);
+}
+#Goku{
+    color: blue;
+}

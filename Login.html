@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    color: #eeeeee;
+    font-family: sans-serif;
+}
+body{
+    background-color: #000000;
+}
+.form{
+    
+    position: absolute;
+    width: 22%;
+    height: 68%;
+    top: 14%;
+    left: 40%;
+    text-align: center;
+    background-color: #15172a;
+    border-radius: 20px;
+}
+.title{
+    font-size: 40px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 6px
+}
+.placeholder{
+    display: none;
+}
+.ic1{
+    margin-top: 20px;
+}
+input{
+    margin-top: 30px;
+    width: 88%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #303244;
+}
+button{
+    margin-top: 42px;
+    width: 88%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3b86d7;
+    font-size: 20px;
+}
+.input::placeholder{
+    color: #656579;
+    font-size: 16px;
+    padding-left: 20px;
+}
+  </style>
+  <body>
+    <div class="form">
+      <div class="title">Welcome</div>
+      <div class="subtitle">Let's create your account!</div>
+      <div class="input-container ic1">
+        <input id="firstname" class="input" type="text" placeholder="First name" />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">First name</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="lastname" class="input" type="text" placeholder="Last name" />
+        <div class="cut"></div>
+        <label for="lastname" class="placeholder">Last name</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="email" class="input" type="text" placeholder="Email" />
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">Email</label>
+      </div>
+      <button type="text" class="submit">submit</button>
+    </div>
+  </body>
+</html>

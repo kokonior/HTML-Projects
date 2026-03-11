@@ -1,0 +1,135 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@font-face {
+    font-family: Balboa;
+    src: url(./fonts/FontsFree-Net-Balboa-W01-Bold.ttf);
+} */
+/* @font-face {
+    font-family: Ace;
+    src: url(fonts/AceSans-Demo.otf);
+} */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.nav-item .nav-link{ 
+  color: rgb(70, 7, 7) !important;
+  transition: .3s; padding: 0 15px !important;
+}
+
+.nav-item .nav-link:hover{ 
+  color: rgb(87, 6, 6) !important;
+
+}
+[alt="logo"]{
+    max-width: 100px;
+    height: auto;
+}
+h1,h2,h3,h4,h5,h6{
+    /* font-family: 'SF Pro Display',sans-serif; */
+     font-family: Ace,sans-serif;
+    font-weight: 700;
+}
+
+.card{
+    margin:4rem 0;
+}
+
+p{
+    font-weight:300;
+}
+
+
+
+.hero{
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)),url("img/about.png"); */
+    background-position:center bottom;
+    background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+[alt="logo-text"]{
+    max-width: 40%;
+}
+
+.text-hero{
+    padding: 1rem 6rem;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width:768px) {
+    .text-hero{
+        padding:1rem;
+    }
+
+    .card{
+        max-width: 90vw !important;
+    }
+}
+
+/*----------footer------------*/
+
+footer {
+    background-color: #333;
+    color: white;
+}
+.underline1{
+    border-bottom: 2px solid red;
+    width: 70px;
+}
+.anc{
+    color: #fff;
+    text-decoration: none;
+}
+
+.so1{
+  text-decoration: none;
+  color: white;
+}
+.so1:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.so2{
+    background-color: #3b5998;
+    border-radius: 50%;
+   width: 32px;
+}
+
+.so3{
+    background-color:#55acee;
+    border-radius: 50%;
+}
+
+.so4{
+    background-color: #dd4b39;
+    border-radius: 50%;
+}
+
+.so5{
+    background-color: #ac2bac;
+    border-radius: 50%;
+    width: 32px;
+}
+.so6{
+    background-color: #0082ca;
+    border-radius: 50%;
+    width: 32px;
+}
+
+.let{
+    width: 75%;
+}
+.sie{
+    background-color: #222;
+}
+

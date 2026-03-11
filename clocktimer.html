@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            border:thin solid black;
+            border-collapse: collapse;
+            margin: 5px 5px 5px 0px;
+        }
+        td{
+            border:thin solid gray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>H</td>
+            <td>M</td>
+            <td>S</td>
+        </tr>
+        <tr>
+            <td id="h">0</td>
+            <td id="m">0</td>
+            <td id="s">0</td>
+        </tr>
+    </table>
+    <button id="submit" onclick="clocktimer()">Start</button>
+    <script>
+        var hr = 0;
+        var min = 0;
+        var sec = 0;
+        function clock(){
+        document.getElementById("s").innerHTML = sec
+        sec++;
+        if(sec == 11){
+            min++;
+            sec = 1;
+            document.getElementById("m").innerHTML = min;
+        }
+        if(min == 2){
+            min = 0;
+            document.getElementById("m").innerHTML = min
+            hr++;
+            document.getElementById("h").innerHTML = hr
+        }
+        }
+        function clocktimer(){
+            console.log("Hello");
+            var timer = setInterval(clock,1000);
+        }
+    </script>
+</body>
+</html>

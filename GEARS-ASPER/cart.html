@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="icon" href="img/Gearsn logo.jpg">
+  <title>GEARS</title>
+</head>
+
+<body>
+<!-- Navbar  -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-sm-0">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="img/Gearsn logo.jpg" width="95px" alt=""> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="" style="color: black;"><i class="fas fa-bars fa-1x"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="mx-auto"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="cart.html">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <h1 class="text-center" style="margin-top: 10rem;">YOUR CART</h1>
+
+  <!-- MAIN CONTENT OF CART -->
+
+  <div id="cart" class="p-5">
+    <div class="dialog">
+      <div class="content">
+
+        <div class="body d-flex flex-lg-row flex-column gap-5 gap-lg-0">
+
+          <!-- LEFT SECTION (CART ITEMS) -->
+
+          <div id="cart-items" class="container-fluid d-flex flex-column gap-5 justify-content-start col-lg-7 col-12">
+            <h4 class="text-center text-md-start">Items Added : 2</h4>
+
+            <!-- CART ITEMS CARDS -->
+
+            <div id="item-cards" class="px-3">
+              <div class="Card mb-3 container-fluid pt-3 border d-flex gap-5 align-items-center flex-column flex-md-row pb-5 pb-md-0">
+
+
+                <img src="img/pepper-spray.png"
+                  class="img-fluid rounded-start" alt="card1-img" style="max-height: 227px ;">
+
+                
+                  <div class="Card-body">
+                    <h5 class="Card-title fs-6 lead"><strong>BeSafe</strong> Pepper Spray Self Defence for Women (Pack of 1)</h5>
+                    <p class="Card-text d-flex flex-column">
+
+                      <strong>Clip-on Design</strong>
+                      <strong>Range: 10'</strong>
+
+                    </p>
+                    <div class="remover btn btn-danger text-white d-flex gap-1 align-self-start"
+                      style="max-width: min-content;text-align: center;"><i class="bi bi-trash"></i></div>
+                  </div>
+
+                  <h6 class="opacity-0 item-price">$<span>100</span></h6>
+                </div>
+
+              
+
+              <div class="Card mb-3 container-fluid pt-3 border d-flex gap-5 align-items-center flex-column flex-md-row pb-5 pb-md-0">
+
+
+                <img src="img/LifeCard-22WMR-3-1030x1030.png"
+                  class="img-fluid rounded-start" alt="card2-img" style="max-height: 227px;">
+
+              
+                  <div class="Card-body">
+                    <h5 class="Card-title fs-6 lead "><strong>TrailblazerFirearms</strong> LifeCard .22LR variant</h5>
+                    <p class="Card-text d-flex flex-column">
+
+                      <strong>Calibre: .22 LR</strong>
+                      <strong>Weight: 7oz"</strong>
+
+
+                    </p>
+                    <div class=" remover btn btn-danger text-white d-flex gap-1 align-self-start text-center"
+                      style="max-width: min-content;"><i class="bi bi-trash"></i></div>
+                  </div>
+                  <h6 class="opacity-0 item-price">$ <span>400</span></h6>
+
+              </div>
+
+            </div>
+          </div>
+          <hr />
+
+          <!-- ORDER SUMMARY -->
+
+          <div id="order-summary" class="container-fluid justify-content-start d-flex flex-column px-0 px-5-lg col-lg-5 col-12">
+            <h4 class="mb-5"> <i class="bi bi-arrow-90deg-down"></i> Order Summary </h4>
+            <div id="summary-fields" class="justify-content-between d-flex flex-column p-3 gap-3 ">
+              <div class="bag-total d-flex justify-content-between">
+                <h5>Bag Total</h5>
+                <h5 class="fw-bold">&#8377;<span>500</span></h5>
+              </div>
+              <div class="bag-discount d-flex justify-content-between">
+                <h5>Bag Discount</h5>
+                <h5 class="fw-bold">&#8377;<span>50.68</span></h5>
+              </div>
+              <div class="tax d-flex justify-content-between">
+                <h5>Taxes</h5>
+                <h5 class="fw-bold">&#8377;<span>60</span></h5>
+              </div>
+              <div class="delivery d-flex justify-content-between">
+                <h5>Delivery Charge</h5>
+                <h5 class="fw-bold text-secondary">&#8377;100</h5>
+              </div>
+
+              <div class="btn btn-success align-self-start p-2 d-flex gap-1" style="pointer-events: none;">Free Delivery<i
+                  class="bi bi-check2-circle"></i></div>
+              <hr>
+              <div class="Total d-flex justify-content-between">
+                <h5>Total Invoice</h5>
+                <h5 class="fw-bold">&#8377;<span>610.32</span></h5>
+              </div>
+
+              <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" id="checkout-btn"
+                class="btn btn-dark text-center text-white d-flex justify-content-center gap-3 align-items-center"><i
+                  class="bi bi-credit-card-fill"></i>Proceed to Checkout<i class="bi bi-box-arrow-in-up-right"></i></a>
+              <h3 class="text-center">OR</h3>
+              <a href=""
+                class="btn btn-outline-danger text-center d-flex justify-content-center gap-3 align-items-center"><i
+                  class="bi bi-box-arrow-in-up-left"></i>Continue Shopping</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thank You</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex flex-column align-items-center justify-content-between">
+          <div id="animation-wrapper">
+            <iframe src="https://embed.lottiefiles.com/animation/26215"></iframe>
+            <iframe src="https://embed.lottiefiles.com/animation/62717"></iframe>
+          </div>
+          <h1 class="text-center lead fw-bold my-3 text-success">Your Order has been Placed</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-warning" href="#">Continue Shopping</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!------------------------footer------------------------->
+<footer class="dark">
+  <div class="container py-4">
+     
+   <div class="row mt-4 px-3">
+
+
+     <div class="col-md-3 col-lg-4 mb-4 mx-auto">
+       <figure><img src="img/logo text red.png" alt="" height="40%" width="40%"></figure>
+       <p class="mb-3 tag">No Offence, Only Defence</p> 
+      
+     </div>
+   
+     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+           <h5>Useful Links</h5>
+           <div class="underline1 mb-4"></div>
+                   
+           <p><a href="index.html" class="anc">Home</a></p>
+           <p><a href="products.html" class="anc">Products</a></p>
+           <p><a href="cart.html" class="anc">Cart</a></p>
+           <p><a href="about.html" class="anc">About Us</a></p>
+           <p><a href="contactus.html" class="anc">Contact Us</a></p>
+
+     </div>
+
+     
+     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+       <h5>Information</h5>
+       <div class="underline1 mb-4"></div>
+          
+       <p><a href="#" class="anc">FAQs</a></p>
+       <p><a href="#" class="anc">Track Order</a></p>
+       <p><a href="#" class="anc">Delivery</a></p>
+       <p><a href="#" class="anc">Return</a></p>
+       <p><a href="#" class="anc">Policies</a></p>
+
+ </div>
+
+     <div class="col-md-3  mx-auto mb-4">
+       <h5>Subscribe </h5>
+       <div class="underline1 mb-4"></div>
+          <p>Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+      <div class="d-flex">
+       <input type="text" class="form-control let " placeholder="Email Address" aria-label="First name"><button type="submit" class="btn btn-primary ms-2"><i class="fa fa-paper-plane"></i></button>
+      </div>
+      <h6 class="pt-3">Follow Us</h6>
+      <a href="#" class="so1">
+        <i class="fab fa-facebook-f p-2 text-center so2"></i>
+      </a>
+      <a href="#" class="so1 ms-1">
+        <i class="fab fa-twitter p-2 so3"></i>
+      </a>
+      <a href="#" class="so1  ms-1">
+        <i class="fab fa-google p-2 so4"></i>
+      </a>
+      <a href="#" class="so1  ms-1">
+        <i class="fab fa-instagram p-2 so5"></i>
+      </a>
+      <a href="#" class="so1  ms-1">
+        <i class="fab fa-linkedin p-2 text-center so6"></i>
+      </a>
+
+ </div>
+
+   </div>
+  </div>
+
+  <div class="text-center p-3 sie">
+   Copyright © 2021 Gears | Powered by Asper Team
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+            var nav = document.querySelector('nav');
+
+            window.addEventListener('scroll', function () {
+              if (window.pageYOffset > 100) {
+                nav.classList.add('bg-light', 'shadow');
+              } else {
+                nav.classList.remove('bg-light', 'shadow');
+              }
+            });
+          </script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect Navbar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+        :root{
+            --font-style: 'Nunito Sans', sans-serif;
+        }
+        body{
+            font-family: var(--font-style);
+            background-color: #1C2A44;
+        }
+        
+        ul{
+            margin: 5%;
+            width: 450px;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 25px 0;
+            border-radius: 25px;
+            border: 0.1px solid #099FFF;
+            background-color: #18181B;
+            box-shadow: 0 4px 8px 0 #00FFFF, 0 6px 20px 0
+                          rgba(0, 0, 0, 0.19);
+
+        }
+
+        li{
+            margin: auto;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        li::after{
+            display: block;
+        }
+
+        li:hover::after{
+            transform: scaleX(1);
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Awesome</li>
+        <li>hover</li>
+        <li>css</li>
+        <li>effect.</li>
+    </ul>
+</body>
+</html>

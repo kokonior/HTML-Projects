@@ -1,0 +1,40 @@
+body{
+	background-color: skyblue;
+	display: block;
+}
+
+table{
+	border:3px solid green;
+	background-color: yellow;
+	margin-bottom: 50px;
+}
+
+th, td {
+  border:1px solid black;
+  text-align: center;
+
+}
+
+#head{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+#img{
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 100px;
+}
+
+#Grades{
+	margin-left: 150px;
+}
+
+#left-head{
+    text-align: left;
+}
+#Welcome{
+	color: red;
+    text-align: center;
+}

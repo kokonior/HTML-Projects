@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+
+  <!-- Title -->
+  <title>Expense Tracker</title>
+</head>
+
+<body>
+
+  <button id="btn-strt" data-bs-toggle="modal" data-bs-target="#frontModal">WELCOME TO EXPENSE TRACKER </button>
+
+  <section id="popup">
+    <div class="modal fade" id="frontModal" tabindex="-1" aria-labelledby="frontModalLabel">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="frontModalLabel">Enter details to continue</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- FORM TO LOGIN -->
+            <form>
+              <div class="mb-3">
+                <label for="input-name" class="form-label">Full Name</label>
+                <input type="text" class="form-control input-border" id="input-name">
+              </div>
+
+              <div class="mb-3">
+                <label for="input-amount" class="form-label">Amount</label>
+                <input type="text" class="form-control input-border" id="input-amount">
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-custom-primary" id="btn">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

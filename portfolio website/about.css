@@ -1,0 +1,39 @@
+body{
+    margin: auto;
+    background-color: rgb(61, 61, 220);
+    text-align: center;
+    
+}
+
+
+.box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    text-align: left;
+}
+
+ table tr td{
+     border: 2px solid black;
+     padding: 20px;
+     font-size: 50px;
+}
+
+a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:15px;
+    color: #fff;
+    display: inline-block;
+    margin: 20px 0;  
+    border-radius: 5px;
+    margin-top: 50px;
+    /* text-align: left; */
+    /* margin: 30px; */
+}
+
+a:hover{
+    background: #6a5959;
+}

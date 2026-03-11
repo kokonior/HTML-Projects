@@ -1,0 +1,21 @@
+<html>
+<head>
+<h2>Cell that apans two columns:<h2>
+<table border="2">
+<tr>
+<th>Name
+<th colspan="2" algin="center">Telephone</th>
+</tr>
+<tr>
+<td>ANKUSH</td>
+<td>55577854</td>
+<td>55587868</td>
+</tr>
+<tr>
+<td>Raman</td>
+<td>66677867</td>
+<td>54893689</td>
+</tr>
+</table>
+</body>
+</html>

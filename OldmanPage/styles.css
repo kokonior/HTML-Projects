@@ -1,0 +1,63 @@
+body {
+	font-family: arial;
+}
+nav {
+	position: fixed;
+	margin: 0px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 1;
+	border-bottom: solid 1px;
+}
+ul {
+	margin-top: 0px;
+	padding-left: unset;
+	list-style-position: inside;
+	list-style-type: none;
+	text-align: center;
+}
+li {
+	display: inline-block;
+}
+a:visited, a:link {
+	color: black;
+	background: white;
+	font-size: 17px;
+	font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 0px 13px;
+    line-height: 50px;
+    text-align: center;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-color: black;
+}
+a:hover {
+	color: black;
+	background: lightgrey;
+	font-size: 17px;
+	font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 0px 13px;
+    line-height: 50px;
+    text-align: center;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-color: black;
+}
+a.aut {
+	background: red;
+}
+a.aut:hover {
+	background: darkred;
+}
+div.main {
+	display: block;
+	margin-top: 70px;
+	margin-left: 25%;
+	margin-right: 25%;
+}

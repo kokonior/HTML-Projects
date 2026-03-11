@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Students Management System</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="assets/main.css"></script>
+<script src="assets/main.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+        <div>
+            <form action="" method="post" id="fileForm" role="form">
+            <fieldset><legend class="text-center">Students Management System</legend>
+            
+            <div class="form-group md-4"> 	 
+                <label for="firstname"><span class="req">* </span> First name: </label>
+                    <input class="form-control" type="text" name="firstname" id = "txt" onkeyup = "Validate(this)" required /> 
+                        <div id="errFirst"></div>    
+            </div>
+            
+            <div class="form-group md-4"> 	 
+                <label for="middlename"><span class="req">* </span> Middle name: </label>
+                    <input class="form-control" type="text" name="middlename" id = "txt" onkeyup = "Validate(this)" required /> 
+                        <div id="errFirst"></div>    
+            </div>
+
+            <div class="form-group md-4">
+                <label for="lastname"><span class="req">* </span> Last name: </label> 
+                    <input class="form-control" type="text" name="lastname" id = "txt" onkeyup = "Validate(this)" required />  
+                        <div id="errLast"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastname"><span class="req">* </span> Address: </label> 
+                    <input class="form-control" type="text" name="afirstline" id = "txt" onkeyup = "add_validate(this.value);" placeholder="Line 1" required />  
+                        <div class="statusadd" id="statusadd"></div>
+                    <input class="form-control" type="text" name="asecoundline" id = "txt" onkeyup = "add_validate(this.value);" placeholder="Line 2" required />  
+                        <div class="statusadd" id="statusadd"></div>
+                    <input class="form-control" type="text" name="city" id = "txt" onkeyup = "add_validate(this.value);" placeholder="City" required />  
+                       <div class="statusadd" id="statusadd"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><span class="req">* </span> Email Address: </label> 
+                    <input class="form-control" required type="text" name="email" id = "email"  onchange="email_validate(this.value);" />   
+                        <div class="status" id="status"></div>
+            </div>
+            
+            
+            <div class="form-group">
+            	<label for="Gender"><span class="req">* </span> Select Gender: </label><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+             </div>
+             
+             <div class="form-group">
+                <label for="email"><span class="req">* </span> Birthday: </label> 
+                    <input class="form-control" required type="text" name="dob" id = "dob" placeholder="date/month/year"  onchange="dob_validate(this.value);" />   
+                        <div class="statusDOB" id="statusDOB"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password"><span class="req">* </span> Password: </label>
+                    <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" /> </p>
+
+                <label for="password"><span class="req">* </span> Password Confirm: </label>
+                    <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
+                        <span id="confirmMessage" class="confirmMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+            </div>
+            </fieldset>
+            </form><!-- ends register form -->
+
+<script type="text/javascript">
+  document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+</script>
+        </div><!-- ends col-6 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

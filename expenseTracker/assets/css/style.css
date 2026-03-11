@@ -1,0 +1,103 @@
+/* CSS file for main styling */
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.heading h1 {
+  text-align: center;
+  padding: 50px 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #e21717;
+}
+
+.balance {
+  background-color: #38cc77;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.name {
+  height: 100%;
+}
+
+.name h4 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+td,
+th {
+  border-bottom: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #38cc77;
+}
+tr:nth-child(even) {
+  /* background-color: #38cc77; */
+  background-color: #dddddd;
+}
+
+#btn-strt {
+  color: #ff8303;
+  position: relative;
+  top: 328px;
+  display: block;
+  width: 54%;
+  background: #1b1a17;
+  font-weight: bold;
+  border: 3px solid black;
+  border-radius: 44px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: auto;
+  height: 72px;
+  box-shadow: 9px 10px 9px #a35709;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-custom-primary {
+  background-color: #120e43;
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.modal-content {
+  background-color: #cad5e2;
+}
+
+.input-border {
+  border: 2px solid #120e43;
+  border-radius: 5px;
+}

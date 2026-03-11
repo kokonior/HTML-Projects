@@ -1,0 +1,53 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background:#b7b6b6;
+}
+
+.button {
+	width: 75px;
+	height: 50px;
+	font-size: 25px;
+	margin: 2px;
+	cursor: pointer;
+	border: none;
+}
+
+.textview {
+	width: 305px;
+	margin: 5px;
+	font-size: 25px;
+	padding: 5px;
+	border: none;
+	background: transparent;
+}
+
+.main {
+	width: 327px;
+	height: 390px;
+	background: #efecec;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%)translateY(-50%);
+	border: 1px solid grey;
+}
+
+.number {
+	background: white;
+	font-weight: bold;
+}
+
+.symbol {
+	background: #fbfbfb;
+}
+
+.gray:hover {
+	background: #e0e0e0;
+}
+
+.blue:hover {
+	background: #03a9f4;
+}

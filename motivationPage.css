@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0px;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: whitesmoke;
+    background-color: #358073;
+}
+
+.heading {
+    padding-top: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.imaging {
+    border-radius: 15px 50px 30px;
+    padding-left: 100px;
+}
+
+.level-1 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+}
+
+.introducing {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.main-content {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+button:hover {
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    padding: 30px;
+    background-color: black;
+    color: whitesmoke;
+    padding-bottom: 0px;
+}
+
+.copyright {
+    align-content: center;
+    color: whitesmoke;
+    text-align: center;
+    background-color: black;
+}
+
+.col-1 {
+    flex-grow: 2;
+    width: 30%;
+}
+
+.col-2 {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.col-3 {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.col-4 {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.social-icons {
+    padding-top: 20px;
+}
+
+.s1 {
+    width: 30px;
+}
+
+.s2 {
+    width: 30px;
+}
+
+.s3 {
+    width: 30px;
+}
+
+.icon-right {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}

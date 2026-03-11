@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 14px;
+    color: #1d1c1c;
+    line-height: 1.2;
+}
+.underline2{
+  
+width:150px;
+border-bottom: 2px solid red;
+
+
+}
+.navbar{
+
+  font-size: 16px !important;
+  z-index: 1;
+}
+.learn a:hover{
+  border-bottom: 2px solid rgb(126, 124, 124);
+  color: rgb(67, 69, 70);
+}
+.learn a{
+  text-decoration: none; 
+  color: #333;
+   transition: .1s;
+   font-size: 18px!important;
+}
+.nav-item .nav-link{ 
+  color: rgb(70, 7, 7) !important;
+  transition: .3s; padding: 0 15px !important;
+}
+
+.nav-item .nav-link:hover{ 
+  color: rgb(87, 6, 6) !important;
+
+}
+.sol{
+  height: 450px;
+}
+
+/* main body */
+
+.card-box {
+  border: 1px solid #ddd;
+  padding: 16px;
+  box-shadow: 0px 0px 7px 0px #d1d0d0;
+  margin-bottom: 20px;
+  float: left;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-box .card-thumbnail {
+  max-width: 343px;
+  height: 230px;
+
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.8s;
+}
+.card-box .card-thumbnail:hover {
+  transform: scale(1.1);
+}
+.card-box h3 a {
+  font-size: 20px;
+  text-decoration: none;
+}
+.fa{
+  color:rgb(223, 222, 222)
+} 
+
+.checked {
+  color: orange;
+}
+
+h5 sub{
+  color: rgb(199, 2, 2);
+}
+.discount {
+  color: rgb(92, 201, 3);
+  font-size: 13px;
+}
+.card-thumbnail{
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+
+footer {
+  background-color: #333;
+  color: white;
+}
+.underline1{
+  border-bottom: 2px solid red;
+  width: 70px;
+}
+.anc{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.so1{
+text-decoration: none;
+color: white;
+}
+.so1:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.so2{
+  background-color: #3b5998;
+  border-radius: 50%;
+ width: 32px;
+}
+
+.so3{
+  background-color:#55acee;
+  border-radius: 50%;
+}
+
+.so4{
+  background-color: #dd4b39;
+  border-radius: 50%;
+}
+
+.so5{
+  background-color: #ac2bac;
+  border-radius: 50%;
+  width: 32px;
+}
+.so6{
+  background-color: #0082ca;
+  border-radius: 50%;
+  width: 32px;
+}
+
+.let{
+  width: 75%;
+}
+.sie{
+  background-color: #222;
+}
+#preloader{
+  background: #000 url("https://cdn.dribbble.com/users/1984282/screenshots/5560773/for_dribbe.gif") no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100 !important;
+}

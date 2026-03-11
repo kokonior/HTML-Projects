@@ -1,0 +1,133 @@
+/* fonts styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* css default format setting */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;;
+}
+.bg-light-gray{    
+    background-color: rgb(241, 240, 240);
+}
+.section_title h1{
+    text-decoration: underline;
+}
+
+/* for cart logo hover effect */
+.cart a{
+    text-decoration: none;
+    list-style: none;
+}
+.cart a:hover{
+    text-decoration: none;
+    list-style: none;
+}
+.bg_cart_1{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.list-group-item{
+    background-color: inherit !important;
+}
+
+/* for product detail page image gallery */
+.carousel-indicators li{
+    width: auto !important;
+    height: auto !important;
+}
+
+
+/* for checkout page */
+.bg_checkout_1{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+/* for product layout design */
+.single_product{
+    background-color: rgb(241, 240, 240);
+}
+.product_img{
+    position: relative;
+}
+.product_img .new_product{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.contact_form{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+
+/* for services section background gradient */
+.feature{
+    background: rgb(0,121,230);
+    background: linear-gradient(0deg, rgba(0,121,230,1) 0%, rgba(0,250,255,1) 90%);
+}
+
+/* for footer section background gradient */
+/* .footer_section{
+    background-color: #0093E9;
+    background-image: linear-gradient(110deg, #0093E9 19%, #80D0C7 100%);
+} */
+.footer_section{
+    border-top: 3px solid #007BFF;
+    border-radius: 10px;
+}
+
+/* for footer links  */
+.footer_links ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+.footer_links ul li a{
+    color: #000;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+.footer_links ul li a:hover{
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+/* for scroll to top button */
+#button{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 100;
+}
+
+.mt-small-2{
+    margin-top: 0rem!important;
+}
+.mt-small-5{
+    margin-top: 0rem!important;
+}
+.mb-small-2{
+    margin-bottom: 0rem!important;
+}
+.mb-small-5{
+    margin-bottom: 0rem!important;
+}
+/* for mobile responsive setting */
+@media(max-width: 767px){
+    .mt-small-2{
+        margin-top: .5rem!important;
+    }
+    .mt-small-5{
+        margin-top: 3rem!important;
+    }
+    .mb-small-2{
+        margin-bottom: .5rem!important;
+    }
+    .mb-small-5{
+        margin-bottom: 3rem!important;
+    }
+}

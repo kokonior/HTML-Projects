@@ -1,0 +1,267 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+    .about_img {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .build_box h1 {
+        font-size: 72px;
+    }
+    .titlepage h2 {
+        font-size: 36px;
+    }
+    .plan_text h3 {
+        font-size: 19px;
+    }
+    .marriage_text h3 {
+        font-size: 23px;
+        padding-bottom: 12px;
+    }
+    ul.lacation li {
+        padding-right: 7px;
+    }
+    .about_img {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    ul.contat_infoma li {
+        font-size: 12px;
+    }
+    .logo {
+        padding-top: 4px;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 9px 19px;
+    }
+    .banner_main {
+        padding-bottom: 115px;
+    }
+    .build_box h1 {
+        font-size: 63px;
+    }
+    .build_box {
+        padding-top: 12%;
+    }
+    .plan_text {
+        padding: 49px 8px;
+    }
+    .plan_text h3 {
+        font-size: 17px;
+    }
+    .marriage_text {
+        padding: 10px 12px 9px 0px;
+    }
+    .marriage_text h3 {
+        font-size: 17px;
+        padding-bottom: 6px;
+    }
+    .marriage_text span {
+        font-size: 16px;
+        line-height: 15px;
+        padding-bottom: 7px;
+    }
+    .marriage_text p {
+        font-size: 15px;
+        line-height: 24px;
+        padding-bottom: 14px;
+    }
+    ul.lacation li {
+        padding-right: 8px;
+        font-size: 13px;
+    }
+    ul.lacation li i {
+        margin-right: 6px;
+        width: 32px;
+        font-size: 18px;
+        height: 30px;
+    }
+    ul.social_icon li {
+        margin-left: 13px;
+    }
+    .about_img {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    ul.search {
+        display: none;
+    }
+    .banner_main {
+        padding-bottom: 115px;
+    }
+    .build_box h1 {
+        font-size: 63px;
+    }
+    .build_box {
+        padding-top: 12%;
+    }
+    .margin_top70 {
+        margin-top: 0px;
+    }
+    .about_img {
+        margin-top: 30px;
+        margin-right: 0;
+    }
+    .titlepage h2 {
+        font-size: 32px;
+    }
+    .marriage_text {
+        padding: 20px 25px 20px 25px;
+    }
+    .main_form .send_btn {
+        margin-bottom: 30px;
+    }
+    .logo_fooetr {
+        padding-bottom: 20px;
+    }
+    .ru_bg {
+        padding: 50px 19px;
+    }
+    ul.lacation li {
+        padding-right: 10px;
+        font-size: 13px;
+    }
+    ul.lacation li i {
+        margin-right: 6px;
+        width: 32px;
+        font-size: 18px;
+        height: 30px;
+    }
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+        padding-top: 0px !important;
+    }
+    .navigation .navbar-collapse {
+        background: #e76f64;
+        padding: 20px;
+        margin-top: 61px;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        border: inherit;
+        float: right;
+        padding-top: 7px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+    .d_none {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding: 29px 0px;
+    }
+    .back_re .title h2 {
+        font-size: 31px;
+    }
+    .logo a img {
+        position: relative;
+        z-index: 9999;
+    }
+    .banner_main {
+        padding-bottom: 115px;
+    }
+    .build_box {
+        padding-top: 12%;
+    }
+    .build_box h1 {
+        font-size: 34px;
+        line-height: 41px;
+    }
+    .logo {
+        text-align: center !important;
+        padding-bottom: 6px;
+        float: left;
+        position: relative;
+    }
+    .marriage_text h3 {
+        font-size: 19px;
+        padding-bottom: 11px;
+    }
+    ul.search {
+        display: none;
+    }
+    .plan_text h3 {
+        font-size: 18px;
+    }
+    .titlepage h2 {
+        font-size: 27px;
+        line-height: 33px;
+    }
+    .margin_top70 {
+        margin-top: 0px;
+    }
+    .about_img {
+        margin-right: 0px;
+        padding-left: 0px;
+        margin-top: 30px;
+    }
+    .marriage_text {
+        padding: 20px 25px 20px 25px;
+    }
+    .main_form .send_btn {
+        margin-bottom: 30px;
+    }
+    ul.lacation {
+        display: inherit;
+    }
+    ul.lacation li {
+        margin-top: 27px;
+        margin-bottom: 0px;
+    }
+    ul.social_icon {
+        float: left;
+        margin-bottom: 17px;
+    }
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        padding-top: 0px !important;
+        width: 100%;
+    }
+    .navigation .navbar-collapse {
+        background: #e76f64;
+        padding: 20px;
+        margin-top: 24px;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        float: right;
+        border: inherit;
+        margin-top: -34px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+    .d_none {
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Form-validtion</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>REGISTRATION FORM</h2>
+      </div>
+      <form action="" class="form" id="form">
+        <div class="form-control">
+          <label for="">Username</label>
+          <input
+            type="text"
+            name=""
+            id="uname"
+            placeholder="Enter your full name"
+            autocomplete="off"
+          />
+          <i class="bi bi-check-circle-fill"></i>
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <small>Error msg</small>
+        </div>
+        <div class="form-control">
+          <label for="">Email</label>
+          <input
+            type="email"
+            name=""
+            id="email"
+            placeholder="Enter your email"
+            autocomplete="off"
+          />
+          <i class="bi bi-check-circle-fill"></i>
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <small>Error msg</small>
+        </div>
+        <div class="form-control">
+          <label for="">Phone Number</label>
+          <input
+            type="number"
+            name=""
+            id="number"
+            placeholder="Enter your Phone number"
+            autocomplete="off"
+          />
+          <i class="bi bi-check-circle-fill"></i>
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <small>Error msg</small>
+        </div>
+        <div class="form-control">
+          <label for="">Password</label>
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Enter your password"
+            autocomplete="off"
+          />
+          <i class="bi bi-check-circle-fill"></i>
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <small>Error msg</small>
+        </div>
+        <div class="form-control">
+          <label for="">Confirm Password</label>
+          <input
+            type="password"
+            name=""
+            id="cpassword"
+            placeholder="Enter your password again"
+            autocomplete="0ff"
+          />
+          <i class="bi bi-check-circle-fill"></i>
+          <i class="bi bi-exclamation-circle-fill"></i>
+          <small>Error msg</small>
+        </div>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+
+    <!-- js -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
